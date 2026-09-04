@@ -36,7 +36,7 @@ export default function ArticleDetail() {
     return <div className="container-page py-24 text-center"><p className="font-display text-2xl text-ivory">Article not found</p><Link to="/articles" className="mt-4 inline-block text-sm text-gold-dim hover:text-gold">← Back to articles</Link></div>
   }
 
-  const articleImage = slug === 'what-is-jainism' ? '/Screenshot_2026-09-04-19-18-01-00_f9ee0578fe1cc94de7482bd41accb329.jpg' : null
+  const articleImage = slug === 'what-is-jainism' ? 'https://raw.githubusercontent.com/ashlovesbuilding/jinverse/main/Screenshot_2026-09-04-19-18-01-00_f9ee0578fe1cc94de7482bd41accb329.jpg' : null
 
   return (
     <article className="py-20">
