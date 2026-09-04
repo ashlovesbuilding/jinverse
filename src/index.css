@@ -39,3 +39,22 @@
     @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
   }
 }
+
+/* Full JINVERSE logo above the homepage hero heading. */
+@layer components {
+  section:first-of-type .container-page::before {
+    content: '';
+    display: block;
+    width: min(100%, 520px);
+    aspect-ratio: 1 / 1;
+    margin: 0 auto 2rem;
+    background: url('/logo.svg') center / contain no-repeat;
+  }
+
+  @media (min-width: 640px) {
+    section:first-of-type .container-page::before {
+      width: min(100%, 620px);
+      margin-bottom: 2.5rem;
+    }
+  }
+}
