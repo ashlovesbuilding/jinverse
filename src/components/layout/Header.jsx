@@ -29,8 +29,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line/70 bg-void/85 backdrop-blur">
       <div className="container-page flex h-16 items-center justify-between">
-        <NavLink to="/" className="font-display text-lg tracking-wide text-ivory" onClick={() => setOpen(false)}>
-          JINVERSE
+        <NavLink to="/" className="flex items-center" onClick={() => setOpen(false)} aria-label="JINVERSE home">
+          <img src="/logo.png" alt="JINVERSE" className="h-11 w-auto object-contain" />
         </NavLink>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
