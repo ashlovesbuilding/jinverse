@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  body {
+    @apply bg-void text-ivory font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+  a, button {
+    @apply outline-none;
+  }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    @apply ring-2 ring-gold ring-offset-2 ring-offset-void rounded-sm;
+  }
+}
+
+@layer utilities {
+  .ford-rule {
+    @apply w-10 h-px bg-gold-dim;
+  }
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
+  }
+}
