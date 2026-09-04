@@ -40,21 +40,24 @@
   }
 }
 
-/* Full JINVERSE logo above the homepage hero heading. */
+/* Full JINVERSE identity artwork above the homepage hero heading. */
 @layer components {
-  section:first-of-type .container-page::before {
+  .container-page > h1::before {
     content: '';
     display: block;
-    width: min(100%, 520px);
+    width: min(100%, 620px);
     aspect-ratio: 1 / 1;
-    margin: 0 auto 2rem;
-    background: url('/logo.svg') center / contain no-repeat;
+    margin: 0 auto 2.5rem;
+    background-image: url('/file_0000000024e0820888a7c6321e76afcf.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   @media (min-width: 640px) {
-    section:first-of-type .container-page::before {
-      width: min(100%, 620px);
-      margin-bottom: 2.5rem;
+    .container-page > h1::before {
+      width: min(100%, 680px);
+      margin-bottom: 3rem;
     }
   }
 }
