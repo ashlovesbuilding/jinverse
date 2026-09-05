@@ -34,7 +34,6 @@ const BODIES = {
 const imageBySlug = {
   'what-is-jainism': 'https://raw.githubusercontent.com/ashlovesbuilding/jinverse/main/Screenshot_2026-09-04-19-18-01-00_f9ee0578fe1cc94de7482bd41accb329.jpg',
   'bharatavarsha-bharat-chakravarti': 'https://raw.githubusercontent.com/ashlovesbuilding/jinverse/main/HGQZVZkaUAAeOkA.jpg',
-  'understanding-ahimsa': '/HQeDNcqbMAA3Wyy.jpg',
 }
 
 export default function ArticleDetail() {
@@ -56,9 +55,9 @@ export default function ArticleDetail() {
           <p className="mt-3 text-ivory-dim">{article.subtitle}</p>
           <p className="mt-3 text-xs text-ivory-dim/60">{article.readingTime}</p>
         </Reveal>
-        {articleImage && <Reveal delay={60}><img src={articleImage} alt={slug === 'understanding-ahimsa' ? 'Jain classification of living beings according to their number of senses' : slug === 'bharatavarsha-bharat-chakravarti' ? 'Bhagwan Rishabhadeva accepting the first ahar in the royal court of Hastinapur' : 'Jain heritage image'} className="mt-10 w-full aspect-[16/7] object-cover border border-line" /></Reveal>}
+        {articleImage && <Reveal delay={60}><img src={articleImage} alt={slug === 'bharatavarsha-bharat-chakravarti' ? 'Bhagwan Rishabhadeva accepting the first ahar in the royal court of Hastinapur' : 'Jain heritage image'} className="mt-10 w-full aspect-[16/7] object-cover border border-line" /></Reveal>}
         <div className="mt-12 space-y-10">
-          {body.map((section, i) => <Reveal key={section.heading} delay={i * 30}><h2 className="font-display text-xl text-ivory">{section.heading}</h2><p className="mt-3 text-sm leading-relaxed text-ivory-dim">{section.text}</p>{slug === 'understanding-ahimsa' && i === 1 && <img src="/HQeDNcqbMAA3Wyy.jpg" alt="Jain classification of living beings according to their number of senses" className="mt-6 w-full border border-line" />} </Reveal>)}
+          {body.map((section, i) => <Reveal key={section.heading} delay={i * 30}><h2 className="font-display text-xl text-ivory">{section.heading}</h2><p className="mt-3 text-sm leading-relaxed text-ivory-dim">{section.text}</p></Reveal>)}
         </div>
       </div>
     </article>
