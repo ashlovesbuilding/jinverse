@@ -21,6 +21,18 @@ export default function Tirthankaras() {
               <p className="text-xs text-ivory-dim/60">Tirthankara {t.number}</p>
               <p className="mt-2 font-display text-base text-ivory">{t.name}</p>
               <p className="mt-2 text-xs text-gold-dim">Emblem: {t.emblem}</p>
+              {t.number === 14 && (
+                <>
+                  <img
+                    src="/FSs1LsyUEAEP2Z3.jpg"
+                    alt="Pratima of Bhagwan Anantanatha at Nellikaru, Karnataka"
+                    className="mt-5 aspect-[4/5] w-full object-cover"
+                  />
+                  <p className="mt-3 text-xs leading-5 text-ivory-dim/70">
+                    Pratima of Bhagwan Anantanatha at Nellikaru, Karnataka.
+                  </p>
+                </>
+              )}
             </div>
           </Reveal>
         ))}
