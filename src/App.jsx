@@ -29,6 +29,7 @@ export default function App() {
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/:slug" element={<ArticleDetail />} />
           <Route path="/editor" element={<ArticleEditor />} />
+          <Route path="/article-editor" element={<ArticleEditor />} />
           <Route path="/reels" element={<Reels />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
