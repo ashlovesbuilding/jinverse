@@ -45,6 +45,11 @@ export default function ArticleEditor() {
     }))
   }
 
+  function removePicture() {
+    setArticle((current) => ({ ...current, imageUrl: '', imageCaption: '' }))
+    setStatus('Picture removed. Save the draft to keep this change.')
+  }
+
   async function saveDraft(event) {
     event.preventDefault()
     setStatus('Saving draft…')
@@ -93,6 +98,7 @@ export default function ArticleEditor() {
           <h2 className="mt-3 font-display text-3xl text-ivory">{article.title || 'Untitled article'}</h2>
           <p className="mt-3 text-ivory-dim">{article.subtitle || 'Add a short subtitle in the editor.'}</p>
           {article.imageUrl && <img src={article.imageUrl} alt={article.imageCaption || article.title || 'Article cover'} className="mt-8 max-h-[28rem] w-full object-cover" />}
+          {article.imageCaption && <p className="mt-2 text-xs text-ivory-dim/70">{article.imageCaption}</p>}
           <div className="mt-10 space-y-5 text-sm leading-relaxed text-ivory-dim">{paragraphs.length ? paragraphs.map((paragraph, index) => <p key={`${index}-${paragraph.slice(0, 20)}`}>{paragraph}</p>) : <p>Your article body will appear here.</p>}</div>
         </article>
       ) : (
@@ -101,6 +107,15 @@ export default function ArticleEditor() {
             <label className="block" htmlFor="article-title"><span className="text-xs text-ivory-dim">Title</span><input id="article-title" name="title" type="text" value={article.title} onChange={handleTitleChange} placeholder="What Is Jainism?" autoComplete="off" className="mt-2 w-full border border-line bg-panel px-4 py-3 text-sm text-ivory outline-none focus:border-gold" required /></label>
             <label className="block" htmlFor="article-slug"><span className="text-xs text-ivory-dim">Slug</span><input id="article-slug" name="slug" type="text" value={article.slug} onChange={(event) => updateField('slug', makeSlug(event.target.value))} placeholder="what-is-jainism" className="mt-2 w-full border border-line bg-panel px-4 py-3 text-sm text-ivory outline-none focus:border-gold" required /></label>
             <label className="block" htmlFor="article-subtitle"><span className="text-xs text-ivory-dim">Subtitle</span><input id="article-subtitle" name="subtitle" type="text" value={article.subtitle} onChange={(event) => updateField('subtitle', event.target.value)} placeholder="A short description for article cards" className="mt-2 w-full border border-line bg-panel px-4 py-3 text-sm text-ivory outline-none focus:border-gold" /></label>
+            <div className="border border-line p-4">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <span className="text-xs text-ivory-dim">Article picture</span>
+                {article.imageUrl && <button type="button" onClick={removePicture} className="border border-red-400/60 px-3 py-1.5 text-xs text-red-300 hover:bg-red-400/10">Remove picture</button>}
+              </div>
+              <label className="mt-3 block" htmlFor="article-image-url"><span className="text-xs text-ivory-dim">Picture URL</span><input id="article-image-url" name="imageUrl" type="url" value={article.imageUrl} onChange={(event) => updateField('imageUrl', event.target.value)} placeholder="https://…" className="mt-2 w-full border border-line bg-panel px-4 py-3 text-sm text-ivory outline-none focus:border-gold" /></label>
+              <label className="mt-3 block" htmlFor="article-image-caption"><span className="text-xs text-ivory-dim">Picture description</span><input id="article-image-caption" name="imageCaption" type="text" value={article.imageCaption} onChange={(event) => updateField('imageCaption', event.target.value)} placeholder="Describe the picture" className="mt-2 w-full border border-line bg-panel px-4 py-3 text-sm text-ivory outline-none focus:border-gold" /></label>
+              {article.imageUrl && <img src={article.imageUrl} alt={article.imageCaption || 'Article picture preview'} className="mt-4 max-h-64 w-full object-cover" />}
+            </div>
             <label className="block" htmlFor="article-body"><span className="text-xs text-ivory-dim">Article body</span><textarea id="article-body" name="body" value={article.body} onChange={(event) => updateField('body', event.target.value)} placeholder="Write one paragraph at a time." rows={14} className="mt-2 w-full resize-y border border-line bg-panel px-4 py-3 text-sm leading-relaxed text-ivory outline-none focus:border-gold" required /></label>
           </div>
           <aside className="space-y-5"><label className="block"><span className="text-xs text-ivory-dim">Category</span><select value={article.category} onChange={(event) => updateField('category', event.target.value)} className="mt-2 w-full border border-line bg-panel px-3 py-3 text-sm text-ivory"><option>Beginner’s guide</option><option>Philosophy</option><option>History</option><option>Texts</option><option>Heritage</option><option>Contemporary relevance</option></select></label><div className="flex flex-col gap-3 pt-2"><button type="submit" className="bg-gold px-4 py-3 text-sm font-medium text-void">Save draft</button><button type="button" onClick={clearDraft} className="border border-line px-4 py-3 text-sm text-ivory-dim">Clear draft</button></div></aside>
