@@ -15,18 +15,6 @@ const NAV_ITEMS = [
 const linkClass = ({ isActive }) =>
   `text-sm transition-colors ${isActive ? 'text-gold' : 'text-ivory-dim hover:text-ivory'}`
 
-function JainMark() {
-  return (
-    <span className="jain-mark" aria-hidden="true">
-      <span className="jain-mark__halo" />
-      <span className="jain-mark__dot jain-mark__dot--top" />
-      <span className="jain-mark__dot jain-mark__dot--middle" />
-      <span className="jain-mark__arc" />
-      <span className="jain-mark__base" />
-    </span>
-  )
-}
-
 export default function Header() {
   const [open, setOpen] = useState(false)
 
@@ -42,12 +30,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-line/70 bg-void/90 backdrop-blur">
       <div className="jain-flag-strip" aria-label="Jain flag colours" />
       <div className="container-page flex h-20 items-center justify-between">
-        <NavLink to="/" className="flex items-center gap-3" onClick={() => setOpen(false)} aria-label="JINVERSE home">
-          <JainMark />
-          <span className="flex flex-col">
-            <span className="font-display text-2xl tracking-[0.18em] text-ivory sm:text-3xl">JINVERSE</span>
-            <span className="mt-0.5 text-[7px] uppercase tracking-[0.28em] text-gold-dim sm:text-[8px]">Explore Jainism · Discover the universe within</span>
-          </span>
+        <NavLink to="/" className="flex min-w-0 items-center gap-3" onClick={() => setOpen(false)} aria-label="JINVERSE home">
+          <img
+            src="/logo.svg"
+            alt="JINVERSE Jain emblem and wordmark"
+            className="h-14 w-auto max-w-[min(78vw,360px)] object-contain"
+          />
         </NavLink>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
@@ -58,14 +46,7 @@ export default function Header() {
           ))}
         </nav>
 
-        <button
-          type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-sm border border-line text-ivory lg:hidden"
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          onClick={() => setOpen((v) => !v)}
-        >
+        <button type="button" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-line text-ivory lg:hidden" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls="mobile-nav" onClick={() => setOpen((v) => !v)}>
           <span className="relative block h-3 w-4" aria-hidden="true">
             <span className={`absolute left-0 top-0 h-px w-4 bg-ivory transition-transform ${open ? 'translate-y-1.5 rotate-45' : ''}`} />
             <span className={`absolute left-0 top-1.5 h-px w-4 bg-ivory transition-opacity ${open ? 'opacity-0' : ''}`} />
