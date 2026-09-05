@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   { to: '/about', label: 'About' },
 ]
 
-const JAIN_EMBLEM = '/file_0000000024e0820888a7c6321e76afcf.png'
+const JAIN_EMBLEM = '/logo.svg'
 
 const linkClass = ({ isActive }) =>
   `text-sm transition-colors ${isActive ? 'text-gold' : 'text-ivory-dim hover:text-ivory'}`
@@ -33,11 +33,7 @@ export default function Header() {
       <div className="jain-flag-strip" aria-label="Jain flag colours" />
       <div className="container-page flex min-h-20 items-center justify-between gap-4 py-3">
         <NavLink to="/" className="flex min-w-0 items-center gap-3" onClick={() => setOpen(false)} aria-label="JINVERSE home">
-          <img
-            src={JAIN_EMBLEM}
-            alt="Jain emblem"
-            className="h-14 w-10 shrink-0 object-contain object-center"
-          />
+          <img src={JAIN_EMBLEM} alt="Jain emblem" className="h-14 w-14 shrink-0 rounded-sm object-contain object-center" />
           <span className="min-w-0">
             <span className="block font-display text-2xl tracking-[0.18em] text-ivory sm:text-3xl">JINVERSE</span>
             <span className="hidden text-[8px] uppercase tracking-[0.28em] text-gold-dim sm:block">Explore Jainism · Discover the Universe Within</span>
@@ -45,9 +41,7 @@ export default function Header() {
         </NavLink>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
-          {NAV_ITEMS.map((item) => (
-            <NavLink key={item.to} to={item.to} className={linkClass}>{item.label}</NavLink>
-          ))}
+          {NAV_ITEMS.map((item) => <NavLink key={item.to} to={item.to} className={linkClass}>{item.label}</NavLink>)}
         </nav>
 
         <button type="button" className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm border border-line text-ivory lg:hidden" aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open} aria-controls="mobile-nav" onClick={() => setOpen((v) => !v)}>
@@ -61,9 +55,7 @@ export default function Header() {
 
       <nav id="mobile-nav" className={`overflow-hidden border-t border-line/70 bg-void transition-[max-height] duration-300 ease-in-out lg:hidden ${open ? 'max-h-96' : 'max-h-0 border-t-0'}`} aria-label="Mobile">
         <div className="container-page flex flex-col gap-1 py-3">
-          {NAV_ITEMS.map((item) => (
-            <NavLink key={item.to} to={item.to} onClick={() => setOpen(false)} className={({ isActive }) => `rounded-sm px-2 py-2.5 text-sm ${isActive ? 'text-gold' : 'text-ivory-dim hover:text-ivory'}`}>{item.label}</NavLink>
-          ))}
+          {NAV_ITEMS.map((item) => <NavLink key={item.to} to={item.to} onClick={() => setOpen(false)} className={({ isActive }) => `rounded-sm px-2 py-2.5 text-sm ${isActive ? 'text-gold' : 'text-ivory-dim hover:text-ivory'}`}>{item.label}</NavLink>)}
         </div>
       </nav>
     </header>
