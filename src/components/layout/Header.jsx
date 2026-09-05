@@ -12,6 +12,8 @@ const NAV_ITEMS = [
   { to: '/about', label: 'About' },
 ]
 
+const JAIN_EMBLEM = 'https://raw.githubusercontent.com/ashlovesbuilding/jinverse/main/file_0000000024e0820888a7c6321e76afcf.png'
+
 const linkClass = ({ isActive }) =>
   `text-sm transition-colors ${isActive ? 'text-gold' : 'text-ivory-dim hover:text-ivory'}`
 
@@ -27,22 +29,24 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line/70 bg-void/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-line/70 bg-void/95 backdrop-blur">
       <div className="jain-flag-strip" aria-label="Jain flag colours" />
-      <div className="container-page flex h-20 items-center justify-between">
+      <div className="container-page flex min-h-20 items-center justify-between gap-4 py-3">
         <NavLink to="/" className="flex min-w-0 items-center gap-3" onClick={() => setOpen(false)} aria-label="JINVERSE home">
           <img
-            src="/logo.svg"
-            alt="JINVERSE Jain emblem and wordmark"
-            className="h-14 w-auto max-w-[min(78vw,360px)] object-contain"
+            src={JAIN_EMBLEM}
+            alt="Jain emblem"
+            className="h-14 w-10 shrink-0 object-contain object-center"
           />
+          <span className="min-w-0">
+            <span className="block font-display text-2xl tracking-[0.18em] text-ivory sm:text-3xl">JINVERSE</span>
+            <span className="hidden text-[8px] uppercase tracking-[0.28em] text-gold-dim sm:block">Explore Jainism · Discover the Universe Within</span>
+          </span>
         </NavLink>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
           {NAV_ITEMS.map((item) => (
-            <NavLink key={item.to} to={item.to} className={linkClass}>
-              {item.label}
-            </NavLink>
+            <NavLink key={item.to} to={item.to} className={linkClass}>{item.label}</NavLink>
           ))}
         </nav>
 
@@ -58,9 +62,7 @@ export default function Header() {
       <nav id="mobile-nav" className={`overflow-hidden border-t border-line/70 bg-void transition-[max-height] duration-300 ease-in-out lg:hidden ${open ? 'max-h-96' : 'max-h-0 border-t-0'}`} aria-label="Mobile">
         <div className="container-page flex flex-col gap-1 py-3">
           {NAV_ITEMS.map((item) => (
-            <NavLink key={item.to} to={item.to} onClick={() => setOpen(false)} className={({ isActive }) => `rounded-sm px-2 py-2.5 text-sm ${isActive ? 'text-gold' : 'text-ivory-dim hover:text-ivory'}`}>
-              {item.label}
-            </NavLink>
+            <NavLink key={item.to} to={item.to} onClick={() => setOpen(false)} className={({ isActive }) => `rounded-sm px-2 py-2.5 text-sm ${isActive ? 'text-gold' : 'text-ivory-dim hover:text-ivory'}`}>{item.label}</NavLink>
           ))}
         </div>
       </nav>
