@@ -7,6 +7,5 @@ export const digambaraTirthankaraInfo = {
     'Digambara images from the Gupta period are described as having half-closed eyes.',
     'The Digambara tradition reveres Mahavira and a lineage of teachers after him, including Gautama, Kundakunda, Bhadrabahu and Umaswami.',
     'The Digambara literary tradition gives major importance to the Ṣaṭkhaṅḍāgama and Kaṣāyapāhuda, while the Mahāpurāṇa includes Jinasena’s Adipurāṇa and Gunabhadra’s Uttarapurāṇa.'
-  ],
-  sourceLabel: 'Source: Wikipedia, “Digambara” — introductory secondary reference. Historical and doctrinal claims should be checked against primary texts and specialist scholarship before being presented as settled history.'
+  ]
 }
