@@ -3,13 +3,9 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+  html { scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
+    html { scroll-behavior: auto; }
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
@@ -19,29 +15,78 @@
   }
   body {
     @apply bg-void text-ivory font-body antialiased;
+    background-image: radial-gradient(circle at 15% 10%, rgba(28, 67, 108, .18), transparent 30rem), radial-gradient(circle at 85% 70%, rgba(184, 147, 95, .08), transparent 28rem);
   }
-  h1, h2, h3, h4 {
-    @apply font-display;
-  }
-  a, button {
-    @apply outline-none;
-  }
+  h1, h2, h3, h4 { @apply font-display; }
+  a, button { @apply outline-none; }
   a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
     @apply ring-2 ring-gold ring-offset-2 ring-offset-void rounded-sm;
   }
 }
 
 @layer utilities {
-  .ford-rule {
-    @apply w-10 h-px bg-gold-dim;
-  }
-  .container-page {
-    @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
-  }
+  .ford-rule { @apply w-10 h-px bg-gold-dim; }
+  .container-page { @apply mx-auto w-full max-w-6xl px-6 sm:px-8; }
 }
 
-/* Full JINVERSE identity artwork above the homepage hero heading. */
 @layer components {
+  .jain-flag-strip {
+    height: 4px;
+    background: linear-gradient(90deg,
+      #b52b2b 0%, #b52b2b 20%,
+      #e2b84b 20%, #e2b84b 40%,
+      #f5f0df 40%, #f5f0df 60%,
+      #4d8b57 60%, #4d8b57 80%,
+      #244c78 80%, #244c78 100%);
+    opacity: .95;
+  }
+
+  .jain-mark {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    border: 1px solid rgba(202, 164, 99, .75);
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(202,164,99,.12), transparent 68%);
+  }
+  .jain-mark__halo {
+    position: absolute;
+    inset: 7px;
+    border: 1px solid rgba(202,164,99,.8);
+    border-radius: 999px;
+  }
+  .jain-mark__dot {
+    position: absolute;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    background: #d9b56e;
+  }
+  .jain-mark__dot--top { top: 8px; }
+  .jain-mark__dot--middle { top: 16px; }
+  .jain-mark__arc {
+    position: absolute;
+    left: 9px;
+    right: 9px;
+    bottom: 11px;
+    height: 13px;
+    border: 1px solid #d9b56e;
+    border-bottom: 0;
+    border-radius: 20px 20px 0 0;
+  }
+  .jain-mark__base {
+    position: absolute;
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+    height: 1px;
+    background: #d9b56e;
+  }
+
   .container-page > h1::before {
     content: '';
     display: block;
