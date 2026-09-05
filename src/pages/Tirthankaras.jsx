@@ -3,7 +3,7 @@ import Reveal from '../components/ui/Reveal.jsx'
 import { tirthankaraList } from '../data/tirthankaraList.js'
 import { digambaraTirthankaraInfo } from '../data/digambaraTirthankaraInfo.js'
 
-const ANANTANATHA_IMAGE = '/anantanatha-nellikaru.jpg'
+const ANANTANATHA_IMAGE = '/FSs1LsyUEAEP2Z3.jpg'
 
 export default function Tirthankaras() {
   return (
