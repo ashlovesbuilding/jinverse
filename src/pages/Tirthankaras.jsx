@@ -2,6 +2,7 @@ import SectionHeading from '../components/ui/SectionHeading.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
 import PlaceholderNote from '../components/ui/PlaceholderNote.jsx'
 import { tirthankaras } from '../data/placeholderContent.js'
+import { digambaraTirthankaraInfo } from '../data/digambaraTirthankaraInfo.js'
 
 export default function Tirthankaras() {
   return (
@@ -42,6 +43,20 @@ export default function Tirthankaras() {
           </Reveal>
         ))}
       </div>
+
+      <Reveal delay={100} className="mt-20">
+        <section className="border border-gold-dim/40 bg-panel/40 p-6 sm:p-10">
+          <p className="text-xs uppercase tracking-[0.24em] text-gold-dim">Tradition and iconography</p>
+          <h2 className="mt-3 font-display text-3xl text-ivory sm:text-4xl">{digambaraTirthankaraInfo.title}</h2>
+          <p className="mt-5 max-w-3xl text-base leading-8 text-ivory-dim">{digambaraTirthankaraInfo.introduction}</p>
+          <ul className="mt-6 list-disc space-y-3 pl-5 text-base leading-7 text-ivory-dim">
+            {digambaraTirthankaraInfo.points.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+          <p className="mt-8 border-t border-line pt-5 text-sm leading-6 text-ivory-dim/70">{digambaraTirthankaraInfo.sourceLabel}</p>
+        </section>
+      </Reveal>
     </div>
   )
 }
