@@ -19,6 +19,22 @@ const BODIES = {
     { heading: 'A path devoted to liberation', text: 'Jainism is a path devoted to the liberation of the soul through non-violence, self-discipline, and right understanding.' },
     { heading: 'What is Jainism?', text: 'Jainism teaches that every living being possesses a soul, or jiva, capable of purification and ultimate liberation, moksha. The path rests on right faith, right knowledge, and right conduct.' },
   ],
+  'understanding-ahimsa': [
+    { heading: 'Ahimsa: reverence for every living being', text: 'Ahimsa is the Jain discipline of non-violence and non-harming. It is not limited to avoiding physical injury; it also asks us to examine the intentions behind our thoughts, the consequences of our speech, and the care with which we act.' },
+    { heading: 'Why every living being matters', text: 'Jain philosophy teaches that every jiva possesses the potential for liberation. Life is therefore not limited to human beings or animals. Jain tradition recognises living beings with one sense through five senses, including earth-bodied, water-bodied, fire-bodied, air-bodied, and plant-bodied beings.' },
+    { heading: 'The five-sensed classification of life', text: 'One-sensed beings possess touch. Two-sensed beings possess touch and taste. Three-sensed beings possess touch, taste, and smell. Four-sensed beings also possess sight. Five-sensed beings possess all five senses: touch, taste, smell, sight, and hearing.' },
+    { heading: 'Violence through mind, speech, and body', text: 'Harm may be caused through action, speech, or thought. Jain ethics also considers asking another person to cause harm, approving harmful conduct, and acting carelessly. Ahimsa therefore requires awareness, restraint, and responsibility.' },
+    { heading: 'Ahimsa and the Jain vows', text: 'Ahimsa is the first of the five principal vows. Truthfulness, non-stealing, chastity, and non-possession can also be understood as expressions of non-violence because they reduce deception, exploitation, uncontrolled desire, and attachment.' },
+    { heading: 'Ahimsa in daily life', text: 'For householders, ahimsa means reducing avoidable harm through careful consumption, compassionate treatment of people and animals, responsible use of resources, gentle speech, and the refusal to encourage cruelty. Monks and nuns undertake a more rigorous form of this discipline.' },
+    { heading: 'Ahimsa and forgiveness', text: 'Jain practices of forgiveness, including Micchami Dukkadam, remind us to recognise harm already caused and seek to prevent its repetition. Forgiveness does not ignore injustice; it refuses to answer harm with another cycle of hatred.' },
+    { heading: 'The deeper message', text: 'Ahimsa changes the way we see the world. A tree is not merely timber, water is not merely a commodity, and another person is not merely an opponent. To practise ahimsa is to move through the world with less violence, less attachment, and greater compassion.' },
+  ],
+}
+
+const imageBySlug = {
+  'what-is-jainism': 'https://raw.githubusercontent.com/ashlovesbuilding/jinverse/main/Screenshot_2026-09-04-19-18-01-00_f9ee0578fe1cc94de7482bd41accb329.jpg',
+  'bharatavarsha-bharat-chakravarti': 'https://raw.githubusercontent.com/ashlovesbuilding/jinverse/main/HGQZVZkaUAAeOkA.jpg',
+  'understanding-ahimsa': '/ahimsa-five-senses.jpg',
 }
 
 export default function ArticleDetail() {
@@ -28,10 +44,6 @@ export default function ArticleDetail() {
 
   if (!article) return <div className="container-page py-24 text-center"><p className="font-display text-2xl text-ivory">Article not found</p></div>
 
-  const imageBySlug = {
-    'what-is-jainism': 'https://raw.githubusercontent.com/ashlovesbuilding/jinverse/main/Screenshot_2026-09-04-19-18-01-00_f9ee0578fe1cc94de7482bd41accb329.jpg',
-    'bharatavarsha-bharat-chakravarti': 'https://raw.githubusercontent.com/ashlovesbuilding/jinverse/main/HGQZVZkaUAAeOkA.jpg',
-  }
   const articleImage = imageBySlug[slug]
 
   return (
@@ -39,16 +51,14 @@ export default function ArticleDetail() {
       <div className="container-page max-w-prose">
         <Reveal>
           <Link to="/articles" className="text-xs text-ivory-dim hover:text-ivory">← Back to articles</Link>
-          <p className="mt-6 text-xs text-gold-dim">JINVERSE Article #{slug === 'bharatavarsha-bharat-chakravarti' ? '002' : '001'} · {article.category}</p>
+          <p className="mt-6 text-xs text-gold-dim">JINVERSE Article #{slug === 'bharatavarsha-bharat-chakravarti' ? '002' : slug === 'understanding-ahimsa' ? '003' : '001'} · {article.category}</p>
           <h1 className="mt-2 font-display text-3xl text-ivory sm:text-4xl">{slug === 'what-is-jainism' ? 'Jainism: An Ancient Tradition of Liberation' : article.title}</h1>
           <p className="mt-3 text-ivory-dim">{article.subtitle}</p>
           <p className="mt-3 text-xs text-ivory-dim/60">{article.readingTime}</p>
         </Reveal>
-        <Reveal delay={60}>
-          <img src={articleImage} alt={slug === 'bharatavarsha-bharat-chakravarti' ? 'Bhagwan Rishabhadeva accepting the first ahar in the royal court of Hastinapur' : 'Jain heritage image'} className="mt-10 w-full aspect-[16/7] object-cover border border-line" />
-        </Reveal>
+        {articleImage && <Reveal delay={60}><img src={articleImage} alt={slug === 'understanding-ahimsa' ? 'Jain classification of living beings according to their number of senses' : slug === 'bharatavarsha-bharat-chakravarti' ? 'Bhagwan Rishabhadeva accepting the first ahar in the royal court of Hastinapur' : 'Jain heritage image'} className="mt-10 w-full aspect-[16/7] object-cover border border-line" /></Reveal>}
         <div className="mt-12 space-y-10">
-          {body.map((section, i) => <Reveal key={section.heading} delay={i * 30}><h2 className="font-display text-xl text-ivory">{section.heading}</h2><p className="mt-3 text-sm leading-relaxed text-ivory-dim">{section.text}</p></Reveal>)}
+          {body.map((section, i) => <Reveal key={section.heading} delay={i * 30}><h2 className="font-display text-xl text-ivory">{section.heading}</h2><p className="mt-3 text-sm leading-relaxed text-ivory-dim">{section.text}</p>{slug === 'understanding-ahimsa' && i === 1 && <img src="/ahimsa-five-senses.jpg" alt="Jain classification of living beings according to their number of senses" className="mt-6 w-full border border-line" />} </Reveal>)}
         </div>
       </div>
     </article>
