@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   { to: '/about', label: 'About' },
 ]
 
-const JAIN_EMBLEM = 'https://raw.githubusercontent.com/ashlovesbuilding/jinverse/main/file_0000000024e0820888a7c6321e76afcf.png'
+const JAIN_EMBLEM = '/file_0000000024e0820888a7c6321e76afcf.png'
 
 const linkClass = ({ isActive }) =>
   `text-sm transition-colors ${isActive ? 'text-gold' : 'text-ivory-dim hover:text-ivory'}`
