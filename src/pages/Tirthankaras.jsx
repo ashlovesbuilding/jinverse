@@ -14,6 +14,19 @@ export default function Tirthankaras() {
         />
       </Reveal>
 
+      <Reveal delay={80} className="mt-10">
+        <figure className="overflow-hidden border border-gold-dim/50 bg-panel/40">
+          <img
+            src="/FSs1LsyUEAEP2Z3.jpg"
+            alt="Pratima of Bhagwan Anantanatha at Nellikaru, Karnataka"
+            className="h-auto max-h-[520px] w-full object-cover object-center"
+          />
+          <figcaption className="px-5 py-4 text-sm leading-6 text-ivory-dim/75 sm:px-7">
+            A sacred image of Bhagwan Anantanatha, the fourteenth Tirthankara, showing the serene and perfectly proportioned form traditionally associated with a Jina.
+          </figcaption>
+        </figure>
+      </Reveal>
+
       <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
         {tirthankaraList.map((t, i) => (
           <Reveal key={t.number} delay={(i % 8) * 40}>
@@ -21,18 +34,6 @@ export default function Tirthankaras() {
               <p className="text-xs text-ivory-dim/60">Tirthankara {t.number}</p>
               <p className="mt-2 font-display text-base text-ivory">{t.name}</p>
               <p className="mt-2 text-xs text-gold-dim">Emblem: {t.emblem}</p>
-              {t.number === 14 && (
-                <>
-                  <img
-                    src="/FSs1LsyUEAEP2Z3.jpg"
-                    alt="Pratima of Bhagwan Anantanatha at Nellikaru, Karnataka"
-                    className="mt-5 aspect-[4/5] w-full object-cover"
-                  />
-                  <p className="mt-3 text-xs leading-5 text-ivory-dim/70">
-                    Pratima of Bhagwan Anantanatha at Nellikaru, Karnataka.
-                  </p>
-                </>
-              )}
             </div>
           </Reveal>
         ))}
