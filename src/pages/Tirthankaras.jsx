@@ -10,7 +10,7 @@ export default function Tirthankaras() {
         <SectionHeading
           eyebrow="Tirthankaras"
           title="The twenty-four ford-makers"
-          description="Jain tradition reveres twenty-four Tirthankaras in the current cosmic age. Each is presented here with the traditional name and emblem recorded in the Wikipedia list of Tirthankaras."
+          description="Jain tradition reveres twenty-four Tirthankaras in the current cosmic age. Each is presented here with the traditional name and emblem, inviting us to remember their lives, virtues, and path to liberation."
         />
       </Reveal>
 
@@ -36,7 +36,6 @@ export default function Tirthankaras() {
               <li key={point}>{point}</li>
             ))}
           </ul>
-          <p className="mt-8 border-t border-line pt-5 text-sm leading-6 text-ivory-dim/70">{digambaraTirthankaraInfo.sourceLabel}</p>
         </section>
       </Reveal>
     </div>
