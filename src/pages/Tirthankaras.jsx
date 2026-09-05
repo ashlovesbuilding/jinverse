@@ -3,6 +3,8 @@ import Reveal from '../components/ui/Reveal.jsx'
 import { tirthankaraList } from '../data/tirthankaraList.js'
 import { digambaraTirthankaraInfo } from '../data/digambaraTirthankaraInfo.js'
 
+const ANANTANATHA_IMAGE = '/FSs1LsyUEAEP2Z3.jpg'
+
 export default function Tirthankaras() {
   return (
     <div className="container-page py-20">
@@ -17,12 +19,15 @@ export default function Tirthankaras() {
       <Reveal delay={80} className="mt-10">
         <figure className="overflow-hidden border border-gold-dim/50 bg-panel/40">
           <img
-            src="/FSs1LsyUEAEP2Z3.jpg"
+            src={ANANTANATHA_IMAGE}
             alt="Pratima of Bhagwan Anantanatha at Nellikaru, Karnataka"
-            className="h-auto max-h-[520px] w-full object-cover object-center"
+            className="block h-auto max-h-[520px] w-full object-cover object-center"
+            onError={(event) => {
+              event.currentTarget.style.display = 'none'
+            }}
           />
           <figcaption className="px-5 py-4 text-sm leading-6 text-ivory-dim/75 sm:px-7">
-            A sacred image of Bhagwan Anantanatha, the fourteenth Tirthankara, showing the serene and perfectly proportioned form traditionally associated with a Jina.
+            Pratima of Bhagwan Anantanatha, the fourteenth Tirthankara, at Nellikaru, Karnataka. The image is presented as a devotional visual introduction to the Tirthankara section.
           </figcaption>
         </figure>
       </Reveal>
