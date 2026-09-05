@@ -11,7 +11,7 @@ const imageBySlug = {
 }
 
 function toSections(body = '') {
-  return body
+  return String(body || '')
     .split(/\n\s*\n/)
     .filter(Boolean)
     .map((part, index) => {
@@ -50,8 +50,9 @@ export default function ArticleDetail() {
 
   if (!article) return <div className="container-page py-24 text-center"><p className="font-display text-2xl text-ivory">Article not found</p></div>
 
-  const body = toSections(article.body)
-  const articleImage = article.image_url || article.imageUrl || imageBySlug[slug]
+  const articleBody = article.body || article.body_markdown || article.content || ''
+  const body = toSections(articleBody)
+  const articleImage = article.image_url || article.hero_image_url || article.imageUrl || imageBySlug[slug]
   const articleTitle = article.title || (slug === 'what-is-jainism' ? 'Jainism: An Ancient Tradition of Liberation' : '')
 
   function editArticle() {
@@ -63,8 +64,8 @@ export default function ArticleDetail() {
       readingTime: article.reading_time || article.readingTime || '5 min read',
       evidence: article.evidence || 'tradition',
       imageUrl: articleImage || '',
-      imageCaption: article.image_caption || article.imageCaption || '',
-      body: article.body || body.map((section) => `${section.heading}\n${section.text}`).join('\n\n'),
+      imageCaption: article.image_caption || article.hero_image_caption || article.imageCaption || '',
+      body: articleBody,
     }
     window.localStorage.setItem('jinverse-article-draft', JSON.stringify(editableArticle))
     navigate('/editor')
@@ -83,9 +84,9 @@ export default function ArticleDetail() {
           <p className="mt-3 text-ivory-dim">{article.subtitle}</p>
           <p className="mt-3 text-xs text-ivory-dim/60">{article.reading_time || article.readingTime}</p>
         </Reveal>
-        {articleImage && <Reveal delay={60}><img src={articleImage} alt={article.image_caption || article.imageCaption || 'Jain heritage image'} className="mt-10 w-full aspect-[16/7] object-cover border border-line" /></Reveal>}
+        {articleImage && <Reveal delay={60}><img src={articleImage} alt={article.image_caption || article.hero_image_caption || article.imageCaption || 'Jain heritage image'} className="mt-10 w-full aspect-[16/7] object-cover border border-line" /></Reveal>}
         <div className="mt-12 space-y-10">
-          {body.map((section, index) => <Reveal key={`${section.heading}-${index}`} delay={index * 30}><h2 className="font-display text-xl text-ivory">{section.heading}</h2><p className="mt-3 text-sm leading-relaxed text-ivory-dim">{section.text}</p></Reveal>)}
+          {body.length ? body.map((section, index) => <Reveal key={`${section.heading}-${index}`} delay={index * 30}><h2 className="font-display text-xl text-ivory">{section.heading}</h2><p className="mt-3 text-sm leading-relaxed text-ivory-dim">{section.text}</p></Reveal>) : <p className="text-sm leading-relaxed text-ivory-dim">This article is being prepared for publication.</p>}
         </div>
       </div>
     </article>
