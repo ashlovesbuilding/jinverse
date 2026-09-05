@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import Reveal from '../components/ui/Reveal.jsx'
-import { articles } from '../data/placeholderContent.js'
+import { articles as seedArticles } from '../data/placeholderContent.js'
+import { readLocalArticles } from '../lib/articleStore.js'
 
 const BODIES = {
   'bharatavarsha-bharat-chakravarti': [
@@ -16,8 +17,14 @@ const BODIES = {
     { heading: 'A heritage that points inward', text: 'The story of Adinath Bhagwan and Bharat Chakravarti is more than a story about a land or a king. It is a story about the purpose of civilization: learning creates order, dharma gives life direction, and renunciation reveals its highest destination.' },
   ],
   'what-is-jainism': [
-    { heading: 'A path devoted to liberation', text: 'Jainism is a path devoted to the liberation of the soul through non-violence, self-discipline, and right understanding.' },
-    { heading: 'What is Jainism?', text: 'Jainism teaches that every living being possesses a soul, or jiva, capable of purification and ultimate liberation, moksha. The path rests on right faith, right knowledge, and right conduct.' },
+    { heading: 'A path devoted to liberation', text: 'Jainism is an ancient Indian tradition devoted to the liberation of the soul. It teaches that every living being has a soul, or jiva, and that the soul can become free from karmic bondage through right understanding, disciplined conduct, and spiritual effort.' },
+    { heading: 'The meaning of Jina', text: 'The word Jain comes from Jina, meaning one who has conquered inner passions such as anger, pride, deceit, and greed. A Jina is not a creator god but a perfected being who discovers the path to liberation and teaches it for the benefit of others.' },
+    { heading: 'Every living being possesses a soul', text: 'Jain philosophy recognises life far beyond human beings. Living beings are understood through their senses, from one-sensed earth-, water-, fire-, air-, and plant-bodied beings to five-sensed beings. Each soul has the potential for purification and moksha.' },
+    { heading: 'The three jewels', text: 'The path is expressed through Ratnatraya, the three jewels: right faith, right knowledge, and right conduct. They work together. Faith gives direction, knowledge gives clarity, and conduct transforms understanding into lived practice.' },
+    { heading: 'Karma as a subtle bond', text: 'In Jain thought, karma is not only a moral idea but a subtle material substance that binds to the soul because of passions and actions. As attachment and aversion decrease, karmic influx is stopped and accumulated karma is gradually shed.' },
+    { heading: 'Ahimsa and compassion', text: 'Ahimsa, or non-violence, is the most recognisable Jain principle. It asks a person to avoid harm through thought, speech, and action, and to cultivate care toward all forms of life. Compassion becomes stronger when we recognise the spiritual worth of every being.' },
+    { heading: 'Aparigraha and inner freedom', text: 'Aparigraha means non-possession or non-attachment. Jainism teaches that endless accumulation and possessiveness deepen bondage. Simplicity, restraint, and awareness help a person become less controlled by desire.' },
+    { heading: 'The goal of moksha', text: 'Moksha is the complete liberation of the soul from karmic bondage and the cycle of birth and death. It is described as a state of infinite knowledge, perception, bliss, and energy. The journey begins through small, conscious choices made in everyday life.' },
   ],
   'understanding-ahimsa': [
     { heading: 'Ahimsa: reverence for every living being', text: 'Ahimsa is the Jain discipline of non-violence and non-harming. It is not limited to avoiding physical injury; it also asks us to examine the intentions behind our thoughts, the consequences of our speech, and the care with which we act.' },
@@ -38,12 +45,12 @@ const imageBySlug = {
 
 export default function ArticleDetail() {
   const { slug } = useParams()
-  const article = articles.find((a) => a.slug === slug)
-  const body = BODIES[slug] || []
+  const article = [...readLocalArticles().filter((item) => item.status === 'published'), ...seedArticles].find((a) => a.slug === slug)
+  const body = BODIES[slug] || (article?.body || '').split(/\n\s*\n/).filter(Boolean).map((text, index) => ({ heading: index === 0 ? 'The article' : 'Further reflection', text }))
 
   if (!article) return <div className="container-page py-24 text-center"><p className="font-display text-2xl text-ivory">Article not found</p></div>
 
-  const articleImage = imageBySlug[slug]
+  const articleImage = article.imageUrl || imageBySlug[slug]
 
   return (
     <article className="py-20">
