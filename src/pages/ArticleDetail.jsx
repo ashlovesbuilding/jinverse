@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useNavigate, useParams, Link } from 'react-router-dom'
 import Reveal from '../components/ui/Reveal.jsx'
 import { articles as seedArticles } from '../data/placeholderContent.js'
 import { readLocalArticles } from '../lib/articleStore.js'
@@ -45,8 +45,25 @@ const imageBySlug = {
 
 export default function ArticleDetail() {
   const { slug } = useParams()
+  const navigate = useNavigate()
   const article = [...readLocalArticles().filter((item) => item.status === 'published'), ...seedArticles].find((a) => a.slug === slug)
   const body = BODIES[slug] || (article?.body || '').split(/\n\s*\n/).filter(Boolean).map((text, index) => ({ heading: index === 0 ? 'The article' : 'Further reflection', text }))
+
+  function editArticle() {
+    const editableArticle = {
+      title: slug === 'what-is-jainism' ? 'Jainism: An Ancient Tradition of Liberation' : article.title,
+      slug: article.slug,
+      subtitle: article.subtitle || '',
+      category: article.category || 'Beginner’s guide',
+      readingTime: article.readingTime || '5 min read',
+      evidence: article.evidence || 'tradition',
+      imageUrl: article.imageUrl || imageBySlug[slug] || '',
+      imageCaption: article.imageCaption || '',
+      body: body.map((section) => `${section.heading}\n${section.text}`).join('\n\n'),
+    }
+    window.localStorage.setItem('jinverse-article-draft', JSON.stringify(editableArticle))
+    navigate('/editor')
+  }
 
   if (!article) return <div className="container-page py-24 text-center"><p className="font-display text-2xl text-ivory">Article not found</p></div>
 
@@ -56,7 +73,10 @@ export default function ArticleDetail() {
     <article className="py-20">
       <div className="container-page max-w-prose">
         <Reveal>
-          <Link to="/articles" className="text-xs text-ivory-dim hover:text-ivory">← Back to articles</Link>
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <Link to="/articles" className="text-xs text-ivory-dim hover:text-ivory">← Back to articles</Link>
+            <button type="button" onClick={editArticle} className="border border-gold px-4 py-2 text-sm text-gold hover:bg-gold hover:text-void">Edit article</button>
+          </div>
           <p className="mt-6 text-xs text-gold-dim">JINVERSE Article #{slug === 'bharatavarsha-bharat-chakravarti' ? '002' : slug === 'understanding-ahimsa' ? '003' : '001'} · {article.category}</p>
           <h1 className="mt-2 font-display text-3xl text-ivory sm:text-4xl">{slug === 'what-is-jainism' ? 'Jainism: An Ancient Tradition of Liberation' : article.title}</h1>
           <p className="mt-3 text-ivory-dim">{article.subtitle}</p>
