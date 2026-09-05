@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom'
 import { isSupabaseConfigured, supabase } from '../lib/supabaseClient.js'
 
 const STORAGE_KEY = 'jinverse-article-draft'
-const APPROVED_EDITOR_EMAIL = 'ashishjainpatni2001@gmail.com'
+const APPROVED_EDITOR_EMAILS = [
+  'ashishjainpatni2001@gmail.com',
+  'sportsfeverworld@gmail.com',
+]
 const EMPTY_ARTICLE = { title: '', slug: '', subtitle: '', category: 'Beginner’s guide', readingTime: '5 min read', imageUrl: '', imageCaption: '', body: '' }
 const makeSlug = (value) => value.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 
@@ -27,7 +30,7 @@ export default function ArticleEditor() {
     try { const saved = window.localStorage.getItem(STORAGE_KEY); if (saved) setArticle({ ...EMPTY_ARTICLE, ...JSON.parse(saved) }) } catch {}
   }, [user])
 
-  const approved = user?.email?.toLowerCase() === APPROVED_EDITOR_EMAIL
+  const approved = APPROVED_EDITOR_EMAILS.includes(user?.email?.toLowerCase() || '')
   const paragraphs = useMemo(() => article.body.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean), [article.body])
   const update = (field, value) => { setArticle((current) => ({ ...current, [field]: value })); setStatus('Unsaved changes.') }
   const signIn = async () => {
