@@ -33,7 +33,7 @@ export default function ArticleEditor() {
   const signIn = async () => {
     if (!supabase) { setStatus('Sign-in is not configured yet.'); return }
     setStatus('Opening Google sign-in…')
-    const { error } = await supabase.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: `${window.location.origin}/#/article-editor` } })
+    const { error } = await supabase.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: window.location.origin } })
     if (error) setStatus(`Sign-in failed: ${error.message}`)
   }
   const signOut = async () => { await supabase?.auth.signOut() }
