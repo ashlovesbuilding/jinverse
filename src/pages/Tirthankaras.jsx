@@ -3,7 +3,7 @@ import Reveal from '../components/ui/Reveal.jsx'
 import { tirthankaraList } from '../data/tirthankaraList.js'
 import { digambaraTirthankaraInfo } from '../data/digambaraTirthankaraInfo.js'
 
-const ANANTANATHA_IMAGE = '/FSs1LsyUEAEP2Z3.jpg'
+const ANANTANATHA_IMAGE = '/anantanatha-nellikaru.jpg'
 
 export default function Tirthankaras() {
   return (
@@ -22,12 +22,9 @@ export default function Tirthankaras() {
             src={ANANTANATHA_IMAGE}
             alt="Pratima of Bhagwan Anantanatha at Nellikaru, Karnataka"
             className="block h-auto max-h-[520px] w-full object-cover object-center"
-            onError={(event) => {
-              event.currentTarget.style.display = 'none'
-            }}
           />
           <figcaption className="px-5 py-4 text-sm leading-6 text-ivory-dim/75 sm:px-7">
-            Pratima of Bhagwan Anantanatha, the fourteenth Tirthankara, at Nellikaru, Karnataka. The image is presented as a devotional visual introduction to the Tirthankara section.
+            Pratima of Bhagwan Anantanatha, the fourteenth Tirthankara, at Nellikaru, Karnataka.
           </figcaption>
         </figure>
       </Reveal>
