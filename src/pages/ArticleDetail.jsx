@@ -39,6 +39,7 @@ export default function ArticleDetail() {
   const { slug } = useParams()
   const navigate = useNavigate()
   const [remoteArticle, setRemoteArticle] = useState(null)
+  const [shareStatus, setShareStatus] = useState('')
 
   useEffect(() => {
     let active = true
@@ -83,13 +84,45 @@ export default function ArticleDetail() {
     navigate('/editor')
   }
 
+  async function shareArticle() {
+    const shareUrl = window.location.href
+    const shareData = {
+      title: articleTitle,
+      text: `Read "${articleTitle}" on JINVERSE`,
+      url: shareUrl,
+    }
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData)
+        return
+      }
+
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(shareUrl)
+        setShareStatus('Link copied')
+      } else {
+        setShareStatus('Copy the page URL from your browser')
+      }
+      window.setTimeout(() => setShareStatus(''), 2200)
+    } catch (error) {
+      if (error?.name === 'AbortError') return
+      setShareStatus('Copy failed')
+      window.setTimeout(() => setShareStatus(''), 2200)
+    }
+  }
+
   return (
     <article className="py-20">
       <div className="container-page max-w-prose">
         <Reveal>
           <div className="flex flex-wrap items-center justify-between gap-4">
             <Link to="/articles" className="text-xs text-ivory-dim hover:text-ivory">← Back to articles</Link>
-            <button type="button" onClick={editArticle} className="border border-gold px-4 py-2 text-sm text-gold hover:bg-gold hover:text-void">Edit article</button>
+            <div className="flex flex-wrap items-center gap-3">
+              <button type="button" onClick={shareArticle} className="border border-line px-4 py-2 text-sm text-ivory-dim hover:border-gold hover:text-gold">Share article</button>
+              <button type="button" onClick={editArticle} className="border border-gold px-4 py-2 text-sm text-gold hover:bg-gold hover:text-void">Edit article</button>
+              {shareStatus && <span role="status" className="text-xs text-gold">{shareStatus}</span>}
+            </div>
           </div>
           <p className="mt-6 text-xs text-gold-dim">JINVERSE Article · {article.category}</p>
           <h1 className="mt-2 font-display text-3xl text-ivory sm:text-4xl">{articleTitle}</h1>
