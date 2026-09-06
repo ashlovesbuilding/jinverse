@@ -159,7 +159,7 @@ export default function ArticleDetail() {
           <p className="mt-3 text-ivory-dim">{article.subtitle}</p>
           <p className="mt-3 text-xs text-ivory-dim/60">{article.reading_time || article.readingTime}</p>
         </Reveal>
-        {articleImage && <Reveal delay={60}><img src={articleImage} alt={article.image_caption || article.hero_image_caption || article.imageCaption || 'Jain heritage image'} className="mt-10 w-full aspect-[16/7] object-cover border border-line" /></Reveal>}
+        {articleImage && <Reveal delay={60}><img src={articleImage} alt={article.image_caption || article.hero_image_caption || article.imageCaption || 'Jain heritage image'} className="mt-10 w-full h-auto object-contain border border-line" /></Reveal>}
         <div className="mt-12 space-y-10">
           {body.length ? body.map((section, index) => (
             <Reveal key={`${section.heading}-${index}`} delay={index * 30}>
