@@ -5,8 +5,7 @@ import Reveal from '../components/ui/Reveal.jsx'
 import EvidenceLabel from '../components/ui/EvidenceLabel.jsx'
 import { teachings, tirthankaras, heritageSites, texts, articles, reels } from '../data/placeholderContent.js'
 
-const BRAND_IMAGE = 'https://raw.githubusercontent.com/ashlovesbuilding/jinverse/main/file_0000000024e0820888a7c6321e76afcf.png'
-
+const BRAND_IMAGE = '/file_000000008c8082119468161444477380.png'
 function CosmicField() {
   const dots = [
     { top: '12%', left: '18%', size: 2, delay: '0s' },
