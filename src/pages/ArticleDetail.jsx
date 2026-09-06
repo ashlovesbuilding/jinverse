@@ -111,19 +111,7 @@ export default function ArticleDetail() {
   const articleTitle = article.title || (slug === 'what-is-jainism' ? 'Jainism: An Ancient Tradition of Liberation' : '')
 
   function editArticle() {
-    const editableArticle = {
-      title: articleTitle,
-      slug: article.slug,
-      subtitle: article.subtitle || '',
-      category: article.category || 'Beginner’s guide',
-      readingTime: article.reading_time || article.readingTime || '5 min read',
-      evidence: article.evidence || 'tradition',
-      imageUrl: articleImage || '',
-      imageCaption: article.image_caption || article.hero_image_caption || article.imageCaption || '',
-      body: articleBody,
-    }
-    window.localStorage.setItem('jinverse-article-draft', JSON.stringify(editableArticle))
-    navigate('/editor')
+    navigate(`/editor?slug=${encodeURIComponent(article.slug)}`)
   }
 
   async function shareArticle() {
