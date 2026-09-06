@@ -87,6 +87,55 @@ export default function About() {
             . Please mention the article title if your message is about a specific page.
           </p>
         </Reveal>
+
+        <Reveal delay={240}>
+          <h2 className="font-display text-xl text-ivory">Disclaimer</h2>
+          <div className="mt-3 space-y-4 text-sm leading-relaxed text-ivory-dim">
+            <p>
+              JINVERSE is an independent educational and heritage project created to make Jain philosophy,
+              history, texts and traditions more accessible. The content is provided for general
+              informational and educational purposes only and should not be treated as professional, legal,
+              academic, medical or religious advice.
+            </p>
+            <p>
+              We make reasonable efforts to present information carefully and to distinguish Jain traditional
+              accounts from historical, archaeological and academic interpretations. However, some material
+              may be incomplete, interpretive, disputed, translated from different editions, or still
+              undergoing verification. Information marked as “Research pending,” “Supported but debated,”
+              “Jain traditional account,” or “Unverified” should be read in that context.
+            </p>
+            <p>
+              JINVERSE does not guarantee that every statement, translation, date, attribution, citation,
+              image or external reference is complete, current or error-free. Readers should consult original
+              texts, qualified scholars, recognised institutions and other reliable sources before relying on
+              information for research, publication, teaching, religious decisions or any other important
+              purpose.
+            </p>
+            <p>
+              The views expressed in an article may reflect the cited source or the author’s interpretation
+              and do not necessarily represent the views of every Jain community, sect, institution or
+              scholar. Differences in terminology, tradition and interpretation should be approached
+              respectfully.
+            </p>
+            <p>
+              We do not knowingly intend to misrepresent, defame, infringe the rights of, or diminish any
+              person, community, author, institution or tradition. If you believe that content is inaccurate,
+              improperly attributed, misleading, or uses material without appropriate permission, please
+              contact us with the relevant details. We will review credible concerns and make corrections or
+              removals where appropriate.
+            </p>
+            <p>
+              External links and third-party materials are provided for reference and convenience. JINVERSE
+              does not control or endorse their content, availability, accuracy or policies.
+            </p>
+            <p>
+              To the extent permitted by applicable law, JINVERSE and its contributors are not responsible
+              for losses, decisions or consequences arising from reliance on the website’s content. Use of
+              the website constitutes acceptance that readers are responsible for evaluating information and
+              seeking appropriate independent advice.
+            </p>
+          </div>
+        </Reveal>
       </div>
     </div>
   )
