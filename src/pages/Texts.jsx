@@ -23,10 +23,16 @@ export default function Texts() {
                 {t.tradition} · {t.language} · {t.date}
               </p>
               <p className="mt-4 flex-1 text-sm leading-relaxed text-ivory-dim">{t.description}</p>
-              <p className="mt-4 text-xs leading-relaxed text-ivory-dim/60">{t.translationStatus}</p>
+              <p className="mt-4 text-xs leading-relaxed text-ivory-dim/60">
+                {t.slug === 'namokar-mahamantra' ? 'Article available' : t.translationStatus}
+              </p>
               <div className="mt-6">
-                <Button to={`/texts#${t.slug}`} variant="secondary" className="w-fit">
-                  Read more
+                <Button
+                  to={t.slug === 'namokar-mahamantra' ? '/articles/namokar-mahamantra' : `/texts#${t.slug}`}
+                  variant="secondary"
+                  className="w-fit"
+                >
+                  {t.slug === 'namokar-mahamantra' ? 'Read the article' : 'Read more'}
                 </Button>
               </div>
             </div>
