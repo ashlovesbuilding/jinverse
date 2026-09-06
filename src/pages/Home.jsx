@@ -24,6 +24,23 @@ export default function Home() {
   return <>
     <section className="relative overflow-hidden border-b border-line/70"><CosmicField /><div className="container-page relative flex min-h-[86vh] flex-col justify-center py-16 sm:py-24">
       <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+        <Reveal delay={100}>
+  <div className="relative mx-auto flex w-full max-w-md items-center justify-center py-8">
+    <div
+      className="absolute h-72 w-72 rounded-full bg-[#e88a24]/10 blur-3xl"
+      aria-hidden="true"
+    />
+
+    <div className="relative flex h-64 w-64 items-center justify-center rounded-full border border-[#d9b36a]/70 bg-[#17100b]/80 p-10 shadow-[0_0_70px_rgba(232,138,36,0.14)]">
+      <div className="absolute inset-3 rounded-full border border-[#9b5a24]/60" />
+      <img
+        src={BRAND_IMAGE}
+        alt="Jain emblem representing ahimsa and the interdependence of life"
+        className="relative h-full w-full object-contain"
+      />
+    </div>
+  </div>
+</Reveal>
         <Reveal><div><p className="mb-5 text-xs uppercase tracking-[0.28em] text-[#f0a33a]">Jain wisdom, made accessible</p><div className="ford-rule mb-8" /><h1 className="max-w-3xl font-display text-4xl leading-[1.1] text-ivory sm:text-6xl">Explore Jainism.<br />Discover the Universe Within.</h1><p className="mt-6 max-w-xl text-base leading-relaxed text-ivory-dim sm:text-lg">Journey through Jain philosophy, living ethics, ancient texts, history and heritage — presented with clarity, depth and respect.</p><div className="mt-10 flex flex-wrap gap-4"><Button to="/teachings" variant="primary">Begin Your Journey</Button><Button to="/explore" variant="secondary">Explore the Teachings</Button></div></div></Reveal>
         <Reveal delay={100}><div className="relative mx-auto w-full max-w-md"><div className="absolute -inset-6 rounded-full bg-[#e88a24]/10 blur-3xl" aria-hidden="true" /><div className="relative border border-[#9b5a24]/60 bg-[#17100b]/70 p-4 shadow-2xl"><img src={BRAND_IMAGE} alt="Jain emblem representing ahimsa and the interdependence of life" className="h-auto max-h-[520px] w-full object-contain" /></div></div></Reveal>
       </div>
