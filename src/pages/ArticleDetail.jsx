@@ -11,16 +11,28 @@ const imageBySlug = {
 }
 
 function toSections(body = '') {
-  return String(body || '')
-    .split(/\n\s*\n/)
-    .filter(Boolean)
-    .map((part, index) => {
-      const lines = part.split('\n')
-      return {
-        heading: lines.length > 1 ? lines[0] : index === 0 ? 'The article' : 'Further reflection',
-        text: lines.length > 1 ? lines.slice(1).join(' ') : part,
-      }
-    })
+  const blocks = String(body || '').trim().split(/\n\s*\n/).filter(Boolean)
+  const sections = []
+  let current = null
+
+  for (const block of blocks) {
+    const lines = block.split('\n')
+    const headingLine = lines[0].match(/^#{1,6}\s+(.+)$/)
+
+    if (headingLine) {
+      if (current) sections.push(current)
+      current = { heading: headingLine[1].trim(), paragraphs: [] }
+      const remainder = lines.slice(1).join(' ').trim()
+      if (remainder) current.paragraphs.push(remainder)
+    } else if (current) {
+      current.paragraphs.push(lines.join(' ').trim())
+    } else {
+      current = { heading: '', paragraphs: [lines.join(' ').trim()] }
+    }
+  }
+
+  if (current) sections.push(current)
+  return sections
 }
 
 export default function ArticleDetail() {
@@ -86,7 +98,14 @@ export default function ArticleDetail() {
         </Reveal>
         {articleImage && <Reveal delay={60}><img src={articleImage} alt={article.image_caption || article.hero_image_caption || article.imageCaption || 'Jain heritage image'} className="mt-10 w-full aspect-[16/7] object-cover border border-line" /></Reveal>}
         <div className="mt-12 space-y-10">
-          {body.length ? body.map((section, index) => <Reveal key={`${section.heading}-${index}`} delay={index * 30}><h2 className="font-display text-xl text-ivory">{section.heading}</h2><p className="mt-3 text-sm leading-relaxed text-ivory-dim">{section.text}</p></Reveal>) : <p className="text-sm leading-relaxed text-ivory-dim">This article is being prepared for publication.</p>}
+          {body.length ? body.map((section, index) => (
+            <Reveal key={`${section.heading}-${index}`} delay={index * 30}>
+              {section.heading && section.heading !== articleTitle && <h2 className="font-display text-xl text-ivory">{section.heading}</h2>}
+              <div className="mt-3 space-y-4 text-sm leading-8 text-ivory-dim">
+                {section.paragraphs.map((paragraph, paragraphIndex) => <p key={paragraphIndex}>{paragraph}</p>)}
+              </div>
+            </Reveal>
+          )) : <p className="text-sm leading-relaxed text-ivory-dim">This article is being prepared for publication.</p>}
         </div>
       </div>
     </article>
