@@ -39,31 +39,73 @@ export default function ArticleDetail() {
   const { slug } = useParams()
   const navigate = useNavigate()
   const [remoteArticle, setRemoteArticle] = useState(null)
+  const [loadState, setLoadState] = useState(isSupabaseConfigured ? 'loading' : 'ready')
+  const [loadError, setLoadError] = useState('')
   const [shareStatus, setShareStatus] = useState('')
 
   useEffect(() => {
     let active = true
+
     async function loadArticle() {
-      if (!isSupabaseConfigured || !supabase) return
+      if (!isSupabaseConfigured || !supabase) {
+        if (active) setLoadState('ready')
+        return
+      }
+
+      setLoadState('loading')
+      setLoadError('')
+
       const { data, error } = await supabase
         .from('articles')
         .select('*')
         .eq('slug', slug)
         .eq('status', 'published')
         .maybeSingle()
-      if (!error && data && active) setRemoteArticle(data)
+
+      if (!active) return
+
+      if (error) {
+        setLoadError('We could not load this article right now. Please try again.')
+        setLoadState('error')
+        return
+      }
+
+      if (!data) {
+        setLoadState('not-found')
+        return
+      }
+
+      setRemoteArticle(data)
+      setLoadState('ready')
     }
+
     loadArticle()
     return () => { active = false }
   }, [slug])
 
-  const localArticle = readLocalArticles().find((item) => item.slug === slug && item.status === 'published')
-  const seedArticle = seedArticles.find((item) => item.slug === slug)
+  if (loadState === 'loading') {
+    return <div className="container-page py-24 text-center"><p className="text-sm text-ivory-dim">Loading article…</p></div>
+  }
+
+  if (loadState === 'error') {
+    return <div className="container-page py-24 text-center"><p className="font-display text-2xl text-ivory">Unable to load article</p><p className="mt-3 text-sm text-ivory-dim">{loadError}</p></div>
+  }
+
+  if (loadState === 'not-found') {
+    return <div className="container-page py-24 text-center"><p className="font-display text-2xl text-ivory">Article not found or not published</p></div>
+  }
+
+  const localArticle = !isSupabaseConfigured
+    ? readLocalArticles().find((item) => item.slug === slug && item.status === 'published')
+    : null
+  const seedArticle = !isSupabaseConfigured
+    ? seedArticles.find((item) => item.slug === slug)
+    : null
   const article = remoteArticle || localArticle || seedArticle
 
   if (!article) return <div className="container-page py-24 text-center"><p className="font-display text-2xl text-ivory">Article not found</p></div>
 
-  const articleBody = article.body || article.body_markdown || article.content || ''
+  const articleBody = article.body_markdown || article.body || article.content || ''
   const body = toSections(articleBody)
   const articleImage = article.image_url || article.hero_image_url || article.imageUrl || imageBySlug[slug]
   const articleTitle = article.title || (slug === 'what-is-jainism' ? 'Jainism: An Ancient Tradition of Liberation' : '')
@@ -138,7 +180,7 @@ export default function ArticleDetail() {
                 {section.paragraphs.map((paragraph, paragraphIndex) => <p key={paragraphIndex}>{paragraph}</p>)}
               </div>
             </Reveal>
-          )) : <p className="text-sm leading-relaxed text-ivory-dim">This article is being prepared for publication.</p>}
+          )) : <p className="text-sm leading-relaxed text-ivory-dim">This article has no published body yet.</p>}
         </div>
       </div>
     </article>
