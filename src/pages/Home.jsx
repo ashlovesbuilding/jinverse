@@ -5,7 +5,8 @@ import Reveal from '../components/ui/Reveal.jsx'
 import EvidenceLabel from '../components/ui/EvidenceLabel.jsx'
 import { teachings, tirthankaras, heritageSites, texts, articles, reels } from '../data/placeholderContent.js'
 
-const BRAND_IMAGE = '/jinverselogo.png'
+const UPPER_IMAGE = '/file_000000008c8082119468161444477380.png'
+const LOWER_IMAGE = '/jinverselogo.png'
 function CosmicField() {
   const dots = [
     { top: '12%', left: '18%', size: 2, delay: '0s' },
@@ -34,15 +35,15 @@ export default function Home() {
     <div className="relative flex h-64 w-64 items-center justify-center rounded-full border border-[#d9b36a]/70 bg-[#17100b]/80 p-10 shadow-[0_0_70px_rgba(232,138,36,0.14)]">
       <div className="absolute inset-3 rounded-full border border-[#9b5a24]/60" />
       <img
-        src={BRAND_IMAGE}
-        alt="JINVERSE logo"
+        src={UPPER_IMAGE}
+        alt="Jain emblem representing ahimsa and the interdependence of life"
         className="relative h-full w-full object-contain"
       />
     </div>
   </div>
 </Reveal>
         <Reveal><div><p className="mb-5 text-xs uppercase tracking-[0.28em] text-[#f0a33a]">Jain wisdom, made accessible</p><div className="ford-rule mb-8" /><h1 className="max-w-3xl font-display text-4xl leading-[1.1] text-ivory sm:text-6xl">Explore Jainism.<br />Discover the Universe Within.</h1><p className="mt-6 max-w-xl text-base leading-relaxed text-ivory-dim sm:text-lg">Journey through Jain philosophy, living ethics, ancient texts, history and heritage — presented with clarity, depth and respect.</p><div className="mt-10 flex flex-wrap gap-4"><Button to="/teachings" variant="primary">Begin Your Journey</Button><Button to="/explore" variant="secondary">Explore the Teachings</Button></div></div></Reveal>
-        <Reveal delay={100}><div className="relative mx-auto w-full max-w-md"><div className="absolute -inset-6 rounded-full bg-[#e88a24]/10 blur-3xl" aria-hidden="true" /><div className="relative border border-[#9b5a24]/60 bg-[#17100b]/70 p-4 shadow-2xl"><img src={BRAND_IMAGE} alt="JINVERSE logo" className="h-auto max-h-[520px] w-full object-contain" /></div></div></Reveal>
+        <Reveal delay={100}><div className="relative mx-auto w-full max-w-md"><div className="absolute -inset-6 rounded-full bg-[#e88a24]/10 blur-3xl" aria-hidden="true" /><div className="relative border border-[#9b5a24]/60 bg-[#17100b]/70 p-4 shadow-2xl"><img src={LOWER_IMAGE} alt="JINVERSE logo" className="h-auto max-h-[520px] w-full object-contain" /></div></div></Reveal>
       </div>
     </div></section>
     <section className="container-page py-24"><Reveal><SectionHeading eyebrow="Featured pathways" title="Four ways to begin" description="However you arrive, JINVERSE keeps Jain tradition central and clearly marks where historical evidence adds context." /></Reveal><div className="mt-12 grid gap-px overflow-hidden rounded-sm border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">{[{ to: '/teachings', title: 'Core Teachings', desc: 'Ahimsa, karma, moksha and the path to liberation.' }, { to: '/tirthankaras', title: 'The Tirthankaras', desc: 'Twenty-four ford-makers across the ages.' }, { to: '/history', title: 'History & Heritage', desc: 'Communities, monuments and evidence.' }, { to: '/texts', title: 'Jain Texts', desc: 'The scriptures that carry the tradition forward.' }].map((p, i) => <Reveal key={p.to} delay={i * 80}><Link to={p.to} className="group flex h-full flex-col justify-between bg-void p-7 transition-colors hover:bg-panel"><div><h3 className="font-display text-lg text-ivory">{p.title}</h3><p className="mt-2 text-sm leading-relaxed text-ivory-dim">{p.desc}</p></div><span className="mt-6 text-sm text-[#f0a33a] group-hover:text-[#ffd45a]">Explore</span></Link></Reveal>)}</div></section>
