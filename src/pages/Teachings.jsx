@@ -1,11 +1,17 @@
 import SectionHeading from '../components/ui/SectionHeading.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
 import EvidenceLabel from '../components/ui/EvidenceLabel.jsx'
+import Seo from '../components/Seo.jsx'
 import { teachings } from '../data/placeholderContent.js'
 
 export default function Teachings() {
   return (
     <div className="container-page py-20">
+      <Seo
+        title="Core Teachings"
+        description="Ahimsa, karma, moksha and the foundations of Jain philosophy, explained on their own terms."
+        path="/teachings"
+      />
       <Reveal>
         <SectionHeading
           eyebrow="Teachings"

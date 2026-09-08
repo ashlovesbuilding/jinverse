@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SectionHeading from '../components/ui/SectionHeading.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
+import Seo from '../components/Seo.jsx'
 import { articles as seedArticles, articleCategories } from '../data/placeholderContent.js'
 import { supabase, isSupabaseConfigured } from '../lib/supabaseClient.js'
 
@@ -50,6 +51,11 @@ export default function Articles() {
 
   return (
     <div className="container-page py-20">
+      <Seo
+        title="Articles"
+        description="The JINVERSE library — articles on Jain philosophy, history, texts and practice."
+        path="/articles"
+      />
       <Reveal><SectionHeading eyebrow="Articles" title="The JINVERSE library" /></Reveal>
       <Reveal delay={60}>
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">

@@ -1,11 +1,17 @@
 import SectionHeading from '../components/ui/SectionHeading.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
 import Button from '../components/ui/Button.jsx'
+import Seo from '../components/Seo.jsx'
 import { reels } from '../data/placeholderContent.js'
 
 export default function Reels() {
   return (
     <div className="container-page py-20">
+      <Seo
+        title="Reels"
+        description="Short, cinematic explainers on Jain philosophy and practice."
+        path="/reels"
+      />
       <Reveal>
         <SectionHeading
           eyebrow="Reels"

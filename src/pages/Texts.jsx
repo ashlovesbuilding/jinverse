@@ -1,11 +1,17 @@
 import SectionHeading from '../components/ui/SectionHeading.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
 import Button from '../components/ui/Button.jsx'
+import Seo from '../components/Seo.jsx'
 import { texts } from '../data/placeholderContent.js'
 
 export default function Texts() {
   return (
     <div className="container-page py-20">
+      <Seo
+        title="Jain Texts"
+        description="The scriptures and literature that carry Jain thought forward, from canonical sutras to narrative tradition."
+        path="/texts"
+      />
       <Reveal>
         <SectionHeading
           eyebrow="Texts"

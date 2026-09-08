@@ -1,5 +1,6 @@
 import SectionHeading from '../components/ui/SectionHeading.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
+import Seo from '../components/Seo.jsx'
 import { tirthankaraList } from '../data/tirthankaraList.js'
 import { digambaraTirthankaraInfo } from '../data/digambaraTirthankaraInfo.js'
 
@@ -8,6 +9,11 @@ const ANANTANATHA_IMAGE = 'https://raw.githubusercontent.com/ashlovesbuilding/ji
 export default function Tirthankaras() {
   return (
     <div className="container-page py-20">
+      <Seo
+        title="The Tirthankaras"
+        description="Twenty-four ford-makers across the ages — names, emblems and the path to liberation they revealed."
+        path="/tirthankaras"
+      />
       <Reveal>
         <SectionHeading
           eyebrow="Tirthankaras"

@@ -2,6 +2,7 @@ import SectionHeading from '../components/ui/SectionHeading.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
 import EvidenceLabel from '../components/ui/EvidenceLabel.jsx'
 import PlaceholderNote from '../components/ui/PlaceholderNote.jsx'
+import Seo from '../components/Seo.jsx'
 
 const SECTIONS = [
   {
@@ -58,6 +59,11 @@ const SECTIONS = [
 export default function History() {
   return (
     <div className="container-page py-20">
+      <Seo
+        title="History & Heritage"
+        description="Jain communities, monuments and evidence across two thousand years — tradition and history, side by side."
+        path="/history"
+      />
       <Reveal>
         <SectionHeading
           eyebrow="History and heritage"
