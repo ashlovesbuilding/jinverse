@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import Header from './components/layout/Header.jsx'
 import Footer from './components/layout/Footer.jsx'
 import Home from './pages/Home.jsx'
@@ -14,9 +15,25 @@ import Reels from './pages/Reels.jsx'
 import About from './pages/About.jsx'
 import NotFound from './pages/NotFound.jsx'
 
+function LegacyHashRedirect() {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    // Old links pointed at /#/some/path (HashRouter). Now that routing is
+    // path-based, send them to the equivalent real URL once on load.
+    const hash = window.location.hash
+    if (hash.startsWith('#/')) {
+      navigate(hash.slice(1), { replace: true })
+    }
+  }, [navigate])
+
+  return null
+}
+
 export default function App() {
   return (
     <div className="flex min-h-screen flex-col">
+      <LegacyHashRedirect />
       <Header />
       <main className="flex-1">
         <Routes>

@@ -4,6 +4,7 @@ import Reveal from '../components/ui/Reveal.jsx'
 import { articles as seedArticles } from '../data/placeholderContent.js'
 import { readLocalArticles } from '../lib/articleStore.js'
 import { supabase, isSupabaseConfigured } from '../lib/supabaseClient.js'
+import Seo from '../components/Seo.jsx'
 
 const imageBySlug = {
   'what-is-jainism': 'https://raw.githubusercontent.com/ashlovesbuilding/jinverse/main/Screenshot_2026-09-04-19-18-01-00_f9ee0578fe1cc94de7482bd41accb329.jpg',
@@ -109,6 +110,7 @@ export default function ArticleDetail() {
   const body = toSections(articleBody)
   const articleImage = article.image_url || article.hero_image_url || article.imageUrl || imageBySlug[slug]
   const articleTitle = article.title || (slug === 'what-is-jainism' ? 'Jainism: An Ancient Tradition of Liberation' : '')
+  const articleDescription = article.subtitle || article.excerpt || (body[0]?.paragraphs?.[0]?.slice(0, 160)) || `Read "${articleTitle}" on JINVERSE.`
 
   function editArticle() {
     navigate(`/editor?slug=${encodeURIComponent(article.slug)}`)
@@ -144,6 +146,12 @@ export default function ArticleDetail() {
 
   return (
     <article className="py-20">
+      <Seo
+        title={articleTitle}
+        description={articleDescription}
+        path={`/articles/${slug}`}
+        image={articleImage}
+      />
       <div className="container-page max-w-prose">
         <Reveal>
           <div className="flex flex-wrap items-center justify-between gap-4">

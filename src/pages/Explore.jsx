@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import SectionHeading from '../components/ui/SectionHeading.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
+import Seo from '../components/Seo.jsx'
 import { explorePathways } from '../data/placeholderContent.js'
 
 const LINKS = {
@@ -17,6 +18,11 @@ const LINKS = {
 export default function Explore() {
   return (
     <div className="container-page py-20">
+      <Seo
+        title="Explore Jainism"
+        description="Eight pathways into the philosophy, history and living practice of Jainism — start wherever draws you in."
+        path="/explore"
+      />
       <Reveal>
         <SectionHeading
           eyebrow="Explore"

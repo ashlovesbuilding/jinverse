@@ -1,9 +1,15 @@
 import SectionHeading from '../components/ui/SectionHeading.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
+import Seo from '../components/Seo.jsx'
 
 export default function About() {
   return (
     <div className="container-page max-w-prose py-20">
+      <Seo
+        title="About"
+        description="What JINVERSE is, why it exists, and our commitment to tradition, accuracy and accessibility."
+        path="/about"
+      />
       <Reveal>
         <SectionHeading eyebrow="About" title="What JINVERSE is, and why it exists" />
       </Reveal>
