@@ -70,6 +70,7 @@ export default function ArticleDetail() {
   const [loadError, setLoadError] = useState('')
   const [shareStatus, setShareStatus] = useState('')
   const [language, setLanguage] = useState('en')
+  const [approvedHindiRow, setApprovedHindiRow] = useState(null)
 
   useEffect(() => {
     let active = true
@@ -117,6 +118,34 @@ export default function ArticleDetail() {
     setLanguage('en')
   }, [slug])
 
+  // Only a translation that is BOTH reviewed and published counts as
+  // available to readers — a machine draft sitting unreviewed must never
+  // surface here, regardless of what content exists behind it.
+  useEffect(() => {
+    let active = true
+
+    async function loadApprovedTranslation() {
+      if (!isSupabaseConfigured || !supabase || !remoteArticle?.id) {
+        if (active) setApprovedHindiRow(null)
+        return
+      }
+
+      const { data } = await supabase
+        .from('article_translations')
+        .select('*')
+        .eq('article_id', remoteArticle.id)
+        .eq('language', 'hi')
+        .eq('status', 'published')
+        .eq('reviewed', true)
+        .maybeSingle()
+
+      if (active) setApprovedHindiRow(data || null)
+    }
+
+    loadApprovedTranslation()
+    return () => { active = false }
+  }, [remoteArticle?.id])
+
   const localArticle = !isSupabaseConfigured
     ? readLocalArticles().find((item) => item.slug === slug && item.status === 'published')
     : null
@@ -127,14 +156,20 @@ export default function ArticleDetail() {
 
   const englishTitle = article?.title || (slug === 'what-is-jainism' ? 'Jainism: An Ancient Tradition of Liberation' : '')
   const englishBodySource = article?.body_markdown || article?.body || article?.content || ''
-  const translation = getArticleTranslation(slug)
-  const hindiAvailable = Boolean(translation?.title)
-  const hindiBodyAvailable = Boolean(translation?.body)
 
-  const displayTitle = language === 'hi' && translation?.title ? translation.title : englishTitle
-  const displaySubtitle = language === 'hi' && translation?.subtitle ? translation.subtitle : article?.subtitle
-  const showingEnglishBodyFallback = language === 'hi' && !hindiBodyAvailable
-  const displayBodySource = language === 'hi' && hindiBodyAvailable ? translation.body : englishBodySource
+  // A translation is only ever surfaced to readers if it is fully reviewed
+  // and complete (title and body both present) — a partially-filled or
+  // unreviewed draft is treated identically to "no translation exists."
+  const localTranslation = getArticleTranslation(slug)
+  const localApproved = Boolean(localTranslation?.reviewed === true && localTranslation?.title && localTranslation?.body)
+  const approvedTranslation = approvedHindiRow
+    ? { title: approvedHindiRow.title, subtitle: approvedHindiRow.subtitle, body: approvedHindiRow.body_markdown }
+    : (localApproved ? localTranslation : null)
+  const hindiApproved = Boolean(approvedTranslation?.title && approvedTranslation?.body)
+
+  const displayTitle = language === 'hi' && hindiApproved ? approvedTranslation.title : englishTitle
+  const displaySubtitle = language === 'hi' && hindiApproved ? approvedTranslation.subtitle : article?.subtitle
+  const displayBodySource = language === 'hi' && hindiApproved ? approvedTranslation.body : englishBodySource
   const body = toSections(displayBodySource)
 
   // Plain-text paragraph chunks for the voice reader, built only from
@@ -215,7 +250,7 @@ export default function ArticleDetail() {
           <div className="flex flex-wrap items-center justify-between gap-4">
             <Link to="/articles" className="text-xs text-ivory-dim hover:text-ivory">← Back to articles</Link>
             <div className="flex flex-wrap items-center gap-3">
-              <LanguageSwitch language={language} onChange={setLanguage} hindiAvailable={hindiAvailable} />
+              <LanguageSwitch language={language} onChange={setLanguage} hindiApproved={hindiApproved} />
               <button type="button" onClick={shareArticle} className="border border-line px-4 py-2 text-sm text-ivory-dim hover:border-gold hover:text-gold">Share article</button>
               <button type="button" onClick={editArticle} className="border border-gold px-4 py-2 text-sm text-gold hover:bg-gold hover:text-void">Edit article</button>
               {shareStatus && <span role="status" className="text-xs text-gold">{shareStatus}</span>}
@@ -225,23 +260,12 @@ export default function ArticleDetail() {
             <p className="mt-6 text-xs text-gold-dim">JINVERSE Article · {article.category}</p>
             <h1 className="mt-2 font-display text-3xl text-ivory sm:text-4xl">{displayTitle}</h1>
             {displaySubtitle && <p className="mt-3 text-ivory-dim">{displaySubtitle}</p>}
-            {language === 'hi' && !hindiAvailable && (
-              <p className="mt-3 text-xs text-ivory-dim/70">Hindi translation not available yet for this article.</p>
-            )}
-            {language === 'hi' && hindiAvailable && translation?.reviewed === false && (
-              <p className="mt-3 text-xs text-ivory-dim/70">Draft translation — pending human review.</p>
-            )}
           </div>
           <p className="mt-3 text-xs text-ivory-dim/60">{article.reading_time || article.readingTime}</p>
         </Reveal>
         <VoiceControls paragraphs={speechParagraphs} contentLang={language} />
         {articleImage && <Reveal delay={60}><img src={articleImage} alt={article.image_caption || article.hero_image_caption || article.imageCaption || 'Jain heritage image'} className="mt-10 w-full h-auto object-contain border border-line" /></Reveal>}
         <div lang={language === 'hi' ? 'hi' : 'en'} className="mt-12 space-y-10">
-          {showingEnglishBodyFallback && (
-            <p className="border border-line bg-panel/40 p-4 text-xs leading-relaxed text-ivory-dim/70">
-              Hindi translation of the full article text is not available yet — showing the English text below.
-            </p>
-          )}
           {body.length ? body.map((section, index) => (
             <Reveal key={`${section.heading}-${index}`} delay={index * 30}>
               {section.heading && section.heading !== displayTitle && <h2 className="font-display text-xl text-ivory">{section.heading}</h2>}
