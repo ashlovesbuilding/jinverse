@@ -14,6 +14,29 @@ const imageBySlug = {
   'bharatavarsha-bharat-chakravarti': 'https://raw.githubusercontent.com/ashlovesbuilding/jinverse/main/HGQZVZkaUAAeOkA.jpg',
 }
 
+const INLINE_IMAGE_PATTERN = /^!\[([^\]]*)\]\(([^)]+)\)$/
+const BOLD_SPLIT_PATTERN = /(\*\*[^*]+\*\*)/g
+
+function renderInlineBold(text) {
+  return text.split(BOLD_SPLIT_PATTERN).map((part, i) =>
+    part.startsWith('**') && part.endsWith('**') ? <strong key={i}>{part.slice(2, -2)}</strong> : part
+  )
+}
+
+function renderParagraph(paragraph, key) {
+  const match = paragraph.match(INLINE_IMAGE_PATTERN)
+  if (match) {
+    const [, caption, src] = match
+    return (
+      <figure key={key} className="my-2">
+        <img src={src} alt={caption || 'Jain heritage image'} className="w-full h-auto object-contain border border-line" />
+        {caption && <figcaption className="mt-2 text-xs leading-relaxed text-ivory-dim/60">{caption}</figcaption>}
+      </figure>
+    )
+  }
+  return <p key={key}>{renderInlineBold(paragraph)}</p>
+}
+
 function toSections(body = '') {
   const blocks = String(body || '').trim().split(/\n\s*\n/).filter(Boolean)
   const sections = []
@@ -122,7 +145,9 @@ export default function ArticleDetail() {
     const chunks = [displayTitle, displaySubtitle]
     body.forEach((section) => {
       if (section.heading) chunks.push(section.heading)
-      section.paragraphs.forEach((p) => chunks.push(p))
+      section.paragraphs.forEach((p) => {
+        if (!INLINE_IMAGE_PATTERN.test(p)) chunks.push(p.replace(/\*\*/g, ''))
+      })
     })
     return chunks.filter(Boolean)
   }, [displayTitle, displaySubtitle, displayBodySource])
@@ -221,7 +246,7 @@ export default function ArticleDetail() {
             <Reveal key={`${section.heading}-${index}`} delay={index * 30}>
               {section.heading && section.heading !== displayTitle && <h2 className="font-display text-xl text-ivory">{section.heading}</h2>}
               <div className="mt-3 space-y-4 text-sm leading-8 text-ivory-dim">
-                {section.paragraphs.map((paragraph, paragraphIndex) => <p key={paragraphIndex}>{paragraph}</p>)}
+                {section.paragraphs.map((paragraph, paragraphIndex) => renderParagraph(paragraph, paragraphIndex))}
               </div>
             </Reveal>
           )) : <p className="text-sm leading-relaxed text-ivory-dim">This article has no published body yet.</p>}
