@@ -4,13 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        void: '#0A0E14',
-        panel: '#0F161F',
-        line: '#232E3A',
-        ivory: '#ECE7DA',
-        'ivory-dim': '#B9B4A6',
-        gold: '#B8935F',
-        'gold-dim': '#8A6D48',
+        void: '#1A120B',
+        panel: '#241A10',
+        parchment: '#F4E9D8',
+        ink: '#2A1B10',
+        'ink-dim': '#5C4630',
+        line: '#4A3826',
+        ivory: '#F1E6D2',
+        'ivory-dim': '#C9BBA0',
+        gold: '#C9A24A',
+        'gold-dim': '#A07A3A',
+        saffron: '#B23A20',
         mist: '#3A5570',
       },
       fontFamily: {
