@@ -29,7 +29,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line/70 bg-void/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-gold-dim/30 bg-gradient-to-b from-panel/98 to-void/95 backdrop-blur">
       <div className="jain-flag-strip" aria-label="Jain flag colours" />
       <div className="container-page flex min-h-20 items-center justify-between gap-4 py-3">
         <NavLink to="/" className="flex min-w-0 items-center gap-3" onClick={() => setOpen(false)} aria-label="JINVERSE home">
