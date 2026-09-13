@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Seo from '../components/Seo.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
 import Button from '../components/ui/Button.jsx'
@@ -28,161 +28,40 @@ const DAS_LAKSHAN_VIRTUES = [
   'उत्तम संयम', 'उत्तम तप', 'उत्तम त्याग', 'उत्तम आकिंचन्य', 'उत्तम ब्रह्मचर्य',
 ]
 
-const CARD_W = 1080
-const CARD_H = 1350
+const CARD_IMAGE = '/images/articles/rot-teej-greeting-card.png'
+const CARD_FILENAME = 'rot-teej-jinverse.png'
 
-function loadImage(src) {
-  return new Promise((resolve, reject) => {
-    const img = new Image()
-    img.onload = () => resolve(img)
-    img.onerror = reject
-    img.src = src
-  })
-}
-
-async function renderCardToCanvas(canvas, name) {
-  const ctx = canvas.getContext('2d')
-  canvas.width = CARD_W
-  canvas.height = CARD_H
-
-  if (document.fonts?.ready) {
-    try { await document.fonts.ready } catch { /* fall through with system fonts */ }
-  }
-
-  // background
-  const bg = ctx.createLinearGradient(0, 0, 0, CARD_H)
-  bg.addColorStop(0, '#241A10')
-  bg.addColorStop(1, '#1A120B')
-  ctx.fillStyle = bg
-  ctx.fillRect(0, 0, CARD_W, CARD_H)
-
-  // soft warm glow behind the emblem
-  const glow = ctx.createRadialGradient(CARD_W / 2, 430, 40, CARD_W / 2, 430, 420)
-  glow.addColorStop(0, 'rgba(228,168,74,0.30)')
-  glow.addColorStop(1, 'rgba(228,168,74,0)')
-  ctx.fillStyle = glow
-  ctx.fillRect(0, 0, CARD_W, CARD_H)
-
-  // gold border
-  ctx.strokeStyle = '#C9A24A'
-  ctx.lineWidth = 6
-  ctx.strokeRect(24, 24, CARD_W - 48, CARD_H - 48)
-  ctx.strokeStyle = 'rgba(201,162,74,0.4)'
-  ctx.lineWidth = 1
-  ctx.strokeRect(40, 40, CARD_W - 80, CARD_H - 80)
-
-  // medallion ring + emblem
-  const cx = CARD_W / 2
-  const cy = 430
-  const r = 260
-  ctx.beginPath()
-  ctx.arc(cx, cy, r, 0, Math.PI * 2)
-  ctx.fillStyle = '#241A10'
-  ctx.fill()
-  ctx.lineWidth = 3
-  ctx.strokeStyle = 'rgba(201,162,74,0.7)'
-  ctx.stroke()
-  ctx.beginPath()
-  ctx.arc(cx, cy, r - 18, 0, Math.PI * 2)
-  ctx.lineWidth = 1
-  ctx.strokeStyle = 'rgba(160,122,58,0.6)'
-  ctx.stroke()
-
-  try {
-    const img = await loadImage(EMBLEM)
-    const boxR = r * 0.78
-    const scale = Math.min((boxR * 2) / img.width, (boxR * 2) / img.height)
-    const w = img.width * scale
-    const h = img.height * scale
-    ctx.save()
-    ctx.beginPath()
-    ctx.arc(cx, cy, r - 4, 0, Math.PI * 2)
-    ctx.clip()
-    ctx.drawImage(img, cx - w / 2, cy - h / 2, w, h)
-    ctx.restore()
-  } catch {
-    // emblem failed to load (offline etc.) — card still renders with text
-  }
-
-  // text
-  ctx.textAlign = 'center'
-  ctx.fillStyle = '#F1E6D2'
-  ctx.font = '600 92px Fraunces, Georgia, serif'
-  ctx.fillText('रोट तीज', cx, 830)
-
-  ctx.fillStyle = '#C9A24A'
-  ctx.font = '400 34px Inter, sans-serif'
-  ctx.fillText('एक जैन लोक-परम्परा', cx, 885)
-
-  ctx.fillStyle = '#C9BBA0'
-  ctx.font = '400 30px Inter, sans-serif'
-  ctx.fillText('भाद्रपद शुक्ल तृतीया', cx, 945)
-
-  ctx.fillStyle = '#A07A3A'
-  ctx.font = '500 28px Inter, sans-serif'
-  ctx.fillText('व्रत  •  परिवार  •  परम्परा', cx, 1000)
-
-  ctx.fillStyle = '#F1E6D2'
-  ctx.font = '500 36px Inter, sans-serif'
-  ctx.fillText(name ? `शुभ रोट तीज — ${name}` : 'शुभ रोट तीज', cx, 1075)
-
-  // footer
-  ctx.strokeStyle = 'rgba(201,162,74,0.35)'
-  ctx.lineWidth = 1
-  ctx.beginPath()
-  ctx.moveTo(160, 1170)
-  ctx.lineTo(CARD_W - 160, 1170)
-  ctx.stroke()
-
-  ctx.fillStyle = '#C9A24A'
-  ctx.font = '600 34px Fraunces, Georgia, serif'
-  ctx.fillText('JINVERSE', cx, 1225)
-
-  ctx.fillStyle = '#C9BBA0'
-  ctx.font = '400 22px Inter, sans-serif'
-  ctx.fillText('Discover · Learn · Live', cx, 1260)
-
-  ctx.fillStyle = '#5C4630'
-  ctx.font = '400 20px Inter, sans-serif'
-  ctx.fillText('jinverse.vercel.app', cx, 1300)
+async function fetchCardBlob() {
+  const response = await fetch(CARD_IMAGE)
+  return response.blob()
 }
 
 function ShareCardSection() {
-  const [name, setName] = useState('')
   const [status, setStatus] = useState('')
-  const canvasRef = useRef(null)
-
-  async function getBlob() {
-    const canvas = canvasRef.current
-    await renderCardToCanvas(canvas, name.trim())
-    return new Promise((resolve) => canvas.toBlob(resolve, 'image/png'))
-  }
 
   async function handleDownload() {
     try {
-      setStatus('कार्ड तैयार किया जा रहा है…')
-      const blob = await getBlob()
+      const blob = await fetchCardBlob()
       const url = URL.createObjectURL(blob)
       const a = document.createElement('a')
       a.href = url
-      a.download = 'rot-teej-jinverse.png'
+      a.download = CARD_FILENAME
       document.body.appendChild(a)
       a.click()
       a.remove()
       URL.revokeObjectURL(url)
-      setStatus('डाउनलोड हो गया')
     } catch {
       setStatus('डाउनलोड में समस्या हुई, कृपया पुनः प्रयास करें')
+      window.setTimeout(() => setStatus(''), 2500)
     }
-    window.setTimeout(() => setStatus(''), 2500)
   }
 
   async function handleShare() {
     const shareText = 'शुभ रोट तीज — JINVERSE पर रोट तीज की परम्परा पढ़ें'
     try {
       if (navigator.share && navigator.canShare) {
-        const blob = await getBlob()
-        const file = new File([blob], 'rot-teej-jinverse.png', { type: 'image/png' })
+        const blob = await fetchCardBlob()
+        const file = new File([blob], CARD_FILENAME, { type: blob.type || 'image/png' })
         if (navigator.canShare({ files: [file] })) {
           await navigator.share({ files: [file], title: 'रोट तीज — JINVERSE', text: shareText })
           return
@@ -213,64 +92,38 @@ function ShareCardSection() {
           <div className="mx-auto max-w-xl text-center">
             <p className="text-xs uppercase tracking-[0.28em] text-gold">Share Card</p>
             <h2 className="mt-3 font-display text-3xl text-ivory sm:text-4xl">अपना रोट तीज कार्ड बनाएं</h2>
-            <p className="mt-4 text-[15px] leading-relaxed text-ivory-dim">एक सुंदर Jinverse शुभकामना कार्ड परिवार और मित्रों के साथ साझा करें।</p>
+            <p className="mt-4 text-[15px] leading-relaxed text-ivory-dim">इस सुंदर शुभकामना कार्ड को परिवार और मित्रों के साथ साझा करें।</p>
           </div>
         </Reveal>
 
-        <div className="mt-12 grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="mt-12 grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            {/* Live HTML/CSS preview — the actual downloaded/shared image is
-                rendered separately onto an offscreen canvas (see
-                renderCardToCanvas) since CSS can't itself export a PNG. */}
-            <div className="mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-lg border-2 border-gold/70 shadow-[0_0_60px_rgba(201,162,74,0.15)]" style={{ background: 'radial-gradient(circle at 50% 32%, rgba(228,168,74,0.22), transparent 55%), linear-gradient(180deg, #241A10 0%, #1A120B 100%)' }}>
-              <div className="relative flex h-full flex-col items-center justify-between border border-gold-dim/30 p-6 text-center">
-                <div className="mandala-glow absolute inset-0 opacity-60" aria-hidden="true" />
-                <div className="relative mt-4 flex h-32 w-32 items-center justify-center overflow-hidden rounded-full border border-gold/60 bg-panel sm:h-36 sm:w-36">
-                  <img src={EMBLEM} alt="" className="h-full w-full object-contain" style={{ padding: '15%' }} aria-hidden="true" />
-                </div>
-                <div className="relative">
-                  <h3 className="font-display text-4xl text-ivory sm:text-5xl">रोट तीज</h3>
-                  <p className="mt-2 text-sm text-gold">एक जैन लोक-परम्परा</p>
-                  <p className="mt-2 text-xs text-ivory-dim">भाद्रपद शुक्ल तृतीया</p>
-                  <p className="mt-3 text-xs tracking-widest text-gold-dim">व्रत • परिवार • परम्परा</p>
-                  <p className="mt-4 text-sm text-ivory">{name.trim() ? `शुभ रोट तीज — ${name.trim()}` : 'शुभ रोट तीज'}</p>
-                </div>
-                <div className="relative border-t border-gold-dim/30 pt-3">
-                  <p className="font-display text-sm tracking-[0.2em] text-gold">JINVERSE</p>
-                  <p className="mt-1 text-[10px] text-ivory-dim">Discover · Learn · Live</p>
-                  <p className="mt-1 text-[10px] text-ivory-dim/60">jinverse.vercel.app</p>
-                </div>
-              </div>
-            </div>
+            <img
+              src={CARD_IMAGE}
+              alt="रोट तीज ग्रीटिंग कार्ड — JINVERSE"
+              className="mx-auto w-full max-w-sm rounded-xl border-[3px] border-gold shadow-[0_0_80px_rgba(201,162,74,0.22)] sm:max-w-md"
+            />
           </Reveal>
 
           <Reveal delay={80}>
-            <div className="mx-auto flex w-full max-w-sm flex-col gap-5 lg:mx-0">
-              <label className="block text-left text-xs uppercase tracking-[0.2em] text-ivory-dim">
-                आपका नाम (वैकल्पिक)
-                <input
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="आपका नाम"
-                  maxLength={40}
-                  className="mt-2 w-full border border-line bg-panel px-4 py-3 text-sm text-ivory outline-none focus:border-gold"
-                />
-              </label>
-              <div className="flex flex-wrap gap-3">
-                <Button type="button" variant="primary" onClick={handleShare}>Share</Button>
-                <Button type="button" variant="secondary" onClick={handleDownload}>Download Image</Button>
+            <div className="mx-auto flex w-full max-w-sm flex-col gap-4 lg:mx-0">
+              <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
+                <Button type="button" variant="primary" onClick={handleShare} className="w-full whitespace-nowrap sm:w-auto">
+                  <span aria-hidden="true">↗</span> Share Card
+                </Button>
+                <Button type="button" variant="secondary" onClick={handleDownload} className="w-full whitespace-nowrap sm:w-auto">
+                  <span aria-hidden="true">↓</span> Download
+                </Button>
               </div>
               {status && <p role="status" className="text-xs text-gold">{status}</p>}
-              <p className="text-[13px] leading-relaxed text-ivory-dim/85">जिन ब्राउज़र में सीधा साझाकरण उपलब्ध नहीं है, वहाँ लिंक कॉपी करने का विकल्प दिया गया है।</p>
             </div>
           </Reveal>
         </div>
-        <canvas ref={canvasRef} width={CARD_W} height={CARD_H} className="hidden" aria-hidden="true" />
       </div>
     </section>
   )
 }
+
 
 function EmblemHero() {
   return (
