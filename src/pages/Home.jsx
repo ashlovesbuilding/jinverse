@@ -95,6 +95,91 @@ function SeasonalBanner() {
     </section>
   )
 }
+// `enShort` / `enMeaningShort` are concise mobile-only variants (per-card
+// readability refinement); `en` / `enMeaning` are the full desktop text
+// and are unchanged from the original approved copy.
+const DAS_LAKSHAN_DAYS = [
+  { day: '01', hi: 'उत्तम क्षमा', en: 'Uttama Kshama — Supreme Forgiveness', enShort: 'Supreme Forgiveness', hiMeaning: 'क्रोध छोड़कर क्षमा', enMeaning: 'Letting go of anger and cultivating forgiveness', enMeaningShort: 'Letting go of anger' },
+  { day: '02', hi: 'उत्तम मार्दव', en: 'Uttama Mardava — Supreme Humility', enShort: 'Supreme Humility', hiMeaning: 'अहंकार छोड़कर विनम्रता', enMeaning: 'Letting go of pride and cultivating humility', enMeaningShort: 'Letting go of pride' },
+  { day: '03', hi: 'उत्तम आर्जव', en: 'Uttama Arjava — Supreme Straightforwardness', enShort: 'Supreme Straightforwardness', hiMeaning: 'सरलता और निष्कपटता', enMeaning: 'Cultivating simplicity and sincerity', enMeaningShort: 'Simplicity and sincerity' },
+  { day: '04', hi: 'उत्तम शौच', en: 'Uttama Shaucha — Supreme Contentment', enShort: 'Supreme Contentment', hiMeaning: 'लोभ से मुक्त आंतरिक शुद्धि', enMeaning: 'Inner purity and freedom from greed', enMeaningShort: 'Inner purity, free of greed' },
+  { day: '05', hi: 'उत्तम सत्य', en: 'Uttama Satya — Supreme Truth', enShort: 'Supreme Truth', hiMeaning: 'सत्य और हितकारी वचन', enMeaning: 'Truthfulness expressed with care', enMeaningShort: 'Truthfulness with care' },
+  { day: '06', hi: 'उत्तम संयम', en: 'Uttama Samyama — Supreme Self-Restraint', enShort: 'Supreme Self-Restraint', hiMeaning: 'इन्द्रियों और प्रवृत्तियों पर नियंत्रण', enMeaning: "Restraint over the senses and one's conduct", enMeaningShort: 'Restraint over the senses' },
+  { day: '07', hi: 'उत्तम तप', en: 'Uttama Tapa — Supreme Austerity', enShort: 'Supreme Austerity', hiMeaning: 'आत्म-अनुशासन और तप', enMeaning: 'Discipline and spiritual austerity', enMeaningShort: 'Discipline and austerity' },
+  { day: '08', hi: 'उत्तम त्याग', en: 'Uttama Tyaga — Supreme Renunciation', enShort: 'Supreme Renunciation', hiMeaning: 'आसक्ति और संग्रह से त्याग', enMeaning: 'Letting go of attachment and possessiveness', enMeaningShort: 'Letting go of attachment' },
+  { day: '09', hi: 'उत्तम आकिंचन्य', en: 'Uttama Akinchanya — Supreme Non-Attachment', enShort: 'Supreme Non-Attachment', hiMeaning: 'ममत्व और परिग्रह से अनासक्ति', enMeaning: 'Freedom from possessiveness and attachment to material things', enMeaningShort: 'Freedom from possessiveness' },
+  { day: '10', hi: 'उत्तम ब्रह्मचर्य', en: 'Uttama Brahmacharya — Supreme Chastity', enShort: 'Supreme Chastity', hiMeaning: 'आत्मसंयम और आत्म-केंद्रित जीवन', enMeaning: 'Self-restraint and a life oriented toward the soul', enMeaningShort: 'A life oriented toward the soul' },
+]
+
+// Evergreen — deliberately carries no festival dates. This is the
+// full bilingual explainer section; the date-gated homepage teaser is
+// the separate SeasonalBanner above, which is untouched by this.
+function DasLakshanSection() {
+  return (
+    <section className="border-b border-[#8C6A32]/20 bg-parchment py-24">
+      <div className="container-page">
+        <Reveal>
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs uppercase tracking-[0.28em] text-saffron">Digambara Jain Tradition</p>
+            <h2 className="mt-3 font-display text-4xl text-ink">दशलक्षण महापर्व</h2>
+            <p className="font-display text-2xl text-ink-dim">Das Lakshan Parv</p>
+            <p className="mt-4 text-sm text-ink-dim">दस उत्तम भाव • आत्मचिंतन • साधना</p>
+            <p className="text-sm text-ink-dim">Ten Supreme Virtues • Self-Reflection • Spiritual Practice</p>
+            <div className="mt-8 space-y-3 text-left sm:text-center">
+              <p className="text-sm leading-7 text-ink-dim">
+                Das Lakshan Parv is a ten-day spiritual observance in the Digambara Jain tradition, dedicated to contemplation and practice of the ten supreme virtues.
+              </p>
+              <p className="text-sm leading-7 text-ink-dim">
+                दशलक्षण महापर्व Digambara Jain tradition में मनाया जाने वाला दस दिनों का आध्यात्मिक पर्व है, जिसमें दस उत्तम धर्मों पर मनन और आचरण किया जाता है।
+              </p>
+            </div>
+          </div>
+        </Reveal>
+
+        <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5 lg:gap-5">
+          {DAS_LAKSHAN_DAYS.map((d, i) => (
+            <Reveal key={d.day} delay={i * 50}>
+              <div className="h-full border border-ink-dim/25 bg-parchment p-4 text-center transition-colors hover:border-saffron/60 lg:p-5">
+                <p className="font-display text-xs text-saffron">{d.day}</p>
+                <h3 className="mt-2 font-display text-base text-ink lg:text-lg">{d.hi}</h3>
+                {/* Concise name on mobile, full "Uttama X — Supreme Y" form
+                    unchanged on desktop (lg:) */}
+                <p className="mt-1 text-xs text-ink-dim lg:hidden">{d.enShort}</p>
+                <p className="mt-1 hidden text-xs text-ink-dim lg:block">{d.en}</p>
+                <div className="mt-3 space-y-1.5 border-t border-ink-dim/15 pt-3 lg:mt-4 lg:pt-4">
+                  <p className="text-xs leading-relaxed text-ink-dim">{d.hiMeaning}</p>
+                  <p className="text-xs leading-relaxed text-ink-dim lg:hidden">{d.enMeaningShort}</p>
+                  <p className="hidden text-xs leading-relaxed text-ink-dim lg:block">{d.enMeaning}</p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal>
+          <div className="mx-auto mt-14 max-w-2xl text-center">
+            <div className="ford-rule mx-auto mb-6" />
+            <p className="font-display text-lg leading-relaxed text-ink sm:text-xl">
+              दशलक्षण केवल दस दिनों का पर्व नहीं—दस गुणों को जीवन में उतारने का निमंत्रण है।
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-ink-dim">
+              Das Lakshan is not merely a ten-day observance—it is an invitation to bring these ten virtues into everyday life.
+            </p>
+
+            <div className="mt-10 border-t border-ink-dim/20 pt-6">
+              <p className="text-xs uppercase tracking-wide text-ink-dim">शास्त्रीय आधार: तत्त्वार्थसूत्र 9.6 — दस उत्तम धर्म।</p>
+              <p className="mt-1 text-xs uppercase tracking-wide text-ink-dim">Scriptural foundation: Tattvārtha Sūtra 9.6 — the ten supreme virtues (uttama dharmas).</p>
+              <p className="mt-4 font-display text-sm leading-relaxed text-ink-dim" lang="sa">
+                उत्तमक्षमामार्दवार्जवशौचसत्यसंयमतपस्त्यागाकिञ्चन्यब्रह्मचर्याणि धर्मः
+              </p>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  )
+}
+
 function CosmicField() {
   const dots = [
     { top: '12%', left: '18%', size: 2, delay: '0s' },
@@ -241,6 +326,7 @@ export default function Home() {
     <section className="border-t border-line/70 bg-panel/40 py-24"><div className="container-page"><Reveal><SectionHeading eyebrow="Jain history and heritage" title="Two thousand years of living evidence" description="From royal inscriptions to monumental statues, Jain heritage across India is documented with care." /></Reveal><div className="mt-12 grid gap-6 sm:grid-cols-2">{heritageSites.map((site, i) => <Reveal key={site.slug} delay={i * 70}><div className="border border-line p-6 transition-colors hover:border-gold-dim"><h3 className="font-display text-lg text-ivory">{site.name}</h3><p className="text-xs text-ivory-dim/70">{site.region}</p><p className="mt-2 text-sm leading-relaxed text-ivory-dim">{site.note}</p></div></Reveal>)}</div><div className="mt-10"><Button to="/history" variant="secondary">Explore history & heritage</Button></div></div></section>
     <section className="border-b border-[#8C6A32]/20 bg-parchment py-24"><div className="container-page"><Reveal><SectionHeading tone="light" eyebrow="Explore Jain texts" title="Scripture and literature" description="From canonical sutras to epic narrative literature, the sources that carry Jain thought forward." /></Reveal><div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{texts.slice(0, 3).map((t, i) => <Reveal key={t.slug} delay={i * 70}><div className="flex h-full flex-col border border-ink-dim/25 bg-parchment p-6 transition-colors hover:border-saffron/60"><h3 className="font-display text-lg text-ink">{t.title}</h3><p className="mt-1 text-xs text-ink-dim/80">{t.tradition} · {t.language}</p><p className="mt-3 text-sm leading-relaxed text-ink-dim">{t.description}</p></div></Reveal>)}</div><div className="mt-10"><Button to="/texts" variant="secondaryLight">View all texts</Button></div></div></section>
     <section className="border-t border-line/70 bg-panel/40 py-24"><div className="container-page"><Reveal><SectionHeading eyebrow="Latest articles" title="From the JINVERSE library" /></Reveal><div className="mt-12 grid gap-6 lg:grid-cols-3">{articles.map((a, i) => <Reveal key={a.slug} delay={i * 70}><Link to={`/articles/${a.slug}`} className="group flex h-full flex-col border border-line p-6 transition-colors hover:border-gold"><p className="text-xs text-gold-dim">{a.category}</p><h3 className="mt-2 font-display text-lg text-ivory">{a.title}</h3><p className="mt-2 flex-1 text-sm leading-relaxed text-ivory-dim">{a.excerpt}</p><p className="mt-4 text-xs text-ivory-dim/60">{a.readingTime}</p></Link></Reveal>)}</div><div className="mt-10"><Button to="/articles" variant="secondary">Read all articles</Button></div></div></section>
+    <DasLakshanSection />
     <section className="border-t border-line/70 py-24"><div className="container-page text-center"><Reveal><div className="ford-rule mx-auto mb-8" /><h2 className="mx-auto max-w-2xl font-display text-3xl text-ivory sm:text-4xl">Ancient wisdom, made accessible for the generation carrying it forward.</h2><div className="mt-10 flex flex-wrap justify-center gap-4"><Button to="/teachings" variant="primary">Begin Your Journey</Button><Button to="/about" variant="secondary">About JINVERSE</Button></div></Reveal></div></section>
   </>
 }
