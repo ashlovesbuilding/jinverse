@@ -29,9 +29,22 @@ export default {
           '0%': { opacity: 0, transform: 'translateY(14px)' },
           '100%': { opacity: 1, transform: 'translateY(0)' },
         },
+        emblemBreathe: {
+          '0%, 100%': { opacity: 1, transform: 'scale(1)' },
+          '50%': { opacity: 0.96, transform: 'scale(1.015)' },
+        },
+        glowPulse: {
+          '0%, 100%': { opacity: 0.55 },
+          '50%': { opacity: 0.9 },
+        },
       },
       animation: {
         reveal: 'reveal 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        // Sacred-geometry hero rings: slow, opposing, non-jarring rotation.
+        'spin-slow': 'spin 24s linear infinite',
+        'spin-reverse-slow': 'spin 30s linear infinite reverse',
+        'emblem-breathe': 'emblemBreathe 8s ease-in-out infinite',
+        'glow-pulse': 'glowPulse 6s ease-in-out infinite',
       },
     },
   },
