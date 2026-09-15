@@ -33,7 +33,22 @@ export default function Header() {
       <div className="jain-flag-strip" aria-label="Jain flag colours" />
       <div className="container-page flex min-h-20 items-center justify-between gap-4 py-3">
         <NavLink to="/" className="flex min-w-0 items-center gap-3" onClick={() => setOpen(false)} aria-label="JINVERSE home">
-          <img src={JAIN_EMBLEM} alt="Jain emblem" className="h-14 w-14 shrink-0 rounded-sm object-contain object-center" />
+          {/*
+            logo.svg is a wide 720x180 lockup (mark + wordmark + tagline
+            baked into one image). The wordmark is rendered separately
+            below, so here we crop to just the leading square mark region
+            (the mark's own bounding box is ~180x180, i.e. exactly the
+            image's height) via object-fit:cover + left-aligned position —
+            no new asset, no edit to the existing SVG.
+          */}
+          <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-gold-dim/50 sm:h-12 sm:w-12">
+            <img
+              src={JAIN_EMBLEM}
+              alt="Jain emblem"
+              className="absolute inset-0 h-full w-full object-cover"
+              style={{ objectPosition: 'left center' }}
+            />
+          </span>
           <span className="min-w-0">
             <span className="block font-display text-2xl tracking-[0.18em] text-ivory sm:text-3xl">JINVERSE</span>
             <span className="hidden text-[8px] uppercase tracking-[0.28em] text-gold-dim sm:block">Explore Jainism · Discover the Universe Within</span>

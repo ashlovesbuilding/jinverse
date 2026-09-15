@@ -86,4 +86,71 @@
     height: 1px;
     background: #d9b56e;
   }
+
+  /* Very subtle rayed/mandala backdrop for the hero emblem. Pure CSS,
+     no asset: a repeating conic gradient masked to a soft radial fade so
+     it reads as ambient sacred geometry rather than a hard pie disc. */
+  .mandala-glow {
+    background: repeating-conic-gradient(
+      from 0deg,
+      rgba(201, 162, 74, 0.2) 0deg 3deg,
+      transparent 3deg 15deg
+    );
+    -webkit-mask-image: radial-gradient(circle, black 50%, transparent 82%);
+    mask-image: radial-gradient(circle, black 50%, transparent 82%);
+  }
+
+  /* Warm golden aura behind the hero emblem rings. Without this, the gap
+     between the inner medallion panel and the gold rings just shows the
+     dark page background through — reading as empty space. This fills
+     that gap with actual warm light so the whole composition glows. */
+  .hero-emblem-aura {
+    background: radial-gradient(
+      circle,
+      rgba(228, 168, 74, 0.32) 0%,
+      rgba(201, 162, 74, 0.16) 45%,
+      rgba(178, 58, 32, 0.06) 68%,
+      transparent 82%
+    );
+  }
+
+  /*
+   * Single size source for the whole hero emblem composition (outer glow
+   * down to the inner panel), so every ring is a fixed proportion of one
+   * number instead of independently-tuned breakpoint values that can
+   * drift apart into "small emblem, huge empty rings". One continuous
+   * clamp from mobile through desktop (~250px at 320px viewports up to
+   * ~580px at 1440px+) — no breakpoint jump/discontinuity.
+   */
+  .hero-emblem-scale {
+    --ring-d: clamp(240px, 156px + 29.5vw, 620px);
+  }
+
+  /* Thin rotating "comet" sweep on the outer ring — a conic-gradient arc
+     masked to a narrow annulus so only a slim bright trail is visible,
+     giving a restrained flowing-light effect rather than a full glowing
+     ring. */
+  .hero-emblem-trail {
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      rgba(244, 214, 154, 0.85) 8deg,
+      transparent 40deg,
+      transparent 360deg
+    );
+    -webkit-mask-image: radial-gradient(
+      circle,
+      transparent calc(50% - 3px),
+      black calc(50% - 2px),
+      black calc(50% - 1px),
+      transparent 50%
+    );
+    mask-image: radial-gradient(
+      circle,
+      transparent calc(50% - 3px),
+      black calc(50% - 2px),
+      black calc(50% - 1px),
+      transparent 50%
+    );
+  }
 }
