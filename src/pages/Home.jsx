@@ -99,16 +99,16 @@ function SeasonalBanner() {
 // readability refinement); `en` / `enMeaning` are the full desktop text
 // and are unchanged from the original approved copy.
 const DAS_LAKSHAN_DAYS = [
-  { day: '01', hi: 'उत्तम क्षमा', en: 'Uttama Kshama — Supreme Forgiveness', enShort: 'Supreme Forgiveness', hiMeaning: 'क्रोध छोड़कर क्षमा', enMeaning: 'Letting go of anger and cultivating forgiveness', enMeaningShort: 'Letting go of anger' },
-  { day: '02', hi: 'उत्तम मार्दव', en: 'Uttama Mardava — Supreme Humility', enShort: 'Supreme Humility', hiMeaning: 'अहंकार छोड़कर विनम्रता', enMeaning: 'Letting go of pride and cultivating humility', enMeaningShort: 'Letting go of pride' },
-  { day: '03', hi: 'उत्तम आर्जव', en: 'Uttama Arjava — Supreme Straightforwardness', enShort: 'Supreme Straightforwardness', hiMeaning: 'सरलता और निष्कपटता', enMeaning: 'Cultivating simplicity and sincerity', enMeaningShort: 'Simplicity and sincerity' },
-  { day: '04', hi: 'उत्तम शौच', en: 'Uttama Shaucha — Supreme Contentment', enShort: 'Supreme Contentment', hiMeaning: 'लोभ से मुक्त आंतरिक शुद्धि', enMeaning: 'Inner purity and freedom from greed', enMeaningShort: 'Inner purity, free of greed' },
-  { day: '05', hi: 'उत्तम सत्य', en: 'Uttama Satya — Supreme Truth', enShort: 'Supreme Truth', hiMeaning: 'सत्य और हितकारी वचन', enMeaning: 'Truthfulness expressed with care', enMeaningShort: 'Truthfulness with care' },
-  { day: '06', hi: 'उत्तम संयम', en: 'Uttama Samyama — Supreme Self-Restraint', enShort: 'Supreme Self-Restraint', hiMeaning: 'इन्द्रियों और प्रवृत्तियों पर नियंत्रण', enMeaning: "Restraint over the senses and one's conduct", enMeaningShort: 'Restraint over the senses' },
-  { day: '07', hi: 'उत्तम तप', en: 'Uttama Tapa — Supreme Austerity', enShort: 'Supreme Austerity', hiMeaning: 'आत्म-अनुशासन और तप', enMeaning: 'Discipline and spiritual austerity', enMeaningShort: 'Discipline and austerity' },
-  { day: '08', hi: 'उत्तम त्याग', en: 'Uttama Tyaga — Supreme Renunciation', enShort: 'Supreme Renunciation', hiMeaning: 'आसक्ति और संग्रह से त्याग', enMeaning: 'Letting go of attachment and possessiveness', enMeaningShort: 'Letting go of attachment' },
-  { day: '09', hi: 'उत्तम आकिंचन्य', en: 'Uttama Akinchanya — Supreme Non-Attachment', enShort: 'Supreme Non-Attachment', hiMeaning: 'ममत्व और परिग्रह से अनासक्ति', enMeaning: 'Freedom from possessiveness and attachment to material things', enMeaningShort: 'Freedom from possessiveness' },
-  { day: '10', hi: 'उत्तम ब्रह्मचर्य', en: 'Uttama Brahmacharya — Supreme Chastity', enShort: 'Supreme Chastity', hiMeaning: 'आत्मसंयम और आत्म-केंद्रित जीवन', enMeaning: 'Self-restraint and a life oriented toward the soul', enMeaningShort: 'A life oriented toward the soul' },
+  { day: '01', hi: 'उत्तम क्षमा', en: 'Uttama Kṣamā — Supreme Forbearance', enShort: 'Supreme Forbearance', hiMeaning: 'क्रोध और वैर से ऊपर उठकर क्षमा और समभाव।', enMeaning: 'Rising above anger and ill-will through forgiveness and equanimity.', enMeaningShort: 'Rising above anger and ill-will through forgiveness and equanimity.' },
+  { day: '02', hi: 'उत्तम मार्दव', en: 'Uttama Mārdava — Supreme Humility', enShort: 'Supreme Humility', hiMeaning: 'अहंकार और मान से मुक्त होकर विनम्रता।', enMeaning: 'Letting go of pride and cultivating genuine humility.', enMeaningShort: 'Letting go of pride and cultivating genuine humility.' },
+  { day: '03', hi: 'उत्तम आर्जव', en: 'Uttama Ārjava — Supreme Straightforwardness', enShort: 'Supreme Straightforwardness', hiMeaning: 'मन, वचन और आचरण में सरलता और निष्कपटता।', enMeaning: 'Freedom from deceit; cultivating sincerity and straightforward conduct.', enMeaningShort: 'Freedom from deceit; cultivating sincerity and straightforward conduct.' },
+  { day: '04', hi: 'उत्तम शौच', en: 'Uttama Śauca — Supreme Purity', enShort: 'Supreme Purity', hiMeaning: 'लोभ से मुक्त होकर अंतर्मन की शुद्धि।', enMeaning: 'Freedom from greed and cultivation of inner purity.', enMeaningShort: 'Freedom from greed and cultivation of inner purity.' },
+  { day: '05', hi: 'उत्तम सत्य', en: 'Uttama Satya — Supreme Truthfulness', enShort: 'Supreme Truthfulness', hiMeaning: 'सत्य बोलना, हितकारी और संयमित वाणी के साथ।', enMeaning: 'Speaking truth with care, restraint and concern for what is beneficial.', enMeaningShort: 'Speaking truth with care, restraint and concern for what is beneficial.' },
+  { day: '06', hi: 'उत्तम संयम', en: 'Uttama Saṃyama — Supreme Self-Restraint', enShort: 'Supreme Self-Restraint', hiMeaning: 'इन्द्रियों, इच्छाओं और कर्मों पर सजग संयम।', enMeaning: 'Conscious restraint over the senses, desires and actions.', enMeaningShort: 'Conscious restraint over the senses, desires and actions.' },
+  { day: '07', hi: 'उत्तम तप', en: 'Uttama Tapa — Supreme Austerity', enShort: 'Supreme Austerity', hiMeaning: 'इच्छाओं पर विजय और आत्मशुद्धि के लिए तप व अनुशासन।', enMeaning: 'Austerity and discipline directed toward overcoming desires and purifying the soul.', enMeaningShort: 'Austerity and discipline directed toward overcoming desires and purifying the soul.' },
+  { day: '08', hi: 'उत्तम त्याग', en: 'Uttama Tyāga — Supreme Renunciation', enShort: 'Supreme Renunciation', hiMeaning: 'आसक्ति और लोभ को छोड़कर त्याग और दान की भावना।', enMeaning: 'Letting go of greed and attachment through renunciation and generosity.', enMeaningShort: 'Letting go of greed and attachment through renunciation and generosity.' },
+  { day: '09', hi: 'उत्तम आकिंचन्य', en: 'Uttama Ākiñcanya — Supreme Non-Attachment', enShort: 'Supreme Non-Attachment', hiMeaning: '"यह मेरा है" के ममत्व से मुक्त होकर अनासक्ति।', enMeaning: 'Freedom from possessiveness and the attachment of "this is mine."', enMeaningShort: 'Freedom from possessiveness and the attachment of "this is mine."' },
+  { day: '10', hi: 'उत्तम ब्रह्मचर्य', en: 'Uttama Brahmacarya — Supreme Chastity', enShort: 'Supreme Chastity', hiMeaning: 'इन्द्रिय-विषयों से संयम और आत्मा में स्थित होने की साधना।', enMeaning: 'Restraint from sensual attachment and a life increasingly centered on the soul.', enMeaningShort: 'Restraint from sensual attachment and a life increasingly centered on the soul.' },
 ]
 
 // Evergreen — deliberately carries no festival dates. This is the
@@ -121,17 +121,25 @@ function DasLakshanSection() {
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.28em] text-saffron">Digambara Jain Tradition</p>
-            <h2 className="mt-3 font-display text-4xl text-ink">दशलक्षण महापर्व</h2>
-            <p className="font-display text-2xl text-ink-dim">Das Lakshan Parv</p>
-            <p className="mt-4 text-sm text-ink-dim">दस उत्तम भाव • आत्मचिंतन • साधना</p>
-            <p className="text-sm text-ink-dim">Ten Supreme Virtues • Self-Reflection • Spiritual Practice</p>
+            <h2 className="mt-3 font-display text-4xl text-ink">दशलक्षण महापर्व क्यों मनाया जाता है?</h2>
+            <p className="font-display text-2xl text-ink-dim">Why Das Lakshan Parv?</p>
             <div className="mt-8 space-y-3 text-left sm:text-center">
               <p className="text-sm leading-7 text-ink-dim">
-                Das Lakshan Parv is a ten-day spiritual observance in the Digambara Jain tradition, dedicated to contemplation and practice of the ten supreme virtues.
+                Das Lakshan Parv is a ten-day Digambara Jain observance dedicated to turning inward and cultivating the ten supreme dharmas — from forgiveness and humility to restraint, renunciation, non-attachment and celibacy.
               </p>
               <p className="text-sm leading-7 text-ink-dim">
-                दशलक्षण महापर्व Digambara Jain tradition में मनाया जाने वाला दस दिनों का आध्यात्मिक पर्व है, जिसमें दस उत्तम धर्मों पर मनन और आचरण किया जाता है।
+                Its scriptural foundation is Tattvārtha Sūtra 9.6, which enumerates these ten dharmas. During the parva, each day becomes an opportunity for self-study, reflection, restraint and spiritual practice. The deeper aim is not celebration for its own sake, but the purification and spiritual uplift of the soul.
               </p>
+              <p className="text-sm leading-7 text-ink-dim">
+                दशलक्षण महापर्व Digambara Jain tradition का दस दिवसीय आध्यात्मिक पर्व है, जिसमें दस उत्तम धर्मों का मनन और आचरण करते हुए भीतर की ओर लौटने का प्रयास किया जाता है।
+              </p>
+              <p className="text-sm leading-7 text-ink-dim">
+                इन दस धर्मों का शास्त्रीय आधार तत्त्वार्थसूत्र 9.6 में मिलता है। पर्व के प्रत्येक दिन एक उत्तम धर्म पर विशेष रूप से चिंतन, स्वाध्याय, संयम और साधना की जाती है। इसका गहरा उद्देश्य केवल पर्व मनाना नहीं, बल्कि आत्मशुद्धि और आध्यात्मिक उन्नति की दिशा में बढ़ना है।
+              </p>
+            </div>
+            <div className="mt-6 border-t border-ink-dim/15 pt-4">
+              <p className="text-xs uppercase tracking-wide text-ink-dim">Scriptural foundation: Tattvārtha Sūtra 9.6 — the ten supreme dharmas.</p>
+              <p className="mt-1 text-xs uppercase tracking-wide text-ink-dim">शास्त्रीय आधार: तत्त्वार्थसूत्र 9.6 — दस उत्तम धर्म।</p>
             </div>
           </div>
         </Reveal>
@@ -168,7 +176,7 @@ function DasLakshanSection() {
 
             <div className="mt-10 border-t border-ink-dim/20 pt-6">
               <p className="text-xs uppercase tracking-wide text-ink-dim">शास्त्रीय आधार: तत्त्वार्थसूत्र 9.6 — दस उत्तम धर्म।</p>
-              <p className="mt-1 text-xs uppercase tracking-wide text-ink-dim">Scriptural foundation: Tattvārtha Sūtra 9.6 — the ten supreme virtues (uttama dharmas).</p>
+              <p className="mt-1 text-xs uppercase tracking-wide text-ink-dim">Scriptural foundation: Tattvārtha Sūtra 9.6 — the ten supreme dharmas (uttama dharmas).</p>
               <p className="mt-4 font-display text-sm leading-relaxed text-ink-dim" lang="sa">
                 उत्तमक्षमामार्दवार्जवशौचसत्यसंयमतपस्त्यागाकिञ्चन्यब्रह्मचर्याणि धर्मः
               </p>
