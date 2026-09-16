@@ -310,7 +310,7 @@ export default function Home() {
   const isDasLakshanFeatured = getSeasonalBanner() === 'das-lakshan'
   return <>
     <SeasonalBanner />
-    <section className="relative overflow-hidden"><CosmicField /><div className="container-page relative flex min-h-[86vh] flex-col items-center justify-center gap-8 py-16 text-center sm:gap-10 sm:py-24">
+    <section className="relative overflow-hidden"><CosmicField /><div className="container-page relative flex min-h-[70vh] flex-col items-center justify-center gap-8 py-16 text-center sm:gap-10 sm:py-24">
         <Reveal delay={100}>
   <div className="hero-emblem-scale relative mx-auto flex items-center justify-center">
     {/* ambient glow, slow pulse — soft/diffuse, so it reads as ambient
