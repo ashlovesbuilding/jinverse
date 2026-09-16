@@ -9,7 +9,6 @@ import { useArticleLibrary } from '../lib/useArticleLibrary.js'
 import { getTodaysArticle } from '../lib/todaysArticle.js'
 
 const UPPER_IMAGE = '/file_000000008c8082119468161444477380.png'
-const LOWER_IMAGE = '/jinverselogo.png'
 const ROT_TEEJ_CARD = '/images/articles/rot-teej-greeting-card.png'
 
 const DAS_LAKSHAN_VIRTUES = [
@@ -430,7 +429,6 @@ export default function Home() {
             </div>
           </div>
         </Reveal>
-        <Reveal delay={100}><div className="relative mx-auto w-full max-w-sm sm:max-w-md"><div className="absolute -inset-6 rounded-full bg-gold/10 blur-3xl" aria-hidden="true" /><div className="relative border border-gold-dim/50 bg-panel/70 p-4 shadow-2xl"><img src={LOWER_IMAGE} alt="JINVERSE logo" className="h-auto max-h-[420px] w-full object-contain" /></div></div></Reveal>
       </div>
       {/* subtle gold divider into the next section, instead of a flat line */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold-dim/60 to-transparent" aria-hidden="true" />
