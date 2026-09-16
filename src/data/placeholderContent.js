@@ -233,6 +233,7 @@ export const explorePathways = [
   { slug: 'history-heritage', title: 'History and Heritage', description: 'Communities, monuments and heritage across centuries.' },
   { slug: 'texts', title: 'Jain Texts', description: 'The scriptures and literature that carry the tradition forward.' },
   { slug: 'communities', title: 'Jain Communities and Traditions', description: 'Svetambara, Digambara, and living practice today.' },
+  { slug: 'prayer-worship', title: 'Prayer & Worship', description: 'How Digambara Jains pray, worship the Jina, cultivate devotion and turn worship inward.' },
 ]
 
 export const heritageSites = [

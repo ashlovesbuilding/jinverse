@@ -13,6 +13,7 @@ const LINKS = {
   'history-heritage': '/history',
   texts: '/texts',
   communities: '/about',
+  'prayer-worship': '/prayer-and-worship',
 }
 
 export default function Explore() {
