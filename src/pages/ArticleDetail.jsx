@@ -99,12 +99,7 @@ export default function ArticleDetail() {
         return
       }
 
-      if (!data) {
-        setLoadState('not-found')
-        return
-      }
-
-      setRemoteArticle(data)
+      if (data) setRemoteArticle(data)
       setLoadState('ready')
     }
 
@@ -149,9 +144,7 @@ export default function ArticleDetail() {
   const localArticle = !isSupabaseConfigured
     ? readLocalArticles().find((item) => item.slug === slug && item.status === 'published')
     : null
-  const seedArticle = !isSupabaseConfigured
-    ? seedArticles.find((item) => item.slug === slug)
-    : null
+  const seedArticle = seedArticles.find((item) => item.slug === slug)
   const article = remoteArticle || localArticle || seedArticle
 
   const englishTitle = article?.title || (slug === 'what-is-jainism' ? 'Jainism: An Ancient Tradition of Liberation' : '')
@@ -193,10 +186,6 @@ export default function ArticleDetail() {
 
   if (loadState === 'error') {
     return <div className="container-page py-24 text-center"><p className="font-display text-2xl text-ivory">Unable to load article</p><p className="mt-3 text-sm text-ivory-dim">{loadError}</p></div>
-  }
-
-  if (loadState === 'not-found') {
-    return <div className="container-page py-24 text-center"><p className="font-display text-2xl text-ivory">Article not found or not published</p></div>
   }
 
   if (!article) return <div className="container-page py-24 text-center"><p className="font-display text-2xl text-ivory">Article not found</p></div>

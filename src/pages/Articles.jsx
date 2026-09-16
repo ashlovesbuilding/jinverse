@@ -1,45 +1,15 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SectionHeading from '../components/ui/SectionHeading.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
 import Seo from '../components/Seo.jsx'
-import { articles as seedArticles, articleCategories } from '../data/placeholderContent.js'
-import { supabase, isSupabaseConfigured } from '../lib/supabaseClient.js'
+import { articleCategories } from '../data/placeholderContent.js'
+import { useArticleLibrary } from '../lib/useArticleLibrary.js'
 
 export default function Articles() {
   const [query, setQuery] = useState('')
   const [category, setCategory] = useState('All')
-  const [remoteArticles, setRemoteArticles] = useState([])
-
-  useEffect(() => {
-    let active = true
-    async function loadArticles() {
-      if (!isSupabaseConfigured || !supabase) return
-      const { data, error } = await supabase
-        .from('articles')
-        .select('*')
-        .eq('status', 'published')
-        .order('created_at', { ascending: true })
-      if (!error && active) setRemoteArticles(data || [])
-    }
-    loadArticles()
-    return () => { active = false }
-  }, [])
-
-  const libraryArticles = useMemo(() => {
-    const merged = [...seedArticles]
-    remoteArticles.forEach((remote) => {
-      const index = merged.findIndex((article) => article.slug === remote.slug)
-      const normalized = {
-        ...remote,
-        readingTime: remote.reading_time || remote.readingTime || '5 min read',
-        excerpt: remote.excerpt || remote.subtitle || '',
-      }
-      if (index >= 0) merged[index] = { ...merged[index], ...normalized }
-      else merged.push(normalized)
-    })
-    return merged
-  }, [remoteArticles])
+  const { articles: libraryArticles } = useArticleLibrary()
 
   const filtered = useMemo(() => {
     return libraryArticles.filter((a) => {
