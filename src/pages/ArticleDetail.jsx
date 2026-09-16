@@ -34,7 +34,7 @@ function renderParagraph(paragraph, key) {
       </figure>
     )
   }
-  return <p key={key}>{renderInlineBold(paragraph)}</p>
+  return <p key={key} className="break-words">{renderInlineBold(paragraph)}</p>
 }
 
 function toSections(body = '') {

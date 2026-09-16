@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Reveal from '../ui/Reveal.jsx'
 
 // Moved out of src/pages/Home.jsx unchanged (content untouched — only the
@@ -55,9 +56,10 @@ export function DasLakshanSection() {
         </Reveal>
 
         <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5 lg:gap-5">
-          {DAS_LAKSHAN_DAYS.map((d, i) => (
-            <Reveal key={d.day} delay={i * 50}>
-              <div className="h-full border border-ink-dim/25 bg-parchment p-4 text-center transition-colors hover:border-saffron/60 lg:p-5">
+          {DAS_LAKSHAN_DAYS.map((d, i) => {
+            const cardClassName = 'h-full border border-ink-dim/25 bg-parchment p-4 text-center transition-colors hover:border-saffron/60 lg:p-5'
+            const cardContent = (
+              <>
                 <p className="font-display text-xs text-saffron">{d.day}</p>
                 <h3 className="mt-2 font-display text-base text-ink lg:text-lg">{d.hi}</h3>
                 {/* Concise name on mobile, full "Uttama X — Supreme Y" form
@@ -69,9 +71,21 @@ export function DasLakshanSection() {
                   <p className="text-xs leading-relaxed text-ink-dim lg:hidden">{d.enMeaningShort}</p>
                   <p className="hidden text-xs leading-relaxed text-ink-dim lg:block">{d.enMeaning}</p>
                 </div>
-              </div>
-            </Reveal>
-          ))}
+              </>
+            )
+            return (
+              <Reveal key={d.day} delay={i * 50}>
+                {/* Only Day 01 (Uttam Kshama) links out, to the first
+                    published Das Lakshan article — the other nine days
+                    don't have an article yet, so they stay static. */}
+                {d.day === '01' ? (
+                  <Link to="/articles/uttam-kshama" className={`block ${cardClassName}`}>{cardContent}</Link>
+                ) : (
+                  <div className={cardClassName}>{cardContent}</div>
+                )}
+              </Reveal>
+            )
+          })}
         </div>
 
         <Reveal>
