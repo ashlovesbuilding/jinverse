@@ -429,6 +429,51 @@ function FeaturedDasLakshanFeature() {
   )
 }
 
+// Evergreen — always renders (not gated by getSeasonalBanner()). The full
+// content (all 8 parts, sources, devotional image) now lives at the
+// dedicated /prayer-and-worship page (src/pages/PrayerAndWorship.jsx),
+// reusing the same PrayerAndWorshipSection component so nothing is
+// duplicated or rewritten. This is a short, tasteful teaser linking there.
+function PrayerAndWorshipPreview() {
+  return (
+    <section className="border-b border-[#8C6A32]/20 bg-parchment py-24">
+      <div className="container-page">
+        <Reveal>
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-xs uppercase tracking-[0.28em] text-saffron">Digambara Jain Tradition</p>
+            <h2 className="mt-3 font-display text-4xl text-ink">दिगम्बर जैन किस प्रकार प्रार्थना और पूजा करते हैं?</h2>
+            <p className="font-display text-2xl text-ink-dim">How Do Digambara Jains Pray?</p>
+            <p className="mt-6 text-sm leading-7 text-ink-dim">
+              Digambara Jain texts describe not a single practice called &ldquo;prayer,&rdquo; but several distinct forms of religious life — reverence, worship, praise, equanimity, meditation, study and self-examination — each theologically distinct from petitioning a creator deity.
+            </p>
+          </div>
+        </Reveal>
+
+        <Reveal delay={80}>
+          <div className="relative mx-auto mt-10 w-full max-w-xs sm:max-w-sm">
+            <div className="absolute -inset-3 rounded-sm bg-gold/10 blur-xl" aria-hidden="true" />
+            <div className="relative border border-gold-dim/50 bg-panel/70 p-2 shadow-xl">
+              <img
+                src="/images/jina-puja-devotion.png"
+                alt="A devotee in reverent prayer before a Jina mūrti seated in meditation, illustrating jina-pūjā"
+                className="h-auto w-full object-contain"
+              />
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={100}>
+          <div className="mx-auto mt-8 text-center">
+            <Link to="/prayer-and-worship" className="text-sm text-saffron transition-colors hover:text-[#8C6A32]">
+              Read the full guide →
+            </Link>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  )
+}
+
 function CosmicField() {
   const dots = [
     { top: '12%', left: '18%', size: 2, delay: '0s' },
@@ -585,6 +630,7 @@ export default function Home() {
       <DasLakshanSection />
       <DasLakshanObservanceSection />
     </>}
+    <PrayerAndWorshipPreview />
     <section className="border-t border-line/70 py-24"><div className="container-page text-center"><Reveal><div className="ford-rule mx-auto mb-8" /><h2 className="mx-auto max-w-2xl font-display text-3xl text-ivory sm:text-4xl">Ancient wisdom, made accessible for the generation carrying it forward.</h2><div className="mt-10 flex flex-wrap justify-center gap-4"><Button to="/teachings" variant="primary">Begin Your Journey</Button><Button to="/about" variant="secondary">About JINVERSE</Button></div></Reveal></div></section>
   </>
 }

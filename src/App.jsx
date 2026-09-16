@@ -14,6 +14,7 @@ import ArticleEditor from './pages/ArticleEditor.jsx'
 import Reels from './pages/Reels.jsx'
 import About from './pages/About.jsx'
 import RotTeej from './pages/RotTeej.jsx'
+import PrayerAndWorship from './pages/PrayerAndWorship.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 function LegacyHashRedirect() {
@@ -51,6 +52,7 @@ export default function App() {
           <Route path="/reels" element={<Reels />} />
           <Route path="/about" element={<About />} />
           <Route path="/rot-teej" element={<RotTeej />} />
+          <Route path="/prayer-and-worship" element={<PrayerAndWorship />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
