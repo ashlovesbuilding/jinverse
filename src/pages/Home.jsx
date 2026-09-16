@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/ui/Button.jsx'
 import SectionHeading from '../components/ui/SectionHeading.jsx'
@@ -5,6 +6,7 @@ import Reveal from '../components/ui/Reveal.jsx'
 import EvidenceLabel from '../components/ui/EvidenceLabel.jsx'
 import { teachings, tirthankaras, heritageSites, texts } from '../data/placeholderContent.js'
 import { useArticleLibrary } from '../lib/useArticleLibrary.js'
+import { getTodaysArticle } from '../lib/todaysArticle.js'
 
 const UPPER_IMAGE = '/file_000000008c8082119468161444477380.png'
 const LOWER_IMAGE = '/jinverselogo.png'
@@ -234,6 +236,54 @@ function PrayerAndWorshipPreview() {
   )
 }
 
+// Deterministic daily pick from the same shared article collection used by
+// /articles and the Latest Articles section below (useArticleLibrary +
+// getTodaysArticle) — no separate query, no second loading system. Renders
+// nothing while the collection is empty, so there is never a broken-looking
+// card; seed articles are available synchronously, so in practice this only
+// happens if the merged collection itself is empty.
+function TodaysArticleFeature({ article }) {
+  if (!article) return null
+  const readingTime = article.readingTime || article.reading_time
+  const meta = [article.category, readingTime].filter(Boolean).join(' · ')
+  const excerpt = article.excerpt || article.subtitle || ''
+  const image = article.image_url || article.hero_image_url || article.imageUrl
+
+  return (
+    <section className="border-t border-line/70 bg-void py-24">
+      <div className="container-page">
+        <Reveal>
+          <p className="text-xs uppercase tracking-[0.2em] text-gold-dim">Today&rsquo;s Article</p>
+        </Reveal>
+        <Reveal delay={40}>
+          <Link
+            to={`/articles/${article.slug}`}
+            className={`group mt-6 flex flex-col gap-8 border border-gold-dim/40 bg-panel/50 p-8 transition-colors hover:border-gold sm:p-10 ${image ? 'lg:flex-row lg:items-center' : ''}`}
+          >
+            {image && (
+              <div className="shrink-0 lg:w-2/5">
+                <img
+                  src={image}
+                  alt={article.image_caption || article.hero_image_caption || article.imageCaption || article.title}
+                  className="h-auto w-full border border-line object-contain"
+                />
+              </div>
+            )}
+            <div className="flex-1">
+              {meta && <p className="text-xs text-gold-dim">{meta}</p>}
+              <h3 className="mt-2 font-display text-2xl text-ivory sm:text-3xl">{article.title}</h3>
+              {excerpt && <p className="mt-3 text-sm leading-relaxed text-ivory-dim">{excerpt}</p>}
+              <span className="mt-6 inline-block text-sm text-gold transition-colors group-hover:text-ivory">
+                Read today&rsquo;s article →
+              </span>
+            </div>
+          </Link>
+        </Reveal>
+      </div>
+    </section>
+  )
+}
+
 function CosmicField() {
   const dots = [
     { top: '12%', left: '18%', size: 2, delay: '0s' },
@@ -252,6 +302,11 @@ function CosmicField() {
 export default function Home() {
   const knownTirthankaras = tirthankaras.filter((t) => t.verified).slice(0, 3)
   const { articles: libraryArticles } = useArticleLibrary()
+  // Recomputes only when the merged collection changes (e.g. once the async
+  // Supabase fetch resolves) — the calendar day itself is read fresh inside
+  // getTodaysArticle on every render, so a visitor who leaves the tab open
+  // across midnight still sees the new day's pick on their next re-render.
+  const todaysArticle = useMemo(() => getTodaysArticle(libraryArticles), [libraryArticles])
   // Reuses the same seasonal state SeasonalBanner already computes above —
   // no second date system. When this stops returning 'das-lakshan', the
   // featured placement disappears and the evergreen one below resumes
@@ -386,6 +441,7 @@ export default function Home() {
     <section className="border-b border-[#8C6A32]/20 bg-parchment py-24"><div className="container-page"><Reveal><SectionHeading tone="light" eyebrow="Meet the Tirthankaras" title="Twenty-four ford-makers" description="A Tirthankara is one who has crossed the ocean of worldly existence and shown others the way." /></Reveal><div className="mt-12 grid gap-6 sm:grid-cols-3">{knownTirthankaras.map((t, i) => <Reveal key={t.number} delay={i * 80}><div className="border border-ink-dim/25 bg-parchment p-6 text-center transition-colors hover:border-saffron/60"><p className="text-xs text-saffron">Tirthankara {t.number}</p><h3 className="mt-2 font-display text-xl text-ink">{t.name}</h3><p className="mt-2 text-sm text-ink-dim">Emblem: {t.emblem}</p></div></Reveal>)}</div><div className="mt-10"><Button to="/tirthankaras" variant="secondaryLight">See all 24</Button></div></div></section>
     <section className="border-t border-line/70 bg-panel/40 py-24"><div className="container-page"><Reveal><SectionHeading eyebrow="Jain history and heritage" title="Two thousand years of living evidence" description="From royal inscriptions to monumental statues, Jain heritage across India is documented with care." /></Reveal><div className="mt-12 grid gap-6 sm:grid-cols-2">{heritageSites.map((site, i) => <Reveal key={site.slug} delay={i * 70}><div className="border border-line p-6 transition-colors hover:border-gold-dim"><h3 className="font-display text-lg text-ivory">{site.name}</h3><p className="text-xs text-ivory-dim/70">{site.region}</p><p className="mt-2 text-sm leading-relaxed text-ivory-dim">{site.note}</p></div></Reveal>)}</div><div className="mt-10"><Button to="/history" variant="secondary">Explore history & heritage</Button></div></div></section>
     <section className="border-b border-[#8C6A32]/20 bg-parchment py-24"><div className="container-page"><Reveal><SectionHeading tone="light" eyebrow="Explore Jain texts" title="Scripture and literature" description="From canonical sutras to epic narrative literature, the sources that carry Jain thought forward." /></Reveal><div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">{texts.slice(0, 3).map((t, i) => <Reveal key={t.slug} delay={i * 70}><div className="flex h-full flex-col border border-ink-dim/25 bg-parchment p-6 transition-colors hover:border-saffron/60"><h3 className="font-display text-lg text-ink">{t.title}</h3><p className="mt-1 text-xs text-ink-dim/80">{t.tradition} · {t.language}</p><p className="mt-3 text-sm leading-relaxed text-ink-dim">{t.description}</p></div></Reveal>)}</div><div className="mt-10"><Button to="/texts" variant="secondaryLight">View all texts</Button></div></div></section>
+    <TodaysArticleFeature article={todaysArticle} />
     <section className="border-t border-line/70 bg-panel/40 py-24"><div className="container-page"><Reveal><SectionHeading eyebrow="Latest articles" title="From the JINVERSE library" /></Reveal><div className="mt-12 grid gap-6 lg:grid-cols-3">{libraryArticles.map((a, i) => <Reveal key={a.slug} delay={i * 70}><Link to={`/articles/${a.slug}`} className="group flex h-full flex-col border border-line p-6 transition-colors hover:border-gold"><p className="text-xs text-gold-dim">{a.category}</p><h3 className="mt-2 font-display text-lg text-ivory">{a.title}</h3><p className="mt-2 flex-1 text-sm leading-relaxed text-ivory-dim">{a.excerpt}</p><p className="mt-4 text-xs text-ivory-dim/60">{a.readingTime}</p></Link></Reveal>)}</div><div className="mt-10"><Button to="/articles" variant="secondary">Read all articles</Button></div></div></section>
     {!isDasLakshanFeatured && <DasLakshanEvergreenPreview />}
     <PrayerAndWorshipPreview />
