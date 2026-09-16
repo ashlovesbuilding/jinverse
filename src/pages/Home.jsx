@@ -431,9 +431,10 @@ function FeaturedDasLakshanFeature() {
 
 // Evergreen — always renders (not gated by getSeasonalBanner()). The full
 // content (all 8 parts, sources, devotional image) now lives at the
-// dedicated /prayer-and-worship page (src/pages/PrayerAndWorship.jsx),
-// reusing the same PrayerAndWorshipSection component so nothing is
-// duplicated or rewritten. This is a short, tasteful teaser linking there.
+// dedicated /prayer-and-worship page (src/pages/PrayerAndWorship.jsx,
+// rendering components/sections/PrayerAndWorshipSection.jsx). This is a
+// separate, short, tasteful teaser (not a reuse of that component) sharing
+// only the same devotional image and related copy, linking there.
 function PrayerAndWorshipPreview() {
   return (
     <section className="border-b border-[#8C6A32]/20 bg-parchment py-24">
@@ -610,7 +611,7 @@ export default function Home() {
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ivory-dim sm:text-lg">Journey through Jain philosophy, living ethics, ancient texts, history and heritage — presented with clarity, depth and respect.</p>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Button to="/teachings" variant="primary">Begin Your Journey</Button>
-              <Button to="/explore" variant="secondary">Explore the Teachings</Button>
+              <Button to="/explore" variant="secondary">Explore JINVERSE</Button>
             </div>
           </div>
         </Reveal>
