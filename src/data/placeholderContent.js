@@ -215,14 +215,125 @@ export const texts = [
   },
 ]
 
+const UTTAM_KSHAMA_BODY = `## What Is Uttam Kshama?
+
+Uttam Kshama, more fully **Uttama Kṣamā**, is the first of the ten virtues of Das Lakshan Dharma. Kshama is usually translated as "forgiveness," but the Jain sense of the word is broader: it includes patience under provocation, forbearance in the face of hardship, and pardon extended freely rather than earned through apology.
+
+Jain teaching is careful to distinguish Uttama Kshama from ordinary "being nice" or from simply suppressing anger while it still burns underneath. Classical explanations of this dharma describe a person who does not become enraged even when the occasion for anger is obvious — when insulted, mocked, publicly disgraced, or spoken to with deliberate unpleasantness. What matters is not only how a person behaves outwardly under provocation, but whether resentment and ill-will take root within at all.
+
+## Kshama in Das Lakshana
+
+Uttama Kshama is the first of the ten uttama dharmas (supreme virtues) named in Tattvārtha Sūtra 9.6 and observed over the ten days of Das Lakshan Parv, traditionally in this order:
+
+1. Uttam Kshama — Supreme Forgiveness / Forbearance
+
+2. Uttam Mardava — Supreme Humility
+
+3. Uttam Arjava — Supreme Straightforwardness
+
+4. Uttam Shaucha — Supreme Contentment / Purity
+
+5. Uttam Satya — Supreme Truth
+
+6. Uttam Sanyama — Supreme Self-restraint
+
+7. Uttam Tapa — Supreme Austerity
+
+8. Uttam Tyaga — Supreme Renunciation
+
+9. Uttam Akinchanya — Supreme Non-attachment / Non-possession
+
+10. Uttam Brahmacharya — Supreme Celibacy / Chastity
+
+The ten virtues are traditionally presented in this order, beginning with Uttama Kṣamā. This article focuses on the first virtue; the remaining nine each deserve their own treatment.
+
+## Beyond Anger
+
+Kshama is closely tied to anger (krodha). Anger typically arises in response to insult, injury, criticism or frustration — moments when something has genuinely gone wrong, or when we feel wronged, dismissed or diminished. The classical framing described above holds that forbearance means not becoming angered even when such an occasion is obvious; it does not ask a person to pretend that no harm occurred.
+
+As a modern practical clarification — an editorial note from JINVERSE rather than a claim drawn from the sources above — it is worth adding: kshama does not require agreeing that a harm was acceptable, and it does not ask anyone to tolerate abuse or abandon legitimate boundaries. Recognizing that harm occurred is a different matter from continuing to cultivate ill-will toward the person responsible for it; the Jain sense of forgiveness concerns the latter.
+
+## Kshama Toward Others
+
+Traditional discussion of Uttama Kshama includes forgiveness directed outward, toward those who have caused harm. Jainworld's account of Uttama Kshama Dharma describes distinct categories of such forgiveness — for example, pardoning someone who speaks unpleasant words without real cause, and pardoning someone whose intentions are more seriously harmful — treating both as expressions of the same underlying virtue rather than requiring different responses.
+
+Jain ethical teaching is also widely understood to ask for the reverse movement: seeking forgiveness from those one has wronged, rather than only waiting to be forgiven, and extending kshama broadly rather than reserving it only for those one is already close to. This article has not been able to verify a specific claim about an annual observance, or about family and community customs tied to a particular time of year, against the five sources listed here, so no such specific claim is made.
+
+## Kshama Toward Oneself
+
+Uttama Kshama is not only about how we treat others; it also concerns how we relate to our own mistakes. One practical way to apply this principle — offered here as a JINVERSE interpretation rather than a traditional formula — is a simple sequence: honestly recognizing what was done, reflecting on it, correcting one's conduct going forward, and restraining oneself from repeating the same fault, without continuing to carry it as a private, ongoing resentment against oneself.
+
+This sequence is offered as a practical framework inspired by the spirit of Uttama Kshama; it is not presented as an ancient or scriptural formula in its own right.
+
+## Kshama and Karma
+
+Jain philosophy treats anger (krodha) as one of the kashayas — passions that bind karmic matter to the soul. Source A (Tattvārtha Sūtra with Sarvārthasiddhi commentary) situates the ten uttama dharmas, including Uttama Kshama, within its discussion of samvara: the stopping of the influx of karma. On that basis, cultivating forbearance can reasonably be understood as part of a broader effort to reduce what binds karma to the soul.
+
+The wider doctrine of the four kashayas — anger, pride, deceit and greed — and their specific mechanics is well-established, general Jain philosophical background. This article has not verified that detail directly against the five sources listed here, so it is presented as general context rather than a claim drawn from any one of them.
+
+What this article does not claim is that one person forgiving another removes karma already bound through a wrongful act, or that forgiveness functions as a transaction erasing someone else's wrongdoing. Cultivating freedom from anger is best understood as affecting the practitioner's own karmic situation, not another person's.
+
+## How to Practice Uttam Kshama Today
+
+The following are practical applications inspired by the virtue of Uttama Kshama, not scriptural commandments in themselves:
+
+Pause before responding to an insult, rather than reacting immediately.
+
+Notice anger as it arises, before acting or speaking from it.
+
+Avoid retaliatory speech, even when a sharp reply would feel justified.
+
+Reflect before judging another person's motives or character.
+
+Acknowledge one's own mistakes honestly, rather than minimizing or denying them.
+
+Apologize where it is appropriate to do so, without waiting to be asked.
+
+Forgive without denying what actually happened — forgiveness and honest memory are not opposites.
+
+Where it fits within one's own tradition and practice, use Pratikraman or a similar period of reflection to review the day's conduct and seek forgiveness for it.
+
+These are everyday applications a practitioner might draw from the virtue; they are not presented here as a complete or binding list.
+
+## A Deeper Jain Perspective
+
+At a deeper level, Uttama Kshamā is not merely a social rule about saying "sorry" or accepting an apology. It concerns the practitioner's relationship with anger, resentment and the impulse to retaliate. The Jain ideal is to cultivate a state in which such passions have progressively less hold over one's conduct.
+
+This paragraph is offered as a general synthesis consistent with the sources above rather than a specific doctrinal claim drawn from any one of them.
+
+## Reflection
+
+When anger rises, what am I protecting?
+
+When I forgive, what am I releasing?
+
+Can I correct what was wrong without carrying resentment forward?
+
+These questions are JINVERSE's own reflective prompt, inspired by the themes of Uttama Kshama. They are not a scriptural quotation.
+
+## Sources & Further Reading
+
+Tattvārtha Sūtra, Chapter 9, Sūtra 6, with Ācārya Pūjyapāda's Sarvārthasiddhi commentary — wisdomlib.org: https://www.wisdomlib.org/jainism/book/tattvartha-sutra-with-commentary/d/doc1084897.html
+
+Jainworld, "Supreme Forgiveness (Uttama Kshama Dharma)" — https://jainworld.jainworld.com/jainbooks/images/31/SUPREME_FORGIVENESS.htm
+
+Jainworld, "Supplements to Ahimsa-Vrata," The Jaina Path of Ahimsa — https://jainworld.com/library/jain-books/books-on-line/jainworld-books-in-indian-languages/the-jaina-path-of-ahimsa/supplements-to-ahimsa-vrata/
+
+Jain Digest, September/October 2013 — https://jainworld.jainworld.com/JWEnglish/Magazines/Jain_Digest_Sept_Oct_2013.pdf
+
+English Pratikraman: Introduction for English-Speaking Jains — https://jainqq.org/booktext/English_Pratikraman_Introduction_for_English_Speaking_Jains/320010
+
+A note on sourcing: direct access to sources B, C, D and E was not available while preparing this article, and source A was consulted only through search-engine summaries of its content rather than its full primary text. Passages above that draw on general Jain philosophical knowledge rather than on these five sources specifically are noted as such within the article, rather than presented as verified quotation.`
+
 export const articles = [
   { slug: 'what-is-jainism', title: 'What Is Jainism?', subtitle: 'An introduction to one of the world’s oldest living paths to liberation.', category: 'Beginner’s guide', readingTime: '6 min read', excerpt: 'Jainism centers on the liberation of the soul through non-violence, self-discipline and right understanding.' },
   { slug: 'bharatavarsha-bharat-chakravarti', title: 'Bharatavarsha: The Land of Bharat Chakravarti', subtitle: 'The sacred story of Bhagwan Rishabhadeva, Bharat Chakravarti and the name of our great land.', category: 'History', readingTime: '9 min read', excerpt: 'Discover the Jain tradition of Adinath Bhagwan as the first civilizational teacher and Bharat Chakravarti as the sovereign whose name lives on in Bharatavarsha.' },
   { slug: 'understanding-ahimsa', title: 'Understanding Ahimsa', subtitle: 'Why non-violence in Jain thought reaches into action, speech and thought alike.', category: 'Philosophy', readingTime: '9 min read', excerpt: 'Ahimsa is not merely the absence of violence. It is a disciplined reverence for every living being.' },
   { slug: 'the-universe-within', title: 'The Universe Within', subtitle: 'What the Jain concept of the soul asks us to see in ourselves.', category: 'Philosophy', readingTime: '7 min read', excerpt: 'Jain metaphysics holds that every soul carries within it the capacity for complete purity and infinite knowledge.' },
+  { slug: 'uttam-kshama', title: 'Uttam Kshama: The Jain Virtue of Supreme Forgiveness', subtitle: 'The first of the ten Das Lakshan virtues — forbearance, forgiveness and freedom from anger.', category: 'Jain Philosophy / Das Lakshan', readingTime: '8 min read', excerpt: 'Uttam Kshama, the first of the ten Das Lakshan virtues, is supreme forgiveness — not mere niceness or suppressed anger, but a settled freedom from ill-will even in the face of insult and provocation.', body_markdown: UTTAM_KSHAMA_BODY },
 ]
 
-export const articleCategories = ['Philosophy', 'History', 'Texts', 'Heritage', 'Contemporary relevance', 'Beginner’s guide']
+export const articleCategories = ['Philosophy', 'History', 'Texts', 'Heritage', 'Contemporary relevance', 'Beginner’s guide', 'Jain Philosophy / Das Lakshan']
 
 export const explorePathways = [
   { slug: 'philosophy', title: 'Jain Philosophy', description: 'The metaphysics and ethics of liberation.' },
