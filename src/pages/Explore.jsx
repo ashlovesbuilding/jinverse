@@ -21,14 +21,14 @@ export default function Explore() {
     <div className="container-page py-20">
       <Seo
         title="Explore Jainism"
-        description="Eight pathways into the philosophy, history and living practice of Jainism — start wherever draws you in."
+        description="Nine pathways into the philosophy, history and living practice of Jainism — start wherever draws you in."
         path="/explore"
       />
       <Reveal>
         <SectionHeading
           eyebrow="Explore"
           title="Find your way into Jain thought"
-          description="Eight pathways into the philosophy, history and living practice of Jainism."
+          description="Nine pathways into the philosophy, history and living practice of Jainism."
         />
       </Reveal>
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
