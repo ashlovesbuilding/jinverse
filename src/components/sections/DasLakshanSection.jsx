@@ -22,6 +22,13 @@ const DAS_LAKSHAN_DAYS = [
   { day: '10', hi: 'उत्तम ब्रह्मचर्य', en: 'Uttama Brahmacarya — Supreme Chastity', enShort: 'Supreme Chastity', hiMeaning: 'इन्द्रिय-विषयों से संयम और आत्मा में स्थित होने की साधना।', enMeaning: 'Restraint from sensual attachment and a life increasingly centered on the soul.', enMeaningShort: 'Restraint from sensual attachment and a life increasingly centered on the soul.' },
 ]
 
+// Maps a Das Lakshan day to its published article slug, if one exists yet.
+// Days without an entry here stay as static (non-linking) cards.
+const DAS_LAKSHAN_ARTICLE_SLUGS = {
+  '01': 'uttam-kshama',
+  '02': 'uttam-mardava',
+}
+
 // Evergreen — deliberately carries no festival dates. This is the
 // full bilingual explainer section; the date-gated homepage teaser is
 // the separate SeasonalBanner in Home.jsx, which is untouched by this.
@@ -73,13 +80,13 @@ export function DasLakshanSection() {
                 </div>
               </>
             )
+            // Only days with a published Das Lakshan article link out; the
+            // rest stay static until their own articles exist.
+            const articleSlug = DAS_LAKSHAN_ARTICLE_SLUGS[d.day]
             return (
               <Reveal key={d.day} delay={i * 50}>
-                {/* Only Day 01 (Uttam Kshama) links out, to the first
-                    published Das Lakshan article — the other nine days
-                    don't have an article yet, so they stay static. */}
-                {d.day === '01' ? (
-                  <Link to="/articles/uttam-kshama" className={`block ${cardClassName}`}>{cardContent}</Link>
+                {articleSlug ? (
+                  <Link to={`/articles/${articleSlug}`} className={`block ${cardClassName}`}>{cardContent}</Link>
                 ) : (
                   <div className={cardClassName}>{cardContent}</div>
                 )}

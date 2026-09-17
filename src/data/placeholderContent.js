@@ -323,12 +323,93 @@ English Pratikraman: Introduction for English-Speaking Jains: https://jainqq.org
 
 A note on sources: we could not directly access Jainworld, the Jain Digest PDF, or the Pratikraman text while writing this article, and reached the Tattvartha Sutra source only through search summaries rather than its full text. Where this article draws on general Jain knowledge rather than these five sources directly, that is noted in the text above.`
 
+const UTTAM_MARDAVA_BODY = `## What Is Uttam Mardava?
+
+Uttam Mardava is the second virtue of Das Lakshan Dharma. Mardava is usually translated as humility, modesty or tenderness. In Jain thought, it means letting go of the pride that makes us feel better than other people.
+
+The Tattvartha Sutra describes it simply: freedom from the arrogance that can come from things like high birth or rank. Mardava is not about hiding your abilities. It is about not using them to look down on anyone.
+
+## Why Humility Matters
+
+Pride shows up in small, everyday thoughts. "I come from a better family." "I have more money." "I am more educated." "I know more about religion than they do." On their own, these thoughts can seem harmless. The problem starts when we use them to measure our worth against someone else, and quietly decide we come out ahead.
+
+Jain teaching treats this kind of pride as a real obstacle. It gets in the way of seeing other people clearly, and it gets in the way of our own spiritual growth. A proud mind is a closed mind. It stops listening once it has decided it already knows better. Mardava asks us to notice this pattern and let it go.
+
+## The Pride We Often Carry
+
+Jain texts describe several common sources of pride. Ancestry and family name. Social standing. Wealth. Beauty. Education and intelligence. Religious knowledge. Even austerity and spiritual achievement can quietly turn into something to feel proud of. Jainworld's account of this virtue describes a person who feels no pride in ancestry, beauty, clan, learning or scriptural knowledge as someone living out true mardava.
+
+The point is simple. Every one of these things can change. Wealth can be lost. Beauty fades. Family reputation shifts with time and circumstance. Even knowledge and achievement are not fixed. They can grow, and they can also be forgotten or overtaken by someone else. Building your sense of worth on things that can disappear is, in Jain terms, a shaky foundation.
+
+## Humility Is Not Weakness
+
+Mardava does not mean letting people walk over you. It does not mean pretending you have no skills, hiding your achievements, or having no self-respect.
+
+What it means is simpler: not turning your abilities or achievements into a reason to feel superior to someone else. You can be confident and humble at the same time. The difference is not in what you have. It is in how you hold it.
+
+## All Souls Are Equal
+
+Jain philosophy holds that every soul has the same basic spiritual potential. Someone may have more money, more education or a higher social position than another person. That does not make their soul more valuable.
+
+This is not a claim that everyone's circumstances in life are the same. They clearly are not. The point is about spiritual worth, not worldly comparison. In Jain teaching, the path toward liberation stays open to any soul, whatever their outward circumstances happen to be. A person with less money, less education or a humbler background is not, on that account, further from it.
+
+## Uttam Mardava in Everyday Life
+
+These are practical ways to bring mardava into daily life, not scriptural rules:
+
+Listen when someone else knows more than you.
+
+Accept correction without getting defensive.
+
+Give credit to other people, especially when it is due.
+
+Do not use your family name, wealth or education to look down on someone.
+
+Treat people the same regardless of their position.
+
+Notice when success starts turning into arrogance.
+
+Remember that no achievement makes you spiritually superior to another person.
+
+## A Deeper Look at Mardava
+
+At its core, mardava is about the pride inside you, not about how you appear to others. Someone can act humble in public, use modest words, downplay their own achievements, and still feel superior underneath. That is not the goal. A performance of humility is still a form of pride, just a quieter one.
+
+Real mardava is quieter still. It shows up less in what you say about yourself and more in how you actually treat other people, especially people who have less than you do, in whatever sense "less" means at that moment.
+
+## Reflection
+
+Do I feel superior to someone because of my family, education or money?
+
+How do I react when someone corrects me?
+
+Can I be proud of something I have done without feeling better than someone else?
+
+What would change if I remembered that every soul has the same potential for liberation?
+
+These questions are ours, not a scripture quote.
+
+## Sources & Further Reading
+
+Tattvartha Sutra, chapter 9, verse 6, with Acharya Pujyapada's Sarvarthasiddhi commentary. wisdomlib.org: https://www.wisdomlib.org/jainism/book/tattvartha-sutra-with-commentary/d/doc1084897.html
+
+Jainworld, "Supreme Tenderness or Humility (Uttama Mardava Dharma)": https://jainworld.jainworld.com/jainbooks/images/31/SUPREME_TENDERNESS_OR_HUMIL.htm
+
+Jainworld, "Supplements to Ahimsa-Vrata": https://jainworld.jainworld.com/jainbooks/ahimsa/supahimsa.htm
+
+Jain Digest, September/October 2013: https://jainworld.jainworld.com/JWEnglish/Magazines/Jain_Digest_Sept_Oct_2013.pdf
+
+Jain Quantum, Compendium of Jainism: https://jainqq.org/booktext/samaysar_Romanized/000021
+
+A note on sources: we reached the Tattvartha Sutra and Jainworld material through search summaries rather than the full original text, and could not directly access the Jain Digest PDF or the Jain Quantum page. Where this article draws on general Jain teaching rather than these sources directly, that is noted in the text above.`
+
 export const articles = [
   { slug: 'what-is-jainism', title: 'What Is Jainism?', subtitle: 'An introduction to one of the world’s oldest living paths to liberation.', category: 'Beginner’s guide', readingTime: '6 min read', excerpt: 'Jainism centers on the liberation of the soul through non-violence, self-discipline and right understanding.' },
   { slug: 'bharatavarsha-bharat-chakravarti', title: 'Bharatavarsha: The Land of Bharat Chakravarti', subtitle: 'The sacred story of Bhagwan Rishabhadeva, Bharat Chakravarti and the name of our great land.', category: 'History', readingTime: '9 min read', excerpt: 'Discover the Jain tradition of Adinath Bhagwan as the first civilizational teacher and Bharat Chakravarti as the sovereign whose name lives on in Bharatavarsha.' },
   { slug: 'understanding-ahimsa', title: 'Understanding Ahimsa', subtitle: 'Why non-violence in Jain thought reaches into action, speech and thought alike.', category: 'Philosophy', readingTime: '9 min read', excerpt: 'Ahimsa is not merely the absence of violence. It is a disciplined reverence for every living being.' },
   { slug: 'the-universe-within', title: 'The Universe Within', subtitle: 'What the Jain concept of the soul asks us to see in ourselves.', category: 'Philosophy', readingTime: '7 min read', excerpt: 'Jain metaphysics holds that every soul carries within it the capacity for complete purity and infinite knowledge.' },
   { slug: 'uttam-kshama', title: 'Uttam Kshama: The Jain Virtue of Supreme Forgiveness', subtitle: 'The first of the ten Das Lakshan virtues: forbearance, forgiveness and freedom from anger.', category: 'Jain Philosophy / Das Lakshan', readingTime: '8 min read', excerpt: "Uttam Kshama, the first of the ten Das Lakshan virtues, means supreme forgiveness. Not mere niceness or suppressed anger, but a steady freedom from ill will, even when we're insulted or provoked.", body_markdown: UTTAM_KSHAMA_BODY },
+  { slug: 'uttam-mardava', title: 'Uttam Mardava: The Jain Virtue of Humility', subtitle: 'The second of the ten Das Lakshan virtues: letting go of the pride that makes us feel better than others.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: "Uttam Mardava, the second of the ten Das Lakshan virtues, means humility. Not weakness or hiding your abilities, but letting go of the pride that puts you above other people.", body_markdown: UTTAM_MARDAVA_BODY },
 ]
 
 export const articleCategories = ['Philosophy', 'History', 'Texts', 'Heritage', 'Contemporary relevance', 'Beginner’s guide', 'Jain Philosophy / Das Lakshan']
