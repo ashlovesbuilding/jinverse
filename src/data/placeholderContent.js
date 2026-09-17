@@ -403,10 +403,104 @@ Jain Quantum, Compendium of Jainism: https://jainqq.org/booktext/samaysar_Romani
 
 A note on sources: we reached the Tattvartha Sutra and Jainworld material through search summaries rather than the full original text, and could not directly access the Jain Digest PDF or the Jain Quantum page. Where this article draws on general Jain teaching rather than these sources directly, that is noted in the text above.`
 
+const UNDERSTANDING_AHIMSA_BODY = `## What Is Ahimsa?
+
+Himsa means violence or injury. Ahimsa means the opposite: non-violence, non-injury. It is one of the central ideas in Jain thought, and probably the one most people already know something about.
+
+Ahimsa asks for more than simply not hurting someone with your hands, though. The Tattvartha Sutra describes himsa as harm caused through careless action of mind, body and speech. So ahimsa covers all three. What we do, what we say, and what we think.
+
+## Why Ahimsa Is So Important in Jainism
+
+Jain teaching holds that life exists in many forms, not only in people and animals we notice easily, but in the smallest and simplest forms of life too. Some living beings have only one sense, like touch. Others have more senses, closer to what we recognise in animals and in ourselves.
+
+Because of this, Jain ethics asks us to be careful. Harming any living being, even by accident or carelessness, is treated seriously. This does not mean every action becomes impossible. It means we are asked to pay attention, and to avoid harm we could reasonably prevent.
+
+## Ahimsa in Action
+
+The most familiar form of ahimsa is physical. Not killing or hurting animals is part of it, and so is avoiding careless or rough treatment of any living being.
+
+Jain teaching pays close attention to intention. Accidentally stepping on an insect while walking is different from deliberately harming it. Jain practice does not expect a person to achieve impossible perfection. It asks for care and awareness, and for avoiding the harm that could reasonably have been avoided.
+
+## Ahimsa in Speech
+
+Ahimsa does not stop at the body. Words can hurt too. Insults, cruel remarks, and speech meant to humiliate someone are all forms of harm in Jain thought.
+
+This does not mean ahimsa asks us to stay silent about difficult truths. It is possible to be honest and still be careful. The question is not whether something is hard to say. It is whether we are saying it with unnecessary cruelty.
+
+## Ahimsa in Thought
+
+Jain thought takes this one step further. Even a thought can carry harm, when it is filled with anger, hatred or the wish to see someone suffer.
+
+This is a careful point, worth stating precisely. Having an angry thought is not treated as identical to committing physical violence. Jain teaching connects passions like anger with karma, the way our actions are believed to affect the soul, but it does not collapse the difference between a fleeting feeling and an actual act. What matters is noticing these thoughts, rather than letting them grow and shape how we act.
+
+## Ahimsa and Everyday Life
+
+Ahimsa becomes real in ordinary moments, not only in big decisions. A few examples:
+
+Choosing words carefully instead of speaking in anger.
+
+Pausing before reacting when something upsets you.
+
+Treating animals, and the people around you, with basic care.
+
+Noticing when a habit or choice causes harm you had not thought about.
+
+These are everyday ways to bring ahimsa into daily life. They are not a complete list of every situation ahimsa applies to, and they are not scriptural commandments in themselves.
+
+## Ahimsa and the Jain Way of Life
+
+Ahimsa connects to other parts of Jain practice. Self-restraint limits the situations where harm might happen. Compassion shapes how we treat other beings, not only as a rule but as an attitude. Carefulness in daily actions is itself considered a form of respect for life.
+
+Ahimsa is also the first of the Jain vows observed by both monastics and laypeople, though the shape it takes differs between the two. This article does not try to explain the full system of Jain vows. It is enough to say that ahimsa sits at the centre of them.
+
+## A Deeper Look at Ahimsa
+
+Ahimsa in Jain thought is not only a rule about outward behaviour. It also concerns the attitude behind our actions.
+
+Two people can perform the same act and mean something different by it. One acts out of carelessness or irritation. The other acts with awareness and care. Jain teaching treats that difference as real. Ahimsa asks for the second kind of attention, not just the right outward result.
+
+## Practising Ahimsa Today
+
+Here are some simple ways to reflect on ahimsa in everyday life.
+
+Notice your words before you speak them, especially in anger.
+
+Pause before reacting to something that upsets you.
+
+Treat animals and insects with basic care, even small ones.
+
+Ask whether a habit of yours causes harm you had not noticed.
+
+Practise patience with people who frustrate you.
+
+These are practical reflections, not scriptural commandments.
+
+## Reflection
+
+Did my words cause unnecessary hurt today?
+
+Did anger influence how I treated someone?
+
+Was there a moment when I could have avoided causing harm?
+
+How can I become more careful tomorrow?
+
+These are JINVERSE's own reflection prompts, not scripture.
+
+## Sources & Further Reading
+
+Tattvartha Sutra with commentary, on the five vows and on the meaning of himsa and ahimsa. wisdomlib.org: https://www.wisdomlib.org/jainism/book/tattvartha-sutra-with-commentary
+
+Jainworld, "Philosophy of Jainism": https://jainworld.com/library/jain-books/books-on-line/jainworld-books-in-indian-languages/the-jaina-path-of-ahimsa/philosophy-of-jainism/
+
+Jainworld, "Living Being (Jiv-Soul)": https://jainworld.com/philosophy/fundamentals/living-being-jiv-soul/
+
+A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
+
 export const articles = [
   { slug: 'what-is-jainism', title: 'What Is Jainism?', subtitle: 'An introduction to one of the world’s oldest living paths to liberation.', category: 'Beginner’s guide', readingTime: '6 min read', excerpt: 'Jainism centers on the liberation of the soul through non-violence, self-discipline and right understanding.' },
   { slug: 'bharatavarsha-bharat-chakravarti', title: 'Bharatavarsha: The Land of Bharat Chakravarti', subtitle: 'The sacred story of Bhagwan Rishabhadeva, Bharat Chakravarti and the name of our great land.', category: 'History', readingTime: '9 min read', excerpt: 'Discover the Jain tradition of Adinath Bhagwan as the first civilizational teacher and Bharat Chakravarti as the sovereign whose name lives on in Bharatavarsha.' },
-  { slug: 'understanding-ahimsa', title: 'Understanding Ahimsa', subtitle: 'Why non-violence in Jain thought reaches into action, speech and thought alike.', category: 'Philosophy', readingTime: '9 min read', excerpt: 'Ahimsa is not merely the absence of violence. It is a disciplined reverence for every living being.' },
+  { slug: 'understanding-ahimsa', title: 'Understanding Ahimsa', subtitle: 'Why non-violence in Jain thought reaches into action, speech and thought alike.', category: 'Philosophy', readingTime: '9 min read', excerpt: 'Ahimsa is not merely the absence of violence. It is a disciplined reverence for every living being.', body_markdown: UNDERSTANDING_AHIMSA_BODY },
   { slug: 'the-universe-within', title: 'The Universe Within', subtitle: 'What the Jain concept of the soul asks us to see in ourselves.', category: 'Philosophy', readingTime: '7 min read', excerpt: 'Jain metaphysics holds that every soul carries within it the capacity for complete purity and infinite knowledge.' },
   { slug: 'uttam-kshama', title: 'Uttam Kshama: The Jain Virtue of Supreme Forgiveness', subtitle: 'The first of the ten Das Lakshan virtues: forbearance, forgiveness and freedom from anger.', category: 'Jain Philosophy / Das Lakshan', readingTime: '8 min read', excerpt: "Uttam Kshama, the first of the ten Das Lakshan virtues, means supreme forgiveness. Not mere niceness or suppressed anger, but a steady freedom from ill will, even when we're insulted or provoked.", body_markdown: UTTAM_KSHAMA_BODY },
   { slug: 'uttam-mardava', title: 'Uttam Mardava: The Jain Virtue of Humility', subtitle: 'The second of the ten Das Lakshan virtues: letting go of the pride that makes us feel better than others.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: "Uttam Mardava, the second of the ten Das Lakshan virtues, means humility. Not weakness or hiding your abilities, but letting go of the pride that puts you above other people.", body_markdown: UTTAM_MARDAVA_BODY },
