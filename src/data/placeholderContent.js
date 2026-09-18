@@ -497,6 +497,108 @@ Jainworld, "Living Being (Jiv-Soul)": https://jainworld.com/philosophy/fundament
 
 A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
 
+const UTTAM_ARJAVA_BODY = `## What Is Uttam Arjava?
+
+Uttam Arjava is the third virtue of Das Lakshan Dharma. Arjava is usually translated as straightforwardness, honesty or simplicity. In simple terms, it means keeping our thoughts, words and actions free from deceit.
+
+The Tattvartha Sutra describes it directly: arjava is freedom from crookedness in activity, and it means giving up maya, the Jain word for deceit. Where kshama deals with anger and mardava deals with pride, arjava deals with this third kind of inner crookedness.
+
+## What Does "Straightforward" Mean?
+
+The word can sound vague, so it helps to be precise about what Jain teaching means by it.
+
+Arjava is not the same as speaking bluntly, saying whatever comes to mind, or being socially direct. Being blunt can still be a form of crookedness if it hides a different motive underneath. Jain sources describe true straightforwardness as when your thought, your words and your actions all point the same way. What you think matches what you say, and what you say matches what you do.
+
+If we praise someone to their face while quietly working against them behind their back, there is a gap between our words and our intentions. Arjava asks us to close that gap, not by saying everything we think, but by not letting our outer behaviour contradict our real intentions.
+
+## Arjava and Deceit
+
+Jain philosophy calls deceit maya. It is counted among the passions, called kashayas, that Jain teaching connects with anger, pride and greed. Arjava is the virtue that works directly against maya.
+
+The point is simple. Deceit creates a gap between how we appear and what we actually intend. That gap can grow into a habit, where a person gets so used to presenting a false face that even they lose track of their real motives.
+
+## Being Honest With Ourselves
+
+Straightforwardness is not only about lying to other people. It also means being honest with yourself.
+
+That can mean admitting your own mistakes instead of explaining them away. It can mean being clear with yourself about your real intentions, rather than dressing up a selfish motive as a generous one. It can mean noticing your own weaknesses instead of pretending you do not have them, and asking honestly whether you believe what you are saying, or are just saying what sounds good.
+
+## Arjava in Speech and Action
+
+Straightforwardness shows up in small, everyday choices.
+
+Saying what you actually mean, instead of deliberately creating a false impression.
+
+Admitting a mistake instead of covering it up.
+
+Keeping promises where you reasonably can.
+
+Being honest in business and personal dealings, even when a small deception would be easier.
+
+Not using religious or moral language to appear more virtuous than you actually are.
+
+That last point is worth naming clearly, as a practical application rather than a fixed rule. Using pious words is not automatically wrong. The concern is using them to build a false impression, rather than living out what they describe.
+
+## Straightforwardness Is Not Harshness
+
+Arjava does not give anyone permission to be rude. "I'm just being honest" is sometimes used as an excuse to say something hurtful without thinking about the effect. That is not what this virtue asks for.
+
+Jain teaching also values truthful, careful speech. Arjava and that concern for how our words land work together, not against each other. Being straightforward still leaves room for choosing your words with care.
+
+## Why Deceit Is a Problem
+
+A deceitful life creates a gap between what we think, what we say, and what we do. The wider that gap grows, the harder it becomes to make real spiritual progress, because so much energy goes into managing appearances instead of actually changing.
+
+Arjava is the effort to close that gap, so a person's inner life and outer life stop working against each other.
+
+## Practising Uttam Arjava Today
+
+Say what you mean, without deliberately misleading someone.
+
+Admit mistakes instead of trying to hide them.
+
+Check your real intention before making an important promise.
+
+Avoid building a false image of yourself.
+
+Try to keep your private actions reasonably consistent with the values you claim in public.
+
+If you realise you have deceived someone, acknowledge it and correct it where you can.
+
+These are practical ways to bring arjava into daily life, not a complete list of scriptural commands.
+
+## A Deeper Look at Arjava
+
+The Jain ideal is not simply appearing honest. A person can look honest on the outside while still holding on to small deceptions inside.
+
+Arjava is really about that inner tendency toward crookedness, not just outward reputation. The goal is not to be seen as straightforward. It is to actually be that way, even when no one else would know the difference.
+
+## Reflection
+
+Do my words and actions usually match my intentions?
+
+Do I sometimes create an image of myself that is different from reality?
+
+How do I react when admitting a mistake would make me look bad?
+
+Can I be honest without becoming harsh?
+
+These are JINVERSE's own reflection prompts, not scripture.
+
+## Sources & Further Reading
+
+Tattvartha Sutra, chapter 9, verse 6, with Acharya Pujyapada's Sarvarthasiddhi commentary. wisdomlib.org: https://www.wisdomlib.org/jainism/book/tattvartha-sutra-with-commentary/d/doc1084897.html
+
+Jainworld, "Ten Universal Virtues": https://jainworld.jainworld.com/jainbooks/Books/Ten%20Universal%20Virtues%200%20-%2010%20final%20done.htm
+
+Jainworld, "Supplements to Ahimsa-Vrata": https://jainworld.jainworld.com/jainbooks/ahimsa/supahimsa.htm
+
+Jainworld, "Ten Universal Virtues" (PDF): https://jainworld.jainworld.com/pdf/Ten%20Universal%20Virtues%200%20-%2010%20final%20done.pdf
+
+Jainworld, "Prescription of Ethical Code": https://jainworld.jainworld.com/jainbooks/antiquity/ethcjain.htm
+
+A note on sources: we reached this material through search summaries rather than the full original texts, and could not directly access the PDF version. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
+
 export const articles = [
   { slug: 'what-is-jainism', title: 'What Is Jainism?', subtitle: 'An introduction to one of the world’s oldest living paths to liberation.', category: 'Beginner’s guide', readingTime: '6 min read', excerpt: 'Jainism centers on the liberation of the soul through non-violence, self-discipline and right understanding.' },
   { slug: 'bharatavarsha-bharat-chakravarti', title: 'Bharatavarsha: The Land of Bharat Chakravarti', subtitle: 'The sacred story of Bhagwan Rishabhadeva, Bharat Chakravarti and the name of our great land.', category: 'History', readingTime: '9 min read', excerpt: 'Discover the Jain tradition of Adinath Bhagwan as the first civilizational teacher and Bharat Chakravarti as the sovereign whose name lives on in Bharatavarsha.' },
@@ -504,6 +606,7 @@ export const articles = [
   { slug: 'the-universe-within', title: 'The Universe Within', subtitle: 'What the Jain concept of the soul asks us to see in ourselves.', category: 'Philosophy', readingTime: '7 min read', excerpt: 'Jain metaphysics holds that every soul carries within it the capacity for complete purity and infinite knowledge.' },
   { slug: 'uttam-kshama', title: 'Uttam Kshama: The Jain Virtue of Supreme Forgiveness', subtitle: 'The first of the ten Das Lakshan virtues: forbearance, forgiveness and freedom from anger.', category: 'Jain Philosophy / Das Lakshan', readingTime: '8 min read', excerpt: "Uttam Kshama, the first of the ten Das Lakshan virtues, means supreme forgiveness. Not mere niceness or suppressed anger, but a steady freedom from ill will, even when we're insulted or provoked.", body_markdown: UTTAM_KSHAMA_BODY },
   { slug: 'uttam-mardava', title: 'Uttam Mardava: The Jain Virtue of Humility', subtitle: 'The second of the ten Das Lakshan virtues: letting go of the pride that makes us feel better than others.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: "Uttam Mardava, the second of the ten Das Lakshan virtues, means humility. Not weakness or hiding your abilities, but letting go of the pride that puts you above other people.", body_markdown: UTTAM_MARDAVA_BODY },
+  { slug: 'uttam-arjava', title: 'Uttam Arjava: The Jain Virtue of Straightforwardness', subtitle: 'The third of the ten Das Lakshan virtues: keeping thought, word and action free from deceit.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Arjava, the third of the ten Das Lakshan virtues, means straightforwardness. Not bluntness, but honesty: closing the gap between what we think, what we say and what we do.', body_markdown: UTTAM_ARJAVA_BODY },
 ]
 
 export const articleCategories = ['Philosophy', 'History', 'Texts', 'Heritage', 'Contemporary relevance', 'Beginner’s guide', 'Jain Philosophy / Das Lakshan']
