@@ -599,6 +599,98 @@ Jainworld, "Prescription of Ethical Code": https://jainworld.jainworld.com/jainb
 
 A note on sources: we reached this material through search summaries rather than the full original texts, and could not directly access the PDF version. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
 
+const UTTAM_SHAUCHA_BODY = `## What Is Uttam Shaucha?
+
+Uttam Shaucha is the fourth virtue of Das Lakshan Dharma. Shaucha is often translated as purity, but in this context it means something more specific. The Tattvartha Sutra puts it simply: shaucha is freedom from greed.
+
+Where arjava deals with honesty and mardava deals with pride, shaucha deals with our relationship to possessions and desire. It asks us to notice when wanting more has taken over, and to find contentment instead.
+
+## Why Shaucha Means More Than Cleanliness
+
+The word shaucha can suggest cleanliness, and in everyday Hindi it often does mean exactly that. In the context of Das Lakshan, though, the meaning runs deeper.
+
+Jain teaching connects shaucha to purity of mind as much as anything external. A person can keep a spotless home and still be consumed by wanting more money, more possessions or more status. Shaucha is not concerned with tidiness. It is concerned with what is happening inside a person who keeps chasing more.
+
+## Contentment and Greed
+
+Greed, called lobha in Sanskrit, is one of the four passions Jain philosophy connects with karmic bondage, alongside anger, pride and deceit. Shaucha is the virtue that works directly against lobha.
+
+Contentment does not mean having nothing. It means not being disturbed by what you lack. A content person can own things and use them freely, without that ownership becoming the centre of their thinking. Someone caught in greed, by contrast, can have a great deal and still feel like it is never enough.
+
+## The Desire for More
+
+Wanting more is easy to justify. A bigger income feels like security. A larger home feels like comfort. More recognition feels like proof that our effort mattered.
+
+Jain teaching does not treat these desires as automatically wrong. What it asks us to notice is the pattern behind them, the sense that satisfaction is always just one more thing away. That pattern rarely stops once it starts. Getting the next thing tends to create a new want, rather than settling the old one.
+
+## Possessions and Inner Peace
+
+There is a real connection in Jain thought between how tightly we hold on to things and how much peace we actually have.
+
+Shaucha is not just about what we own. It is about how we relate to what we own. A person who can lose something without being shattered by it has a kind of freedom that a person clinging tightly to every possession does not have. This is not a claim that loss is easy. It is a claim that our attachment shapes how much any loss can disturb us.
+
+## Shaucha in the Life of a Householder
+
+Digambara Jain monastics practise this virtue in a radical way, owning almost nothing. Most people reading this are not monastics, and Jain teaching does not expect the same standard from a householder living an ordinary life with a job, a family and responsibilities.
+
+For a householder, shaucha shows up differently. It looks like earning and owning what is genuinely needed, without letting the pursuit of more crowd out everything else. It looks like noticing when ambition has quietly turned into greed.
+
+## Contentment Does Not Mean Giving Up Responsibility
+
+It is worth being direct about this. Practising shaucha does not mean neglecting your family, giving away your income, or refusing to plan for the future.
+
+A parent providing for their children, a person saving for a real need, or someone building a stable life are not failing at shaucha. The virtue is not about how much you hold. It is about whether greed, rather than genuine need or care for others, is driving your choices.
+
+## Why Greed Creates Bondage
+
+Jain philosophy classifies lobha as one of the kashayas, the passions that bind karmic matter to the soul. Actions, words and thoughts shaped by greed are understood to deepen this bondage rather than loosen it.
+
+Greed also keeps attention fixed outward, on what is missing, rather than inward, on the soul's actual condition. Shaucha loosens that grip. It does not claim to erase every desire overnight. It asks for a steady move away from being ruled by wanting more.
+
+## Practising Uttam Shaucha Today
+
+Notice when "I want this" turns into "I need this."
+
+Ask whether a purchase or goal comes from real need or from comparison with someone else.
+
+Practise being satisfied with what you already have, even while working toward more.
+
+Give something away occasionally, simply to loosen your grip on it.
+
+Pay attention to how you feel when you cannot get something you wanted.
+
+These are practical ways to bring shaucha into daily life, not a complete list of scriptural commands.
+
+## A Deeper Look at Shaucha
+
+At its heart, shaucha is not really about objects. It is about the mind's habit of measuring happiness by what it has or lacks.
+
+A person practising shaucha is working to loosen that habit, so that contentment does not depend entirely on outside circumstances. This is a direction of practice, not something achieved quickly or completely by most people.
+
+## Reflection
+
+Do I have what I need, or am I constantly disturbed by what I do not have?
+
+Do I use my possessions, or do they use me?
+
+Where does my sense of "enough" actually come from?
+
+Can I want something without needing it to feel content?
+
+These are JINVERSE's own reflection prompts, not scripture.
+
+## Sources & Further Reading
+
+Tattvartha Sutra, chapter 9, verse 6, with Acharya Pujyapada's Sarvarthasiddhi commentary. wisdomlib.org: https://www.wisdomlib.org/jainism/book/tattvartha-sutra-with-commentary/d/doc1084897.html
+
+Jainworld, "Ten Universal Virtues": https://jainworld.jainworld.com/jainbooks/Books/Ten%20Universal%20Virtues%200%20-%2010%20final%20done.htm
+
+Jainworld, "Supplements to Ahimsa-Vrata": https://jainworld.jainworld.com/jainbooks/ahimsa/supahimsa.htm
+
+Jainworld, "Prescription of Ethical Code": https://jainworld.jainworld.com/jainbooks/antiquity/ethcjain.htm
+
+A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
+
 export const articles = [
   { slug: 'what-is-jainism', title: 'What Is Jainism?', subtitle: 'An introduction to one of the world’s oldest living paths to liberation.', category: 'Beginner’s guide', readingTime: '6 min read', excerpt: 'Jainism centers on the liberation of the soul through non-violence, self-discipline and right understanding.' },
   { slug: 'bharatavarsha-bharat-chakravarti', title: 'Bharatavarsha: The Land of Bharat Chakravarti', subtitle: 'The sacred story of Bhagwan Rishabhadeva, Bharat Chakravarti and the name of our great land.', category: 'History', readingTime: '9 min read', excerpt: 'Discover the Jain tradition of Adinath Bhagwan as the first civilizational teacher and Bharat Chakravarti as the sovereign whose name lives on in Bharatavarsha.' },
@@ -607,6 +699,7 @@ export const articles = [
   { slug: 'uttam-kshama', title: 'Uttam Kshama: The Jain Virtue of Supreme Forgiveness', subtitle: 'The first of the ten Das Lakshan virtues: forbearance, forgiveness and freedom from anger.', category: 'Jain Philosophy / Das Lakshan', readingTime: '8 min read', excerpt: "Uttam Kshama, the first of the ten Das Lakshan virtues, means supreme forgiveness. Not mere niceness or suppressed anger, but a steady freedom from ill will, even when we're insulted or provoked.", body_markdown: UTTAM_KSHAMA_BODY },
   { slug: 'uttam-mardava', title: 'Uttam Mardava: The Jain Virtue of Humility', subtitle: 'The second of the ten Das Lakshan virtues: letting go of the pride that makes us feel better than others.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: "Uttam Mardava, the second of the ten Das Lakshan virtues, means humility. Not weakness or hiding your abilities, but letting go of the pride that puts you above other people.", body_markdown: UTTAM_MARDAVA_BODY },
   { slug: 'uttam-arjava', title: 'Uttam Arjava: The Jain Virtue of Straightforwardness', subtitle: 'The third of the ten Das Lakshan virtues: keeping thought, word and action free from deceit.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Arjava, the third of the ten Das Lakshan virtues, means straightforwardness. Not bluntness, but honesty: closing the gap between what we think, what we say and what we do.', body_markdown: UTTAM_ARJAVA_BODY },
+  { slug: 'uttam-shaucha', title: 'Uttam Shaucha: The Jain Virtue of Contentment', subtitle: 'The fourth of the ten Das Lakshan virtues: finding contentment and letting go of greed.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Shaucha, the fourth of the ten Das Lakshan virtues, means contentment. Not merely cleanliness, but freedom from the greed that keeps us chasing more.', body_markdown: UTTAM_SHAUCHA_BODY },
 ]
 
 export const articleCategories = ['Philosophy', 'History', 'Texts', 'Heritage', 'Contemporary relevance', 'Beginner’s guide', 'Jain Philosophy / Das Lakshan']
