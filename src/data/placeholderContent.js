@@ -691,6 +691,114 @@ Jainworld, "Prescription of Ethical Code": https://jainworld.jainworld.com/jainb
 
 A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
 
+const UTTAM_SATYA_BODY = `## What Is Uttam Satya?
+
+Uttam Satya is the fifth virtue of Das Lakshan Dharma. Satya means truthfulness, but Jain teaching treats it as more than simply not lying. It asks for speech that is honest, careful and genuinely helpful, not just factually correct.
+
+The Tattvartha Sutra places satya among the ten virtues that help settle the mind and reduce the harm we cause through carelessness. Truthful speech, in this sense, is not just an ethical rule on its own. It is part of a wider discipline that includes how we act, what we own and how we speak.
+
+## Why Truth Matters in Jainism
+
+Speech has real weight in Jain thought. Words can build trust or destroy it, comfort someone or wound them, clarify a situation or confuse it further.
+
+Because speech carries this kind of power, Jain teaching treats truthfulness as a serious discipline rather than a casual habit. Lying, exaggerating and misleading people are all treated as forms of harm, even when no one is physically hurt. Satya asks us to take that responsibility seriously.
+
+## Truth and Ahimsa
+
+Satya cannot really be separated from ahimsa, the Jain principle of non-violence. Classical Jain teaching holds that a statement being true does not automatically make it right to say. What also matters is its effect on the person hearing it.
+
+Traditional guidance describes truthful speech as speech that helps rather than harms. Words that are accurate but spoken to wound, humiliate or destroy someone are treated as a kind of violence, even when every fact in them is correct. This does not mean Jain teaching allows false speech in order to spare someone's feelings. It means satya and ahimsa work together, and how a truth is delivered matters as much as whether it is true.
+
+## More Than Simply Speaking Facts
+
+Satya cannot be reduced to reciting accurate information. A person can state facts correctly and still mislead someone through tone, selective emphasis or a cruel choice of words.
+
+Jain teaching asks for something closer to integrity in speech: saying what is true, in a way that is fair to the person listening. This includes avoiding half-truths designed to create a false impression, even when no single sentence spoken is technically a lie.
+
+## Truthful Speech and Intention
+
+Intention matters in Jain ethics as much as the words themselves. Speaking carelessly, exaggerating out of habit or twisting facts to win an argument are all treated differently from an honest mistake.
+
+Someone who happens to say something true, without caring whether it is right, has not really practised satya. The virtue asks for attentiveness: checking what we actually know before we speak, and being honest about the difference between what we know and what we merely assume.
+
+## When Silence Is Better Than Speech
+
+Jain teaching does not ask a person to announce every true thing they know, regardless of the consequences. Where a true statement would cause serious, unnecessary harm, staying silent is often described as the better choice.
+
+This is worth stating precisely. Choosing silence over a cruel truth is not the same as being permitted to lie. Satya does not become optional just because honesty is uncomfortable. The choice being described here is between speaking and staying quiet, not between telling the truth and telling a falsehood.
+
+## Satya in Everyday Life
+
+Truthfulness shows up constantly in ordinary situations, not only in dramatic ones.
+
+Not exaggerating a story to make it more impressive.
+
+Correcting a mistake instead of letting a false impression stand.
+
+Keeping commitments made in words, not only in writing.
+
+Being accurate in small things, like retelling something someone else said.
+
+Avoiding gossip that spreads unverified claims about someone.
+
+These examples show where satya applies. They are not a complete list of every situation it covers.
+
+## Truthfulness Without Harshness
+
+Being truthful does not give anyone permission to be unkind. "I'm just telling the truth" is sometimes used to excuse speech that is needlessly harsh.
+
+Jain teaching consistently pairs truthfulness with care in how something is said. Choosing gentler words, better timing or a private conversation instead of a public one does not compromise satya. It is part of practising it well.
+
+## Why Falsehood Creates Bondage
+
+Jain philosophy links deceptive or careless speech to maya, the passion of deceit, and to the wider set of passions called kashayas that Jain teaching connects with karmic bondage.
+
+Repeated dishonesty does more than damage relationships. It is understood to reinforce habits of mind that keep a person further from spiritual clarity. Truthful speech, by contrast, is treated as part of the discipline that helps settle the mind rather than unsettle it.
+
+## Practising Uttam Satya Today
+
+Pause before repeating something you have not verified.
+
+Notice when you are exaggerating to make a point.
+
+Choose honest words delivered with care, rather than blunt words delivered without thought.
+
+If speaking the full truth would cause serious harm, consider whether silence is the better choice, rather than reaching for a convenient lie.
+
+Correct a false impression you have created, even if it is inconvenient to do so.
+
+These are practical ways to bring satya into daily life, not a complete list of scriptural commands.
+
+## A Deeper Look at Satya
+
+At a deeper level, satya is not only about the words leaving your mouth. It concerns whether your understanding, your intention and your speech line up with each other.
+
+Someone can be technically accurate and still fall short of this virtue, if their words are used to manipulate rather than to genuinely communicate. Satya asks for honesty that runs all the way through, not just honesty at the surface.
+
+## Reflection
+
+Are my words true, necessary, and spoken without causing avoidable harm?
+
+Do I exaggerate to make myself look better?
+
+When have I chosen silence over cruelty, and did I get that balance right?
+
+Is there a false impression I am letting stand because correcting it is inconvenient?
+
+These are JINVERSE's own reflection prompts, not scripture.
+
+## Sources & Further Reading
+
+Tattvartha Sutra, chapter 9, verse 6, with Acharya Pujyapada's Sarvarthasiddhi commentary. wisdomlib.org: https://www.wisdomlib.org/jainism/book/tattvartha-sutra-with-commentary/d/doc1084897.html
+
+Jainworld, "Ten Universal Virtues": https://jainworld.jainworld.com/jainbooks/Books/Ten%20Universal%20Virtues%200%20-%2010%20final%20done.htm
+
+Jainworld, "Supplements to Ahimsa-Vrata": https://jainworld.jainworld.com/jainbooks/ahimsa/supahimsa.htm
+
+Jainworld, "Prescription of Ethical Code": https://jainworld.jainworld.com/jainbooks/antiquity/ethcjain.htm
+
+A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
+
 export const articles = [
   { slug: 'what-is-jainism', title: 'What Is Jainism?', subtitle: 'An introduction to one of the world’s oldest living paths to liberation.', category: 'Beginner’s guide', readingTime: '6 min read', excerpt: 'Jainism centers on the liberation of the soul through non-violence, self-discipline and right understanding.' },
   { slug: 'bharatavarsha-bharat-chakravarti', title: 'Bharatavarsha: The Land of Bharat Chakravarti', subtitle: 'The sacred story of Bhagwan Rishabhadeva, Bharat Chakravarti and the name of our great land.', category: 'History', readingTime: '9 min read', excerpt: 'Discover the Jain tradition of Adinath Bhagwan as the first civilizational teacher and Bharat Chakravarti as the sovereign whose name lives on in Bharatavarsha.' },
@@ -700,6 +808,7 @@ export const articles = [
   { slug: 'uttam-mardava', title: 'Uttam Mardava: The Jain Virtue of Humility', subtitle: 'The second of the ten Das Lakshan virtues: letting go of the pride that makes us feel better than others.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: "Uttam Mardava, the second of the ten Das Lakshan virtues, means humility. Not weakness or hiding your abilities, but letting go of the pride that puts you above other people.", body_markdown: UTTAM_MARDAVA_BODY },
   { slug: 'uttam-arjava', title: 'Uttam Arjava: The Jain Virtue of Straightforwardness', subtitle: 'The third of the ten Das Lakshan virtues: keeping thought, word and action free from deceit.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Arjava, the third of the ten Das Lakshan virtues, means straightforwardness. Not bluntness, but honesty: closing the gap between what we think, what we say and what we do.', body_markdown: UTTAM_ARJAVA_BODY },
   { slug: 'uttam-shaucha', title: 'Uttam Shaucha: The Jain Virtue of Contentment', subtitle: 'The fourth of the ten Das Lakshan virtues: finding contentment and letting go of greed.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Shaucha, the fourth of the ten Das Lakshan virtues, means contentment. Not merely cleanliness, but freedom from the greed that keeps us chasing more.', body_markdown: UTTAM_SHAUCHA_BODY },
+  { slug: 'uttam-satya', title: 'Uttam Satya: The Jain Virtue of Truthfulness', subtitle: 'The fifth of the ten Das Lakshan virtues: honest, careful speech that avoids unnecessary harm.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Satya, the fifth of the ten Das Lakshan virtues, means truthfulness. Not just stating facts, but speaking with honesty and care, in step with ahimsa.', body_markdown: UTTAM_SATYA_BODY },
 ]
 
 export const articleCategories = ['Philosophy', 'History', 'Texts', 'Heritage', 'Contemporary relevance', 'Beginner’s guide', 'Jain Philosophy / Das Lakshan']
