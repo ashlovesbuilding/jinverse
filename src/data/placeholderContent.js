@@ -799,6 +799,102 @@ Jainworld, "Prescription of Ethical Code": https://jainworld.jainworld.com/jainb
 
 A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
 
+const UTTAM_SANYAM_BODY = `## What Is Uttam Sanyam?
+
+Uttam Sanyam is the sixth virtue of Das Lakshan Dharma. Sanyam is usually translated as self-restraint or self-control. It is the discipline of governing your own senses, mind, speech and actions, rather than being pulled along by every impulse that arises.
+
+The Tattvartha Sutra describes samyama as care in how we act, so that we avoid harming living beings and are not simply driven by whatever sensory pleasure is in front of us. It builds on the virtues before it. Kshama governs anger, mardava governs pride, arjava governs honesty, shaucha governs greed, satya governs speech. Sanyam brings these together into a wider discipline covering the whole person.
+
+## What Does Self-Restraint Mean?
+
+Self-restraint can sound negative, like a long list of things you are not allowed to do. Jain teaching frames it differently.
+
+Sanyam is a positive discipline. It is the ability to choose your actions instead of simply reacting to whatever your senses or emotions push you toward. A person practising sanyam is not necessarily doing less. They are doing things more deliberately, with attention to their effect on themselves and on other living beings.
+
+## The Six Areas of Restraint
+
+Jain teaching describes self-restraint across six areas: the five senses of touch, taste, smell, sight and hearing, plus a sixth, the mind.
+
+Each sense pulls us toward something: comfort, taste, attraction, sound. Left unchecked, these pulls can quietly run a person's life. Sanyam does not ask us to stop sensing the world. It asks us to notice the pull and choose our response, rather than being carried along by whichever one is strongest.
+
+## Controlling the Senses
+
+Restraining the senses does not mean becoming numb to the world. It means not letting every craving or aversion dictate your behaviour.
+
+A simple example is food. Eating is necessary, and Jain teaching does not treat eating itself as a problem. What sanyam asks about is whether a person eats with awareness, or is simply chasing taste without limit. The same pattern applies to sound, sight, touch and smell. The senses are not the enemy. Being ruled by them is what sanyam works against.
+
+## Restraining the Mind
+
+The sixth area, the mind, is often the hardest to restrain. Thoughts wander into anger, comparison, resentment and desire long before any outward action happens.
+
+Jain teaching connects this mental restraint to the four kashayas already familiar from earlier Das Lakshan virtues: anger, pride, deceit and greed. A restrained mind notices these passions rising and does not automatically act on them. Two related ideas from Jain practice describe this. Samiti is careful attention in ordinary activity, such as how one walks, speaks, eats and handles objects, so as not to cause avoidable harm. Gupti is a deeper restraint of mind, speech and body themselves. Together they describe a movement from watching your actions carefully to eventually needing less watching, because the mind has settled.
+
+## Restraint and Compassion for Living Beings
+
+Sanyam is not only personal discipline. It has an outward dimension too, care for other living beings.
+
+Careless movement, careless speech and careless action can all cause harm without anyone intending it. Restraint in how a person walks, speaks and handles things is described in Jain teaching as a way of protecting other life from unnecessary injury. Self-restraint and compassion for others are treated as two sides of the same practice, not separate concerns.
+
+## Sanyam Is Not Suppression
+
+It is worth being direct about this. Sanyam is not punishment, denial for its own sake, or forcing yourself to feel nothing.
+
+Suppressing anger while still seething inside is not the same as restraining it. Denying a desire out of guilt is not the same as understanding it and choosing not to act on it. Jain teaching asks for a real change in how a person relates to their impulses, not a performance of control that hides what is happening underneath.
+
+## Why Self-Restraint Matters
+
+An unrestrained life tends to be reactive. Something happens, and the senses or emotions respond immediately, without space for reflection.
+
+Jain philosophy connects this kind of restraint to samvara, the stopping of new karma from attaching to the soul. Careless action driven by unchecked passion is understood to deepen karmic bondage. Restraint, by contrast, is part of the discipline that helps quiet that process. This is not presented as an instant transformation, but as a direction of steady practice.
+
+## Sanyam in Everyday Life
+
+Pausing before reacting to an urge or an irritation.
+
+Eating and consuming with some awareness, rather than on autopilot.
+
+Being careful with words instead of speaking the first thing that comes to mind.
+
+Handling objects, tasks and other people's time with a bit more care.
+
+Noticing when a small comfort has quietly become something you cannot do without.
+
+These are practical ways to bring sanyam into daily life. A monk's discipline goes much further, and Jain teaching does not expect a householder to match it exactly. Each person is asked to practise restraint according to their own life and capacity.
+
+## From Outer Control to Inner Freedom
+
+Early practice of sanyam can feel effortful, like constantly checking yourself. Jain teaching treats this as the starting point, not the destination.
+
+Over time, the aim is for restraint to become less about forcing yourself to hold back and more about a mind that no longer wants what it once could not resist. What begins as outer control is meant to grow into a kind of inner freedom.
+
+## A Deeper Look at Sanyam
+
+Sanyam names the larger discipline that the earlier virtues all belong to: restraint across the whole of a person's senses, mind and conduct, not just one part of it.
+
+This is not the entire path to liberation, but Jain teaching treats it as an essential part of it.
+
+## Reflection
+
+Am I choosing my actions, or are my impulses choosing for me?
+
+Which of my senses is hardest for me to restrain?
+
+Do I confuse suppressing a feeling with actually understanding it?
+
+Where in my day could a small pause change how I act?
+
+These are JINVERSE's own reflection prompts, not scripture.
+
+## Sources & Further Reading
+
+Tattvartha Sutra, chapter 9, verse 6, with Acharya Pujyapada's Sarvarthasiddhi commentary. wisdomlib.org: https://www.wisdomlib.org/jainism/book/tattvartha-sutra-with-commentary/d/doc1084897.html
+
+Jainworld, "Ten Universal Virtues": https://jainworld.jainworld.com/jainbooks/Books/Ten%20Universal%20Virtues%200%20-%2010%20final%20done.htm
+
+Jainworld, "Supplements to Ahimsa-Vrata": https://jainworld.jainworld.com/jainbooks/ahimsa/supahimsa.htm
+
+A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
+
 export const articles = [
   { slug: 'what-is-jainism', title: 'What Is Jainism?', subtitle: 'An introduction to one of the world’s oldest living paths to liberation.', category: 'Beginner’s guide', readingTime: '6 min read', excerpt: 'Jainism centers on the liberation of the soul through non-violence, self-discipline and right understanding.' },
   { slug: 'bharatavarsha-bharat-chakravarti', title: 'Bharatavarsha: The Land of Bharat Chakravarti', subtitle: 'The sacred story of Bhagwan Rishabhadeva, Bharat Chakravarti and the name of our great land.', category: 'History', readingTime: '9 min read', excerpt: 'Discover the Jain tradition of Adinath Bhagwan as the first civilizational teacher and Bharat Chakravarti as the sovereign whose name lives on in Bharatavarsha.' },
@@ -809,6 +905,7 @@ export const articles = [
   { slug: 'uttam-arjava', title: 'Uttam Arjava: The Jain Virtue of Straightforwardness', subtitle: 'The third of the ten Das Lakshan virtues: keeping thought, word and action free from deceit.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Arjava, the third of the ten Das Lakshan virtues, means straightforwardness. Not bluntness, but honesty: closing the gap between what we think, what we say and what we do.', body_markdown: UTTAM_ARJAVA_BODY },
   { slug: 'uttam-shaucha', title: 'Uttam Shaucha: The Jain Virtue of Contentment', subtitle: 'The fourth of the ten Das Lakshan virtues: finding contentment and letting go of greed.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Shaucha, the fourth of the ten Das Lakshan virtues, means contentment. Not merely cleanliness, but freedom from the greed that keeps us chasing more.', body_markdown: UTTAM_SHAUCHA_BODY },
   { slug: 'uttam-satya', title: 'Uttam Satya: The Jain Virtue of Truthfulness', subtitle: 'The fifth of the ten Das Lakshan virtues: honest, careful speech that avoids unnecessary harm.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Satya, the fifth of the ten Das Lakshan virtues, means truthfulness. Not just stating facts, but speaking with honesty and care, in step with ahimsa.', body_markdown: UTTAM_SATYA_BODY },
+  { slug: 'uttam-sanyam', title: 'Uttam Sanyam: The Jain Virtue of Self-Restraint', subtitle: 'The sixth of the ten Das Lakshan virtues: governing the senses, mind and conduct with care.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Sanyam, the sixth of the ten Das Lakshan virtues, means self-restraint. Not suppression, but the discipline of choosing your actions rather than reacting to every impulse.', body_markdown: UTTAM_SANYAM_BODY },
 ]
 
 export const articleCategories = ['Philosophy', 'History', 'Texts', 'Heritage', 'Contemporary relevance', 'Beginner’s guide', 'Jain Philosophy / Das Lakshan']
