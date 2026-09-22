@@ -895,6 +895,92 @@ Jainworld, "Supplements to Ahimsa-Vrata": https://jainworld.jainworld.com/jainbo
 
 A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
 
+const UTTAM_TAP_BODY = `## What Is Uttam Tap?
+
+Uttam Tap is the seventh virtue of Das Lakshan Dharma. Tap, often written as tapas, means austerity or self-discipline: the practices Jain tradition uses to loosen a person's attachment to bodily comfort and sensory pleasure, and to bring the passions under control.
+
+The Tattvartha Sutra names tapas among the causes of nirjara, the gradual shedding of karma already bound to the soul. Where sanyam, the virtue before it, restrains the senses and mind in daily conduct, tap is a more deliberate practice aimed at wearing down that karma directly.
+
+## What Does Tap Mean in Jainism?
+
+Tap is often translated as austerity, but that word can sound harsher than what is meant. At its core, tap is a chosen discipline, not something imposed from outside: voluntarily accepting some hardship or restriction, in eating, comfort or activity, for a spiritual reason. The word is related to heat, in the sense of something that burns away impurity, and Jain teaching treats tap as a way of burning off the karmic matter that clings to the soul through past action, thought and speech.
+
+## More Than Fasting
+
+When people hear the word austerity in a Jain context, fasting is usually the first thing that comes to mind. Fasting is a real and valued part of tap, but it is only one practice among many.
+
+Jain sources describe twelve forms of austerity, six external, involving the body and outward conduct, and six internal, involving the mind and inner discipline. Reducing tap to fasting alone misses most of what the tradition actually asks for.
+
+## The Six External Austerities
+
+Anashana is fasting, giving up food for a set period. Unodari is eating less than one's full appetite, even while eating regularly. Vritti-parisankhyana is limiting the conditions under which one will accept food. Rasa-parityaga is giving up rich tastes or foods that tend to feed craving. Vivikta-shayya-asana is choosing a quiet, secluded place to sit or rest, away from distraction. Kaya-klesha is willingly bearing physical discomfort, such as heat, cold or a difficult posture, without complaint.
+
+These practices are external because another person can observe them. Their purpose is internal: to loosen the body's grip on comfort and the mind's grip on the body.
+
+## The Six Internal Austerities
+
+The internal austerities are harder to see from outside, because they work on the mind and character directly. Prayashchitta is repentance, honestly facing and correcting one's own faults. Vinaya is humility and respect, especially toward teachers and those further along the path. Vaiyavritya is service, caring for others, especially monks, the sick or the suffering. Svadhyaya is study, reading and reflecting on scripture so that understanding deepens. Vyutsarga is letting go, detaching from the body and from possessions one has grown too attached to. Dhyana is meditation, steadying the mind rather than letting it run in every direction.
+
+Together, the twelve forms cover the whole person: body, conduct and mind.
+
+## Why Austerity Matters
+
+Jain philosophy holds that karma is a subtle kind of matter that binds to the soul through action driven by attachment and aversion. Right conduct can stop new karma from binding, a process called samvara. Tap goes further: it weakens the passions, anger, pride, deceit and greed, that keep drawing karma in, so a person is less driven to the reactive thought and action that generates new karmic bondage.
+
+## Tap Is Not Self-Punishment
+
+It matters to be clear here. Tap is not suffering for its own sake, and Jain teaching does not treat physical pain as valuable in itself. A fast undertaken in anger, or hardship endured to impress others, is not what the tradition means by austerity. What makes an action tapas is the intention behind it: a calm, willing acceptance of discipline for the sake of reducing attachment and passion, not a performance of deprivation.
+
+## Tap and the Shedding of Karma
+
+Karma already bound to the soul does not simply disappear with time. It has to be worked out, either through experiencing its effects or through disciplined practice that hastens its release. Tap is an active hand in that process, rather than waiting passively for karma to run its course.
+
+## Tap in the Life of a Householder
+
+Jain monks practise austerity far more intensely than a layperson typically would, including extended fasting and a life stripped of most comforts. This is not the standard expected of every Jain householder.
+
+A householder can practise tap through moderate fasting, eating with more restraint, giving up a favourite food for a time, studying scripture, sitting in quiet reflection, or honestly repenting a fault. What matters is that the practice suits the person's own capacity, not that it matches monastic discipline. None of this is a substitute for medical guidance about eating or health.
+
+## Practising Tap Today
+
+A short fast during Das Lakshan or another observed period, kept within reason.
+
+Cutting back on rich or excessive food for a day or a week.
+
+Setting aside time for quiet study or reflection instead of constant distraction.
+
+Honestly acknowledging a mistake instead of excusing it.
+
+## A Deeper Look at Tap
+
+Tap works alongside the virtues that come before it in Das Lakshan Dharma. Where kshama, mardava, arjava, shaucha, satya and sanyam shape how a person responds to anger, pride, dishonesty, greed and impulse, tap actively loosens the deeper hold those patterns have on the soul. It is a demanding practice, but Jain teaching frames it as a chosen discipline aimed at freedom, not a punishment imposed from outside.
+
+## Reflection
+
+What am I willing to give up so that my inner life becomes stronger?
+
+Do I treat comfort as something I need, or something I have simply grown used to?
+
+Is there a habit I keep out of craving rather than real need?
+
+Could a small, deliberate restraint teach me something about my own attachments?
+
+These are JINVERSE's own reflection prompts, not scripture.
+
+## Sources & Further Reading
+
+Tattvartha Sutra, chapter 9, verses 3, 6 and 19 through 26, with commentary where available. wisdomlib.org: https://www.wisdomlib.org/jainism/book/tattvartha-sutra-with-commentary/d/doc1084897.html
+
+Jainworld, "Ten Universal Virtues": https://jainworld.jainworld.com/jainbooks/Books/Ten%20Universal%20Virtues%200%20-%2010%20final%20done.htm
+
+Jainworld, "Supplements to Ahimsa-Vrata": https://jainworld.jainworld.com/jainbooks/ahimsa/supahimsa.htm
+
+Jainworld, "Austerities (Taps)": https://jainworld.com/philosophy/austerities-taps/
+
+Jainworld, "Daily Practices and Recitations": https://jainworld.jainworld.com/jainbooks/explain/e9.htm
+
+A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
+
 export const articles = [
   { slug: 'what-is-jainism', title: 'What Is Jainism?', subtitle: 'An introduction to one of the world’s oldest living paths to liberation.', category: 'Beginner’s guide', readingTime: '6 min read', excerpt: 'Jainism centers on the liberation of the soul through non-violence, self-discipline and right understanding.' },
   { slug: 'bharatavarsha-bharat-chakravarti', title: 'Bharatavarsha: The Land of Bharat Chakravarti', subtitle: 'The sacred story of Bhagwan Rishabhadeva, Bharat Chakravarti and the name of our great land.', category: 'History', readingTime: '9 min read', excerpt: 'Discover the Jain tradition of Adinath Bhagwan as the first civilizational teacher and Bharat Chakravarti as the sovereign whose name lives on in Bharatavarsha.' },
@@ -906,6 +992,7 @@ export const articles = [
   { slug: 'uttam-shaucha', title: 'Uttam Shaucha: The Jain Virtue of Contentment', subtitle: 'The fourth of the ten Das Lakshan virtues: finding contentment and letting go of greed.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Shaucha, the fourth of the ten Das Lakshan virtues, means contentment. Not merely cleanliness, but freedom from the greed that keeps us chasing more.', body_markdown: UTTAM_SHAUCHA_BODY },
   { slug: 'uttam-satya', title: 'Uttam Satya: The Jain Virtue of Truthfulness', subtitle: 'The fifth of the ten Das Lakshan virtues: honest, careful speech that avoids unnecessary harm.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Satya, the fifth of the ten Das Lakshan virtues, means truthfulness. Not just stating facts, but speaking with honesty and care, in step with ahimsa.', body_markdown: UTTAM_SATYA_BODY },
   { slug: 'uttam-sanyam', title: 'Uttam Sanyam: The Jain Virtue of Self-Restraint', subtitle: 'The sixth of the ten Das Lakshan virtues: governing the senses, mind and conduct with care.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Sanyam, the sixth of the ten Das Lakshan virtues, means self-restraint. Not suppression, but the discipline of choosing your actions rather than reacting to every impulse.', body_markdown: UTTAM_SANYAM_BODY },
+  { slug: 'uttam-tap', title: 'Uttam Tap: The Jain Virtue of Austerity', subtitle: 'The seventh of the ten Das Lakshan virtues: disciplined restraint that loosens attachment and wears away karma.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Tap, the seventh of the ten Das Lakshan virtues, means austerity. Far more than fasting, it is a disciplined practice of body and mind aimed at shedding karma and reducing attachment.', body_markdown: UTTAM_TAP_BODY },
 ]
 
 export const articleCategories = ['Philosophy', 'History', 'Texts', 'Heritage', 'Contemporary relevance', 'Beginner’s guide', 'Jain Philosophy / Das Lakshan']
