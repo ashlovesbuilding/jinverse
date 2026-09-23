@@ -981,6 +981,90 @@ Jainworld, "Daily Practices and Recitations": https://jainworld.jainworld.com/ja
 
 A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
 
+const UTTAM_TYAGA_BODY = `## What Is Uttam Tyaga?
+
+Uttam Tyaga is the eighth virtue of Das Lakshan Dharma. Tyaga means renunciation, and here it points to the discipline of giving: letting go of possessiveness and directing what we have toward the benefit of others.
+
+The Tattvartha Sutra names uttama tyaga among the ten dharmas central to right conduct. Tap, the virtue before it, works on the person practising it directly, loosening attachment through fasting, restraint and inner discipline. Tyaga turns that same loosening outward, into generosity toward others.
+
+## What Does Tyaga Mean in Jainism?
+
+Tyaga is often translated simply as "giving up," but the word carries something more specific here. It is not primarily about the object given away. It is about the letting go that happens inside the giver. A person can hand something to someone else and still hold onto it tightly in their mind, resentful or proud of the gesture. Jain teaching treats tyaga as the loosening of possessiveness itself, expressed through the act of giving.
+
+## Renunciation Is More Than Giving Things Away
+
+It is easy to hear "renunciation" and picture someone giving away everything they own. That is not what Uttam Tyaga asks of most people. Jain tradition reserves that complete renunciation for monks, who set aside possessions entirely as part of a different stage of practice. For a householder, tyaga means something more everyday: loosening the grip that possessions, time and comfort have on us, and directing some of what we have toward others with an open hand.
+
+## The Four Forms of Dana
+
+Jainworld's account of this virtue describes fourfold charity, or dana, as its traditional expression. Ahara dana is giving food to those who need it. Abhaya dana is giving fearlessness, protecting another living being from danger rather than simply being kind in passing. Aushadha dana is giving medicine or care to someone who is unwell. Shastra dana, sometimes called gyana dana, is sharing knowledge that helps another person live and think more clearly.
+
+These four are not the only ways to give, but they show how wide the tradition understands generosity to be: beyond money, into safety, health and understanding.
+
+## Tyaga and Attachment
+
+Jain philosophy sees attachment to possessions as one of the ways the soul stays bound. The things we own can quietly become things we are owned by, defended and clung to long after they've stopped serving any real need. Giving, approached rightly, works against that grip. It is a practical way of testing and loosening one's own attachment, not simply a transaction that benefits someone else. This is why the tradition places so much weight on the spirit behind the gift and not only its size.
+
+## Tyaga for a Householder
+
+Jain sources are clear that a householder practises tyaga within their own capacity, not as a demand to give away one's livelihood or security. It might mean setting aside a portion of income for those in need, sharing food, supporting access to medicine, or making time available for someone who needs help. What matters is that giving becomes a regular, considered part of life rather than a rare, dramatic gesture. Jain teaching does not measure tyaga by wealth. A person without much money can still practise it through time, effort, food or care.
+
+## Giving Without Seeking Recognition
+
+Intention shapes whether an act counts as real tyaga. Giving in order to be praised or seen as generous is a different thing from giving because someone genuinely needs help. This does not mean giving must be secret or joyless. It means the giver's attention stays on the person receiving help, not their own reputation. A gift given for status still transfers an object, but it does little to loosen the giver's own possessiveness, which is the deeper point of the practice.
+
+## Tyaga and the Jain Path
+
+Tyaga is not a shortcut to liberation on its own. Jain teaching treats it as one part of a larger discipline that includes right faith, right knowledge and right conduct together. What it contributes is a practical training in letting go, done in a way that also brings real benefit to others, alongside tap, sanyam and the other Das Lakshan virtues.
+
+## Tyaga Is Not the Same as Akinchanya
+
+It helps to be clear about a distinction the tradition draws carefully. Tyaga is the ninth virtue's near neighbour, but they are not the same thing.
+
+Tyaga is renunciation expressed through giving: an active, outward gesture of generosity and letting go. Akinchanya, the ninth virtue, goes further inward. It is the deeper recognition that possessions were never truly the self to begin with, a non-attachment that does not depend on the act of giving at all. Tyaga is a practice; akinchanya is closer to an understanding.
+
+## Practising Uttam Tyaga Today
+
+Sharing a meal with someone who needs one.
+
+Supporting someone's access to medicine or care when they cannot manage it alone.
+
+Sharing knowledge or a skill that genuinely helps another person.
+
+Stepping in to protect a person or animal from harm.
+
+Giving attention and time to someone who needs to be heard, not just money.
+
+Noticing a possession we are holding onto out of habit rather than need, and letting it go.
+
+## A Deeper Look at Tyaga
+
+Tyaga asks something specific of a person: not that they give away everything, but that they hold what they have a little more loosely, and let some of it flow toward others with a clear intention.
+
+Charity alone does not guarantee liberation in Jain thought. It is one thread in a larger discipline. But it is a thread that touches other people directly, in a way few of the other Das Lakshan virtues do.
+
+## Reflection
+
+What am I holding onto that I could use to bring benefit to someone else?
+
+Do I give in order to help, or to be seen helping?
+
+Is there a form of giving, time, knowledge, care, that I overlook because it isn't money?
+
+These are JINVERSE's own reflection prompts, not scripture.
+
+## Sources & Further Reading
+
+Tattvartha Sutra, chapter 9, verse 6, with commentary where available. wisdomlib.org: https://www.wisdomlib.org/jainism/book/tattvartha-sutra-with-commentary/d/doc1084897.html
+
+Jainworld, "Ten Universal Virtues": https://jainworld.jainworld.com/jainbooks/Books/Ten%20Universal%20Virtues%200%20-%2010%20final%20done.htm
+
+Jainworld, "Supreme Renunciation": https://jainworld.jainworld.com/jainbooks/images/31/SUPREME_RENUNCIATION.htm
+
+Jainworld, "Supplements to Ahimsa-Vrata": https://jainworld.jainworld.com/jainbooks/ahimsa/supahimsa.htm
+
+A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
+
 export const articles = [
   { slug: 'what-is-jainism', title: 'What Is Jainism?', subtitle: 'An introduction to one of the world’s oldest living paths to liberation.', category: 'Beginner’s guide', readingTime: '6 min read', excerpt: 'Jainism centers on the liberation of the soul through non-violence, self-discipline and right understanding.' },
   { slug: 'bharatavarsha-bharat-chakravarti', title: 'Bharatavarsha: The Land of Bharat Chakravarti', subtitle: 'The sacred story of Bhagwan Rishabhadeva, Bharat Chakravarti and the name of our great land.', category: 'History', readingTime: '9 min read', excerpt: 'Discover the Jain tradition of Adinath Bhagwan as the first civilizational teacher and Bharat Chakravarti as the sovereign whose name lives on in Bharatavarsha.' },
@@ -993,6 +1077,7 @@ export const articles = [
   { slug: 'uttam-satya', title: 'Uttam Satya: The Jain Virtue of Truthfulness', subtitle: 'The fifth of the ten Das Lakshan virtues: honest, careful speech that avoids unnecessary harm.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Satya, the fifth of the ten Das Lakshan virtues, means truthfulness. Not just stating facts, but speaking with honesty and care, in step with ahimsa.', body_markdown: UTTAM_SATYA_BODY },
   { slug: 'uttam-sanyam', title: 'Uttam Sanyam: The Jain Virtue of Self-Restraint', subtitle: 'The sixth of the ten Das Lakshan virtues: governing the senses, mind and conduct with care.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Sanyam, the sixth of the ten Das Lakshan virtues, means self-restraint. Not suppression, but the discipline of choosing your actions rather than reacting to every impulse.', body_markdown: UTTAM_SANYAM_BODY },
   { slug: 'uttam-tap', title: 'Uttam Tap: The Jain Virtue of Austerity', subtitle: 'The seventh of the ten Das Lakshan virtues: disciplined restraint that loosens attachment and wears away karma.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Tap, the seventh of the ten Das Lakshan virtues, means austerity. Far more than fasting, it is a disciplined practice of body and mind aimed at shedding karma and reducing attachment.', body_markdown: UTTAM_TAP_BODY },
+  { slug: 'uttam-tyaga', title: 'Uttam Tyaga: The Jain Virtue of Renunciation', subtitle: 'The eighth of the ten Das Lakshan virtues: giving that loosens possessiveness and benefits others.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Tyaga, the eighth of the ten Das Lakshan virtues, means renunciation. Far more than giving everything away, it is the discipline of generosity that loosens the grip of possession.', body_markdown: UTTAM_TYAGA_BODY },
 ]
 
 export const articleCategories = ['Philosophy', 'History', 'Texts', 'Heritage', 'Contemporary relevance', 'Beginner’s guide', 'Jain Philosophy / Das Lakshan']
