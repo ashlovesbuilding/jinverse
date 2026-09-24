@@ -1065,6 +1065,106 @@ Jainworld, "Supplements to Ahimsa-Vrata": https://jainworld.jainworld.com/jainbo
 
 A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
 
+const UTTAM_AKINCHANYA_BODY = `## What Is Uttam Akinchanya?
+
+Uttam Akinchanya is the ninth virtue of Das Lakshan. It is usually translated as non-attachment or non-possessiveness.
+
+Having something and being attached to it are not the same thing. You can own a house, a phone or a career and still hold it lightly. You can also own very little and still be tightly attached to what you do have. Akinchanya is about that inner grip, not about how much or how little a person owns.
+
+## What Does Akinchanya Mean?
+
+We say things like "my house," "my money," "my career," "my family," "my reputation." There is nothing wrong with these words on their own. Everyone uses them.
+
+The deeper issue is when our sense of who we are becomes tied completely to them. If losing the house would feel like losing yourself, that is mine-ness at work. Akinchanya asks us to notice this feeling and loosen it, not to stop using the word "my."
+
+## Having Things Is Not the Same as Being Attached
+
+This matters a lot for householders, because most people are not going to give away their home, savings or business.
+
+Jain teaching does not ask that of a householder. What it asks is a change in relationship, not a change in possessions. Someone can own a house and still know it is temporary. Someone can earn money without treating wealth as proof of their worth. Someone can love their family deeply without needing to possess them completely. Owning things and being ruled by them are two different situations, and Akinchanya is about the second one.
+
+## The Feeling of "Mine"
+
+This feeling shows up in small, everyday moments. Losing an expensive phone can feel like losing a piece of yourself. Someone criticising your reputation can feel like a personal attack. A financial loss can feel like your whole identity has taken a hit. Fear of losing status can quietly shape a lot of decisions.
+
+None of this means the phone, the reputation or the money has no value. It means we have let something we possess become the ground we stand on. Akinchanya is the practice of noticing that and building your sense of self on something steadier.
+
+## Material Possessions
+
+The most visible form of this attachment is to things: money, property, clothing, jewellery, gadgets, status.
+
+Jain teaching does not set a number on how much a person should own. It asks a simpler question: does this object sit in your hands, or does it sit on your mind? You can genuinely enjoy something well made, useful or beautiful. The concern is when an object starts to feel like it is holding you, rather than the other way round.
+
+## Attachment Can Also Be Internal
+
+Jain teaching does not limit possessiveness to physical things. It also points to the passions that grip a person from the inside: anger, pride, deceit and greed.
+
+Holding onto an old grudge, protecting your pride, defending a lie you told, or chasing more than you need are all forms of grip too, even though nothing is being held in your hands. Akinchanya includes loosening these as well, though the deeper study of how they work belongs elsewhere.
+
+## Akinchanya and Tyaga
+
+It helps to keep this virtue separate from Tyaga, the one before it.
+
+Tyaga asks, "What can I give up or give away?" Akinchanya asks a different question: "Why am I so attached to calling this mine?" A person can donate something valuable through Tyaga and still think about it constantly afterward, missing it, half regretting it, quietly proud of having given it. The object is gone, but the mine-ness is still there. Akinchanya is about that inner attachment, whether or not anything is actually given away.
+
+## Akinchanya for a Householder
+
+Household life comes with real possessions and real responsibilities. Akinchanya does not ask a person to step outside that life.
+
+It can look like using what you have responsibly, not accumulating more than you need, sharing when you're able to, and not letting wealth become the centre of who you are. It also means facing change and loss, a job ending, a relationship changing, a plan falling through, without feeling like your whole foundation has collapsed. This is not financial advice. It is a way of holding your circumstances a little more loosely.
+
+## Akinchanya and the Jain Path
+
+Jain teaching connects this loosening of attachment to the wider goal of reducing attachment and aversion in general. A soul weighed down by constant grasping and constant resisting stays bound to that pattern.
+
+Akinchanya is one part of working on that pattern, alongside the other Das Lakshan virtues.
+
+## Practising Uttam Akinchanya Today
+
+Before buying something, ask whether you actually need it.
+
+Use what you have instead of always reaching for something newer.
+
+Give away things you genuinely no longer need.
+
+Share instead of only accumulating.
+
+Notice how strongly you react when someone touches, criticises or takes something you think of as "yours."
+
+Practice gratitude for what you have without turning that gratitude into a tighter grip.
+
+Remember that relationships, possessions, status and circumstances all change.
+
+## A Deeper Look at Akinchanya
+
+At its heart, Jain teaching holds that the soul is not the same thing as the objects around it. What we own, wear or achieve is not who we are.
+
+## Reflection
+
+What do I find hardest to let go of?
+
+How much of my identity comes from what I own?
+
+Can I use something fully without believing it defines me?
+
+What does "mine" really mean to me?
+
+These are JINVERSE's own reflection questions, not scripture.
+
+## Sources & Further Reading
+
+Tattvartha Sutra, chapter 9, verse 6, listing the ten dharmas. jainworld.com: https://jainworld.com/scripture/tattvarth-sutra/chapter-9/
+
+Jainworld, "Ten Universal Virtues," on Akinchanya as non-attachment: https://jainworld.jainworld.com/pdf/Ten%20Universal%20Virtues%200%20-%2010%20final%20done.pdf
+
+Jainworld, "Jainism: Key to Reality," on giving up the feeling of "mine": https://jainworld.jainworld.com/JWEnglish/Jainism%2C%20Key%20to%20Reality%20%28PDFDrive%20%29.pdf
+
+Jainworld, "Prescription of Ethical Code," connecting the ten virtues with the four kashayas: https://jainworld.com/library/jain-books/books-on-line/jainworld-books-in-indian-languages/antiquity-of-jainism/prescription-of-ethical-code/
+
+Tattvartha Sutra, chapter 7, on non-possession and attachment to objects: https://jainworld.com/scripture/tattvarth-sutra/chapter-7/
+
+A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
+
 export const articles = [
   { slug: 'what-is-jainism', title: 'What Is Jainism?', subtitle: 'An introduction to one of the world’s oldest living paths to liberation.', category: 'Beginner’s guide', readingTime: '6 min read', excerpt: 'Jainism centers on the liberation of the soul through non-violence, self-discipline and right understanding.' },
   { slug: 'bharatavarsha-bharat-chakravarti', title: 'Bharatavarsha: The Land of Bharat Chakravarti', subtitle: 'The sacred story of Bhagwan Rishabhadeva, Bharat Chakravarti and the name of our great land.', category: 'History', readingTime: '9 min read', excerpt: 'Discover the Jain tradition of Adinath Bhagwan as the first civilizational teacher and Bharat Chakravarti as the sovereign whose name lives on in Bharatavarsha.' },
@@ -1078,6 +1178,7 @@ export const articles = [
   { slug: 'uttam-sanyam', title: 'Uttam Sanyam: The Jain Virtue of Self-Restraint', subtitle: 'The sixth of the ten Das Lakshan virtues: governing the senses, mind and conduct with care.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Sanyam, the sixth of the ten Das Lakshan virtues, means self-restraint. Not suppression, but the discipline of choosing your actions rather than reacting to every impulse.', body_markdown: UTTAM_SANYAM_BODY },
   { slug: 'uttam-tap', title: 'Uttam Tap: The Jain Virtue of Austerity', subtitle: 'The seventh of the ten Das Lakshan virtues: disciplined restraint that loosens attachment and wears away karma.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Tap, the seventh of the ten Das Lakshan virtues, means austerity. Far more than fasting, it is a disciplined practice of body and mind aimed at shedding karma and reducing attachment.', body_markdown: UTTAM_TAP_BODY },
   { slug: 'uttam-tyaga', title: 'Uttam Tyaga: The Jain Virtue of Renunciation', subtitle: 'The eighth of the ten Das Lakshan virtues: giving that loosens possessiveness and benefits others.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Tyaga, the eighth of the ten Das Lakshan virtues, means renunciation. Far more than giving everything away, it is the discipline of generosity that loosens the grip of possession.', body_markdown: UTTAM_TYAGA_BODY },
+  { slug: 'uttam-akinchanya', title: 'Uttam Akinchanya: The Jain Virtue of Non-Attachment', subtitle: 'The ninth of the ten Das Lakshan virtues: loosening the feeling of "mine" that ties us to what we own.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Akinchanya, the ninth of the ten Das Lakshan virtues, means non-attachment. You can own things without letting those things own you.', body_markdown: UTTAM_AKINCHANYA_BODY },
 ]
 
 export const articleCategories = ['Philosophy', 'History', 'Texts', 'Heritage', 'Contemporary relevance', 'Beginner’s guide', 'Jain Philosophy / Das Lakshan']
