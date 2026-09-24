@@ -33,6 +33,7 @@ const DAS_LAKSHAN_ARTICLE_SLUGS = {
   '06': 'uttam-sanyam',
   '07': 'uttam-tap',
   '08': 'uttam-tyaga',
+  '09': 'uttam-akinchanya',
 }
 
 // Evergreen — deliberately carries no festival dates. This is the
