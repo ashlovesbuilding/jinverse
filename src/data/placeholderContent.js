@@ -1165,6 +1165,104 @@ Tattvartha Sutra, chapter 7, on non-possession and attachment to objects: https:
 
 A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
 
+const UTTAM_BRAHMACHARYA_BODY = `## What Is Uttam Brahmacharya?
+
+Uttam Brahmacharya is the tenth and final virtue of Das Lakshan. It is most often translated as celibacy, and that translation is not wrong, but it is incomplete on its own.
+
+The Tattvartha Sutra lists brahmacharya alongside forbearance, humility, straightforwardness, purity, truthfulness, self-restraint, austerity, renunciation and non-attachment as one of the ten dharmas central to right conduct. Taken together, these ten virtues describe a gradual loosening of the passions and attachments that keep the soul bound. Brahmacharya is where that movement reaches desire itself, especially sensual and sexual desire, the pull that can be among the hardest for a person to bring under conscious control.
+
+## What Does Brahmacharya Mean?
+
+A simple way to put it: brahmacharya asks us to bring desire under conscious control instead of allowing desire to control us. That is an editorial explanation, not a scriptural quotation, but it captures the spirit of the virtue well.
+
+This is not a claim that desire itself is shameful or wrong. Jain teaching does not ask a person to feel guilty for being drawn to something pleasant. The concern is what happens after that pull arises. Does a person notice it and respond with awareness, or does the pull simply take over and drive behaviour on its own? Brahmacharya is about strengthening that first option.
+
+## Brahmacharya Is More Than Celibacy
+
+It is easy to hear "celibacy" and think the whole virtue is about a single physical act, but that misses most of what Jain teaching actually addresses.
+
+Brahmacharya reaches into thought, intention, speech and behaviour, not only outward conduct. A person can be physically restrained and still be consumed by fixation in their mind. Another person's outward life might look ordinary while their inner attention stays calm and undistracted. Jain teaching treats both dimensions, outer restraint and inner restraint, as connected but not identical. Real brahmacharya asks for progress on both.
+
+## Brahmacharya and the Senses
+
+The senses are where attraction usually begins. Sight, touch, sound, taste and smell can all pull a person toward wanting more of something pleasant.
+
+This becomes a problem not because attraction exists, but when it starts running unchecked: constantly seeking new stimulation, becoming fixated on appearance, letting attraction dominate your attention for long stretches of the day, or repeatedly feeding a craving just to feel it again. None of this describes ordinary human attraction, which Jain teaching does not condemn. It describes attraction that has grown into a habit governing a person rather than something they can simply notice and set down.
+
+## Brahmacharya and the Mind
+
+This is where the virtue becomes most demanding, because Jain discipline does not stop at outward behaviour. It looks closely at the mental tendencies behind that behaviour.
+
+Imagination, repeated mental fixation, and the intentions a person quietly nurses all matter here, not only what they visibly do. A person can avoid every outward act and still spend most of their mental energy circling the same desire. Jain teaching treats this inner fixation as its own kind of bondage, separate from anything actually carried out. Brahmacharya asks a person to notice these patterns of mind as they arise, rather than assuming that self-control only concerns the body.
+
+## Brahmacharya for Monks and Householders
+
+Jain tradition draws a clear line here, and it matters.
+
+Monks take up complete celibacy as part of a total renunciation of household life. Their vows, their daily routine and their community are all built around that full discipline, appropriate to the stage of life they have chosen.
+
+Householders live under a different set of vows and limitations, shaped by the responsibilities of family and daily life. Jain teaching does not ask a householder to imitate a monk's discipline exactly. It asks for restraint suited to the householder's own stage of life: fidelity, moderation, and awareness of how desire is functioning, rather than the complete renunciation a monk has taken on. This article is not offering guidance on modern relationships. It is describing how Jain tradition itself frames this difference.
+
+## Brahmacharya and the Other Virtues
+
+Brahmacharya does not stand apart from the nine virtues before it. Kshama works on anger, mardava on pride, arjava on the gap between thought, word and action, shaucha on greed, satya on careless speech, sanyam on the senses and mind generally, tap on attachment to comfort, tyaga on possessiveness expressed through giving, and akinchanya on the deeper feeling of "mine."
+
+Brahmacharya belongs to this same movement. It applies that same discipline to desire and sensual attachment specifically. None of the ten virtues works in isolation. Together they describe one gradual project: loosening the passions that bind the soul.
+
+## What Brahmacharya Does Not Mean
+
+A few clarifications matter here, especially for a modern reader coming to this for the first time.
+
+This is not saying that attraction itself makes a person immoral. It is not saying that marriage or family life is incompatible with Jain practice, since the majority of Jains are householders living exactly that life. It is not asking every householder to live like a monk. It is not demanding that every desire be eliminated instantly, as if that were even possible. And repression, forcing a feeling underground while it still quietly runs the show, is not the same thing as this discipline. Jain teaching is asking for awareness and conscious restraint, not denial that pretends a feeling isn't there.
+
+## Practising Uttam Brahmacharya Today
+
+These are modern applications, not scriptural commandments.
+
+Notice when ordinary attraction has quietly turned into obsession.
+
+Pay attention to what repeatedly captures your attention without your choosing it.
+
+Avoid deliberately feeding impulses you already know make self-control harder.
+
+Be mindful of media and content that intensify unhealthy fixation rather than easing it.
+
+Treat other people as people, not as objects of possession or gratification.
+
+Practise restraint in thought, speech and behaviour together, not just one of the three.
+
+Create a small space between an impulse and your response to it.
+
+Strengthen attention through meditation, prayer, study or whatever practice fits your own tradition.
+
+## Brahmacharya and Inner Freedom
+
+The point of this discipline is not suppression for its own sake. Jain teaching treats brahmacharya, like the other Das Lakshan virtues, as a way of loosening the hold that passions and attachments have over the soul.
+
+A person who has made real progress here is not someone who feels nothing. They are someone whose attention is their own again, not constantly pulled along by whatever desire happens to be loudest.
+
+## Reflection
+
+What desires most easily capture my attention?
+
+Do I choose my actions, or do my impulses choose them for me?
+
+Where could a little more restraint bring me more clarity?
+
+Can I respect desire without being controlled by it?
+
+These are JINVERSE's own reflection questions, not scripture.
+
+## Sources & Further Reading
+
+Tattvartha Sutra, chapter 9, verse 6, listing the ten dharmas, with commentary where available. wisdomlib.org: https://www.wisdomlib.org/jainism/book/tattvartha-sutra-with-commentary/d/doc1084897.html
+
+Jainworld, "Ten Universal Virtues," on Brahmacharya: https://jainworld.jainworld.com/jainbooks/Books/Ten%20Universal%20Virtues%200%20-%2010%20final%20done.htm
+
+Jainworld, "Supplements to Ahimsa-Vrata," on the distinction between monastic and householder vows: https://jainworld.jainworld.com/jainbooks/ahimsa/supahimsa.htm
+
+A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
+
 export const articles = [
   { slug: 'what-is-jainism', title: 'What Is Jainism?', subtitle: 'An introduction to one of the world’s oldest living paths to liberation.', category: 'Beginner’s guide', readingTime: '6 min read', excerpt: 'Jainism centers on the liberation of the soul through non-violence, self-discipline and right understanding.' },
   { slug: 'bharatavarsha-bharat-chakravarti', title: 'Bharatavarsha: The Land of Bharat Chakravarti', subtitle: 'The sacred story of Bhagwan Rishabhadeva, Bharat Chakravarti and the name of our great land.', category: 'History', readingTime: '9 min read', excerpt: 'Discover the Jain tradition of Adinath Bhagwan as the first civilizational teacher and Bharat Chakravarti as the sovereign whose name lives on in Bharatavarsha.' },
@@ -1179,6 +1277,7 @@ export const articles = [
   { slug: 'uttam-tap', title: 'Uttam Tap: The Jain Virtue of Austerity', subtitle: 'The seventh of the ten Das Lakshan virtues: disciplined restraint that loosens attachment and wears away karma.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Tap, the seventh of the ten Das Lakshan virtues, means austerity. Far more than fasting, it is a disciplined practice of body and mind aimed at shedding karma and reducing attachment.', body_markdown: UTTAM_TAP_BODY },
   { slug: 'uttam-tyaga', title: 'Uttam Tyaga: The Jain Virtue of Renunciation', subtitle: 'The eighth of the ten Das Lakshan virtues: giving that loosens possessiveness and benefits others.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Tyaga, the eighth of the ten Das Lakshan virtues, means renunciation. Far more than giving everything away, it is the discipline of generosity that loosens the grip of possession.', body_markdown: UTTAM_TYAGA_BODY },
   { slug: 'uttam-akinchanya', title: 'Uttam Akinchanya: The Jain Virtue of Non-Attachment', subtitle: 'The ninth of the ten Das Lakshan virtues: loosening the feeling of "mine" that ties us to what we own.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Akinchanya, the ninth of the ten Das Lakshan virtues, means non-attachment. You can own things without letting those things own you.', body_markdown: UTTAM_AKINCHANYA_BODY },
+  { slug: 'uttam-brahmacharya', title: 'Uttam Brahmacharya: The Jain Virtue of Self-Control', subtitle: 'The tenth and final Das Lakshan virtue: bringing desire under conscious control rather than being ruled by it.', category: 'Jain Philosophy / Das Lakshan', readingTime: '8 min read', excerpt: 'Uttam Brahmacharya, the tenth of the ten Das Lakshan virtues, is often translated as celibacy, but it reaches far further: into thought, attention and the discipline of desire itself.', body_markdown: UTTAM_BRAHMACHARYA_BODY },
 ]
 
 export const articleCategories = ['Philosophy', 'History', 'Texts', 'Heritage', 'Contemporary relevance', 'Beginner’s guide', 'Jain Philosophy / Das Lakshan']
