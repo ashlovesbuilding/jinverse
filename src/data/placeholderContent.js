@@ -1263,6 +1263,124 @@ Jainworld, "Supplements to Ahimsa-Vrata," on the distinction between monastic an
 
 A note on sources: we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
 
+const DAS_LAKSHAN_CONCLUSION_BODY = `## The Ten Virtues, One Path
+
+Over ten articles, we have gone through each of the Das Lakshan virtues one at a time: Kshama, Mardava, Arjava, Shaucha, Satya, Sanyam, Tapa, Tyaga, Akinchanya and Brahmacharya. The Tattvartha Sutra lists all ten together in chapter 9, verse 6, and Digambara Jains observe them over ten days during Das Lakshan Parv.
+
+Read on their own, the ten can look like a list of separate good qualities: be forgiving, be humble, be honest, and so on. Read together, they start to look like something more specific. Each virtue points at a different place where anger, pride, deceit, greed, carelessness or attachment tends to slip into how we live. This article steps back to see that fuller picture, using what the ten earlier articles already established rather than adding anything new to the doctrine.
+
+## From Anger to Forgiveness
+
+Uttam Kshama, the first virtue, deals with krodha, anger. Jain teaching describes it as not letting anger and resentment take root, even when someone genuinely wrongs you. This does not mean pretending harm didn't happen, accepting bad treatment, or giving up your own boundaries. You can see clearly that something wrong occurred and still choose not to carry anger about it afterward. Seeing clearly is one thing. Staying angry is another. Kshama is about the second.
+
+## From Pride to Humility
+
+Uttam Mardava works on pride, mana. The article on this virtue was clear that status, birth, beauty, learning, wealth or position do not make one soul worth more than another in Jain thought. Humility here does not mean putting yourself down or denying your own abilities. It means not letting whatever you have, achievement, background, talent, inflate into a sense of superiority over other people.
+
+## From Deceit to Straightforwardness
+
+Uttam Arjava asks for straightforwardness: closing the gap between what you think, what you say and what you do. Deceit, maya, is the passion this virtue works against.
+
+A person practising arjava is not necessarily blunt or tactless. They are simply not running three different versions of themselves, one in their head, one in their words and one in their actions.
+
+## From Greed to Contentment and Purity
+
+Uttam Shaucha is usually translated as purity, but the article on this virtue centred on contentment and loosening greed, lobha. Owning things and managing responsibilities is not the problem. The issue is when wanting more becomes constant and unsatisfied, regardless of how much a person already has. Shaucha does not ask anyone to stop earning, owning or planning for the future. It asks whether enough is ever allowed to feel like enough.
+
+## Truth With Ahimsa
+
+Uttam Satya is where the connection to ahimsa, non-violence, becomes most direct. Jain teaching does not treat truthfulness as simply saying whatever is factually correct. A true statement spoken to wound, humiliate or destroy someone is treated as a kind of harm, even if every fact in it checks out. Where speaking a hard truth would cause serious, unnecessary harm, Jain teaching often points toward silence as the better choice. This is worth being precise about. Choosing silence over cruelty is not the same as being allowed to lie. The choice being described is between speaking and staying quiet, never between telling the truth and telling a falsehood.
+
+## Restraint in Daily Life
+
+Uttam Sanyam covers restraint across the senses and the mind. It builds on ideas like samiti, care in ordinary activity such as how one walks, speaks or handles things, and gupti, a deeper restraint of mind, speech and body. The earlier article on this virtue was careful to note that a monk's discipline goes much further than what is expected of a Jain householder. Sanyam asks a householder for restraint suited to their own life, not an attempt to imitate monastic practice exactly.
+
+## Discipline and Tapa
+
+Uttam Tapa follows naturally from Sanyam. Where restraint holds back a reaction in the moment, tapa is that same discipline sustained on purpose, through fasting, study, service or other practice chosen deliberately rather than forced by circumstance.
+
+The article on this virtue spent real effort making sure it wasn't reduced to fasting alone. Jain sources describe six external austerities, involving the body, and six internal austerities, involving the mind and character, such as repentance, humility, service, study, detachment and meditation. Importantly, tapa is not suffering valued for its own sake. Jain teaching does not treat physical hardship as automatically spiritual. What makes an austerity meaningful is the discipline and intention behind it, not discomfort by itself.
+
+## Giving and Letting Go
+
+Uttam Tyaga is renunciation, expressed through generosity. The earlier article described a fourfold structure of giving found in Jain sources: giving food, giving protection or fearlessness, giving medicine, and giving knowledge. Tyaga does not mean giving away everything you own. For a householder, it means holding what you have a little more loosely, and directing some of it toward others rather than only accumulating more.
+
+## Beyond "Mine"
+
+Uttam Akinchanya follows naturally from Tyaga, but it is not the same virtue. Tyaga asks what you can give or give up. Akinchanya asks a different question: why you are so attached to calling something yours in the first place. Someone can give away a possession through tyaga and still think about it constantly afterward, which shows the inner attachment hasn't actually gone anywhere. A person with very little can still be tightly attached to what they have, and a person with real responsibilities and possessions can work on holding them more loosely. It is not simply a matter of how much someone owns.
+
+## Brahmacharya and the Direction of Desire
+
+Uttam Brahmacharya, the tenth and final virtue, is often translated as celibacy, but the article on it was clear that this translation is incomplete on its own. Brahmacharya reaches into thought, intention, speech and behaviour, not only a single physical act. Jain tradition draws a firm line between monastic and householder practice here. Monks take up complete celibacy as part of total renunciation. Householders live under a different set of vows, shaped by family and daily responsibilities, and are not expected to imitate monastic discipline exactly. What Brahmacharya asks of anyone, monk or householder, is the same underlying thing: bringing desire under conscious control rather than being carried along by it.
+
+## What Changes When We Put the Ten Together?
+
+Reading the ten side by side, a pattern becomes visible. Jain scripture lists these ten virtues together, but the summary that follows is our own way of reading them as a series, not a claim that any single source lays them out in exactly this language.
+
+Kshama asks us not to be ruled by anger. Mardava asks us not to be inflated by pride. Arjava asks us to close the gap between thought, speech and action. Shaucha asks us to loosen greed. Satya asks us to make our speech both truthful and careful of harm. Sanyam asks us to restrain our activity, senses and mind in the moment, and Tapa asks us to carry that same restraint further, into real, sustained discipline. Tyaga asks us to give and hold things more loosely, and Akinchanya asks us to loosen the inner feeling of possession that giving alone doesn't always touch. Brahmacharya asks us to bring desire under conscious direction.
+
+These are not ten unrelated traits to work on independently. Together they describe a life with less domination by anger, pride, deceit, greed, carelessness and attachment, and more room for clear, deliberate choice in their place.
+
+## What Does This Look Like in Ordinary Life?
+
+Someone insults you at work. Kshama changes what happens next, not by pretending the insult didn't sting, but by not letting it decide your response.
+
+You get praised because of your family name or position rather than what you actually did. Mardava changes how you receive that praise.
+
+You make a mistake. Arjava means owning it plainly instead of building a small excuse around it.
+
+You want something mainly because someone else has it. Shaucha and Akinchanya are both worth asking about here, since that pull can come from either greed or attachment.
+
+You need to tell someone something difficult. Satya asks you to weigh truth and harm together, rather than treating bluntness as automatically virtuous.
+
+You're angry and about to fire off a message you'll probably regret. Sanyam is the pause before you send it.
+
+You choose to give something away instead of buying one more thing you don't need. Tyaga becomes practical, right there.
+
+You take up a genuinely difficult practice on purpose, not to impress anyone. Tapa becomes practical, and you notice a desire has started running the show instead of sitting quietly in the background: Brahmacharya becomes practical too.
+
+Not every day will touch all ten. Most days will touch at least one.
+
+## The Ten Days End, the Practice Does Not
+
+Das Lakshan Parv is observed over ten days, one virtue examined closely each day. But nothing in the tradition suggests these qualities are meant to matter only during that window and fade once the calendar moves on. The value of this series was never really about learning ten Sanskrit names. It was about having ten specific, workable places to look for anger, pride, deceit, greed, attachment, carelessness and desire in your own life, described clearly enough that you could actually recognise them when they show up.
+
+## Reflection
+
+Where does anger control me?
+
+Where does pride make me defensive?
+
+Where am I less honest than I want to be?
+
+What do I own that I am afraid to let go of?
+
+Where could I practise more restraint?
+
+What desire has more control over me than I would like?
+
+What would change if I carried these ten virtues beyond the ten days?
+
+These are JINVERSE's own reflection questions, written for this series, not a scriptural quotation.
+
+## Conclusion
+
+At the centre of all ten virtues is a simple question: what happens inside us when life gives us a reason to become angry, proud, dishonest, greedy, careless or attached. Das Lakshan gives us ten days and ten specific subjects to sit with that question honestly. The ten days end. What we do with them afterward is the actual practice.
+
+## Sources & Further Reading
+
+This article draws on the sources already used across the ten-part series, rather than introducing new ones.
+
+Tattvartha Sutra, chapter 9, verse 6, with Acharya Pujyapada's Sarvarthasiddhi commentary. wisdomlib.org: https://www.wisdomlib.org/jainism/book/tattvartha-sutra-with-commentary/d/doc1084897.html
+
+Jainworld, "Ten Universal Virtues": https://jainworld.jainworld.com/jainbooks/Books/Ten%20Universal%20Virtues%200%20-%2010%20final%20done.htm
+
+Jainworld, "Supplements to Ahimsa-Vrata": https://jainworld.jainworld.com/jainbooks/ahimsa/supahimsa.htm
+
+Jainworld, "Prescription of Ethical Code": https://jainworld.jainworld.com/jainbooks/antiquity/ethcjain.htm
+
+A note on sources: as with the ten articles before it, we reached this material through search summaries rather than the full original texts. Where this article draws on general Jain teaching rather than a specific source above, that is noted in the text itself.`
+
 export const articles = [
   { slug: 'what-is-jainism', title: 'What Is Jainism?', subtitle: 'An introduction to one of the world’s oldest living paths to liberation.', category: 'Beginner’s guide', readingTime: '6 min read', excerpt: 'Jainism centers on the liberation of the soul through non-violence, self-discipline and right understanding.' },
   { slug: 'bharatavarsha-bharat-chakravarti', title: 'Bharatavarsha: The Land of Bharat Chakravarti', subtitle: 'The sacred story of Bhagwan Rishabhadeva, Bharat Chakravarti and the name of our great land.', category: 'History', readingTime: '9 min read', excerpt: 'Discover the Jain tradition of Adinath Bhagwan as the first civilizational teacher and Bharat Chakravarti as the sovereign whose name lives on in Bharatavarsha.' },
@@ -1278,6 +1396,7 @@ export const articles = [
   { slug: 'uttam-tyaga', title: 'Uttam Tyaga: The Jain Virtue of Renunciation', subtitle: 'The eighth of the ten Das Lakshan virtues: giving that loosens possessiveness and benefits others.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Tyaga, the eighth of the ten Das Lakshan virtues, means renunciation. Far more than giving everything away, it is the discipline of generosity that loosens the grip of possession.', body_markdown: UTTAM_TYAGA_BODY },
   { slug: 'uttam-akinchanya', title: 'Uttam Akinchanya: The Jain Virtue of Non-Attachment', subtitle: 'The ninth of the ten Das Lakshan virtues: loosening the feeling of "mine" that ties us to what we own.', category: 'Jain Philosophy / Das Lakshan', readingTime: '7 min read', excerpt: 'Uttam Akinchanya, the ninth of the ten Das Lakshan virtues, means non-attachment. You can own things without letting those things own you.', body_markdown: UTTAM_AKINCHANYA_BODY },
   { slug: 'uttam-brahmacharya', title: 'Uttam Brahmacharya: The Jain Virtue of Self-Control', subtitle: 'The tenth and final Das Lakshan virtue: bringing desire under conscious control rather than being ruled by it.', category: 'Jain Philosophy / Das Lakshan', readingTime: '8 min read', excerpt: 'Uttam Brahmacharya, the tenth of the ten Das Lakshan virtues, is often translated as celibacy, but it reaches far further: into thought, attention and the discipline of desire itself.', body_markdown: UTTAM_BRAHMACHARYA_BODY },
+  { slug: 'das-lakshan-conclusion', title: 'The Ten Virtues: Understanding Das Lakshan as a Whole', subtitle: 'Bringing the ten-part Das Lakshan series together, and what changes when the ten virtues are read as one path rather than ten separate ideas.', category: 'Jain Philosophy / Das Lakshan', readingTime: '10 min read', excerpt: 'Kshama, Mardava, Arjava, Shaucha, Satya, Sanyam, Tapa, Tyaga, Akinchanya and Brahmacharya are not ten unrelated qualities. Read together, they point toward one path: a life with less domination by anger, pride, deceit, greed and attachment.', body_markdown: DAS_LAKSHAN_CONCLUSION_BODY },
 ]
 
 export const articleCategories = ['Philosophy', 'History', 'Texts', 'Heritage', 'Contemporary relevance', 'Beginner’s guide', 'Jain Philosophy / Das Lakshan']
